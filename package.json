@@ -1,0 +1,41 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Starter template for Polygraph stories",
+  "main": "index.js",
+  "scripts": {
+    "js:dev": "webpack --config webpack.config.dev.js",
+    "js:dist": "webpack --config webpack.config.dist.js",
+    "js:watch": "onchange src/js/* -- npm run js:dev",
+    "css:dev": "stylus -u autoprefixer-stylus src/css/config.styl -o dev/style.css",
+    "css:dist": "npm run css:dev && npm run css:min",
+    "css:min": "cleancss -o dist/style.css dev/style.css",
+    "css:watch": "onchange src/css/* -- npm run css:dev",
+    "html:dev": "cp src/index.html dev",
+    "html:dist": "inline-source --compress false --root dist src/index.html dist/index.html",
+    "html:watch": "onchange 'src/index.html' -- npm run html:dev",
+    "server": "light-server -s ./dev/. -w 'dev/style.css # # reloadcss' -w 'dev/bundle.js # #' -w 'dev/index.html # #'",
+    "dev": "npm run html:dev && npm run js:dev && npm run css:dev",
+    "dist": "npm run js:dist && npm run css:dist && npm run html:dist",
+    "start": "npm-run-all --parallel dev html:watch js:watch css:watch server"
+  },
+  "author": "Russell Goldenberg",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.9.4",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-1": "^6.13.0",
+    "clean-css": "^3.4.19",
+    "dsv-loader": "^1.1.0",
+    "inline-source-cli": "^1.1.1",
+    "json-loader": "^0.5.4",
+    "light-server": "^1.1.7",
+    "npm-run-all": "^3.0.0",
+    "onchange": "^2.5.0",
+    "stylus": "^0.54.5",
+    "uglify-js": "^2.7.2",
+    "webpack": "^1.13.1",
+    "yargs": "^5.0.0"
+  }
+}
