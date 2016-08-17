@@ -14,7 +14,7 @@ Starter template for stories.
 Create a new project directory then:
 
 ```
-curl -Lk https://goo.gl/jsHfVD > Makefile; make;
+curl -Lk http://bit.ly/2bjjvyb > Makefile; make;
 
 ```
 
