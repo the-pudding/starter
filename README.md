@@ -1,6 +1,7 @@
 # starter
 
-Starter template for stories.
+A starter template for projects.
+
 * Write in ES6
 * Stylus for CSS pre-processor
 * Bundles, minifies JS with Webpack
