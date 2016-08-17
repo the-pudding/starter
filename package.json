@@ -34,8 +34,6 @@
     "npm-run-all": "^3.0.0",
     "onchange": "^2.5.0",
     "stylus": "^0.54.5",
-    "uglify-js": "^2.7.2",
-    "webpack": "^1.13.1",
-    "yargs": "^5.0.0"
+    "webpack": "^1.13.1"
   }
 }
