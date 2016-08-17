@@ -1,6 +1,11 @@
 # starter
 
-Starter files for stories
+Starter template for stories.
+* Write in ES6
+* Stylus for CSS pre-processor
+* Bundles, minifies JS with Webpack
+* Bundles, minifies, auto-prefixes CSS
+* Inlines CSS and JS to a single html file
 
 ## Dependencies
 [node](http://nodejs.org)
