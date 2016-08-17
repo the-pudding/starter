@@ -11,6 +11,8 @@ Starter template for stories.
 [node](http://nodejs.org)
 
 ## Setup
+Create a new project directory then:
+
 ```
 curl -Lk https://goo.gl/gu4BzA > Makefile; make;
 
