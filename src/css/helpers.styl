@@ -1,0 +1,95 @@
+// -------------------
+// BREAKPOINT CACHE
+// -------------------
+$mq_cache = {}
+
+mq($condition)
+	helper($condition)
+		unless $mq_cache[$condition]
+			$mq_cache[$condition] = ()
+		push($mq_cache[$condition], block)
+
+	+helper($condition)
+		{selector() + ''}
+			{block}
+			
+apply_mq_cache()
+	for $mq, $blocks in $mq_cache
+		$mq = unquote($mq_vars[$mq] || $mq)
+		$mq = '(%s)' % $mq unless match('\(', $mq)
+		$mq = 'only screen and %s' % $mq
+		@media $mq
+			for $block in $blocks
+				{$block}
+
+// -------------------
+// CLEARFIX
+// -------------------
+clearfix()
+	overflow auto
+	zoom 1
+
+// -------------------
+// LIST STYLES
+// -------------------
+// Default is none
+list-style(type = none)
+	list-style-type type
+	margin 0
+	padding 0
+	
+// -------------------
+// GRIDS
+// -------------------
+flex-grid(num, child, gutter = false, direction = row)
+	display flex
+	flex-direction direction
+	flex-wrap wrap
+	> .{child}
+		width (100% / num)
+		if num == equal
+			flex 1
+	if gutter
+		justify-content space-between
+		> .{child}
+			flex-basis (100% / num) - gutter
+
+// -------------------
+// HIDE
+// -------------------
+hidden(type = false)
+	if type == accessible
+		width 1px 
+		height 1px 
+		overflow hidden
+		position absolute
+	else if type == invisible
+		visibility hidden
+	else
+		display none
+
+
+// -------------------
+// VERTICAL CENTERING
+// Centers items vertically
+// If you want horizontal centering on flex
+// add `justify-content center`
+// -------------------
+// Put this on the parent element
+center(type, child = false)
+	if type == flex
+		// No child, set to false in function
+		display flex
+		align-items center
+	else if type == translate
+		transform-style preserve-3d
+		> .{child}
+			position relative
+			top 50%
+			transform translateY(-50%)
+	else if type == absolute
+		position relative
+		> .{child}
+			position absolute
+			top 50%
+			width 100%
