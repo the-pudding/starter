@@ -20,8 +20,17 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make;
 ```
 
 ## Usage
-* Dev: `npm run start` and open `localhost:4000`
-* Dist: `npm run dist` result is **dist/index.html**
 
-Live reloads any changes made in **src** folder. Put JS in **src/js/entry.js** and CSS in **src/css/story.styl**.
+#### Development
+`npm run start` and open `localhost:4000` in your browser.
+
+Any changes to the **src** folder will trigger live reload.
+
+Put JS in **src/js/entry.js** and CSS in **src/css/story.styl**.
+
+
+#### Deploy
+`npm run dist`
+
+Generates a single html file and assets in the **dist** folder.
 
