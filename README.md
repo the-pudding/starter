@@ -15,7 +15,7 @@ A starter template for projects.
 Create a new project directory then:
 
 ```
-curl -Lk http://bit.ly/2bjjvyb > Makefile; make;
+curl -Lk http://bit.ly/2bgptna > Makefile; make;
 
 ```
 
