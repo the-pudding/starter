@@ -23,5 +23,5 @@ curl -Lk http://bit.ly/2bjjvyb > Makefile; make;
 * Dev: `npm run start` and open `localhost:4000`
 * Dist: `npm run dist` result is **dist/index.html**
 
-Live reloads any changes made in **src**
+Live reloads any changes made in **src** folder. Put JS in **src/js/entry.js** and CSS in **src/css/story.styl**.
 
