@@ -2,7 +2,7 @@
 
 A starter template for projects.
 
-* Write in ES6
+* Write in ES6 (preset with d3)
 * Stylus for CSS pre-processor
 * Bundles, minifies JS with Webpack
 * Bundles, minifies, auto-prefixes CSS
