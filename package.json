@@ -17,7 +17,7 @@
     "html:dev": "cp src/index.html dev",
     "html:dist": "inline-source --compress false --root dist src/index.html dist/index.html",
     "html:watch": "onchange 'src/index.html' -- npm run html:dev",
-    "dev": "mkdir -p dev && npm run html:dev && npm run js:dev && npm run css:dev",
+    "dev": "mkdir -p dev && npm run html:dev && npm run js:dev && npm run css:dev && npm run assets:dev",
     "dist": "mkdir -p dist && npm run js:dist && npm run css:dist && npm run assets:dist && npm run html:dist",
     "server": "light-server -s ./dev/. -w 'dev/style.css # # reloadcss' -w 'dev/bundle.js # #' -w 'dev/assets/**/* # #' -w 'dev/index.html # #'",
     "start": "npm-run-all --parallel dev html:watch js:watch css:watch assets:watch server"
