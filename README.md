@@ -26,7 +26,7 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make;
 
 Any changes to the **src** folder will trigger live reload.
 
-Put JS in **src/js/entry.js** and CSS in **src/css/story.styl**.
+Put JS in **src/js/entry.js** and CSS in **src/css/story/story.styl**.
 
 
 #### Deploy
