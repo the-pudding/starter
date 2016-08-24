@@ -16,7 +16,6 @@ Create a new project directory then:
 
 ```
 curl -Lk http://bit.ly/2bgptna > Makefile; make;
-
 ```
 
 ## Usage
@@ -28,9 +27,7 @@ Any changes to the **src** folder will trigger live reload.
 
 Put JS in **src/js/entry.js** and CSS in **src/css/story/story.styl**.
 
-
 #### Deploy
 `npm run dist`
 
 Generates a single html file and assets in the **dist** folder.
-
