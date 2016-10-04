@@ -6,4 +6,5 @@ all:
 	mv starter-master/.gitignore .
 	rm -rf temp.zip starter-master Makefile
 	rm src/assets/.gitkeep
+	mv Makefile.story Makefile
 	npm i

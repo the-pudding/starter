@@ -1,0 +1,167 @@
+footer
+	background $off-white
+	margin-top 2em
+	font-family $sans
+
+// share
+.share
+	padding 1em
+	max-width 40rem
+	margin 0 auto
+	text-align center
+	padding 1em 0 1.5em 0
+	border-bottom 1px solid $gray-light
+	.preach
+		display inline-block
+		padding 0
+		margin-right 0.5em
+		span 
+			font-weight 500
+
+	.share__icons
+		display inline-block
+		vertical-align middle
+		clearfix()
+		.share__icon
+			float left
+			margin 0
+			padding 0
+			line-height 1
+			margin-right 0.5em
+			display inline-block
+			
+
+// recirc
+.recirc
+	padding 1em
+	&__hed 
+		text-align center
+		color #00a27c
+		font-weight 500
+		font-size 1em
+		text-transform uppercase
+		letter-spacing 0.05em
+	&__articles
+		margin 0 auto
+		max-width 50em
+		display flex
+		flex-wrap wrap
+		align-items center
+	&__article
+		margin 1em 0
+		padding 1em
+		display block
+		text-align center
+		text-decoration none
+		color black
+		font-size 0.8rem
+		width 100%
+		+mq('bp-2')
+			margin 2em 0
+			width 50%
+		p 
+			padding 0
+	.article__headline
+		max-width 30em
+		margin 0 auto
+	.article__date
+		font-weight 500
+		text-transform uppercase
+	.exclude
+		fill $off-white
+
+.newsletter
+	padding 2em 1em
+	&__wrapper 
+		max-width 40rem
+		margin 0 auto
+		text-align center
+		display flex
+		justify-content center
+		flex-wrap wrap
+		text-transform uppercase
+		font-size 0.8em
+	&__header 
+		padding 0
+		margin 0
+		margin-right 1em
+		font-weight 400
+		letter-spacing 0.05em
+	&__footer
+		display flex
+		input 
+			font-size 1em
+			padding 0.2em
+			line-height 1
+			border none
+			border-bottom 2px solid $gray-light
+			background-color transparent
+			color $off-black
+			&::placeholder
+				color $gray-dark
+	&__button
+		border none
+		outline none
+		text-transform uppercase
+		background-color #00a27c
+		border-radius 3px
+		color white
+		font-size 1em
+		font-weight 700
+		line-height 1
+		margin-left 1em
+		padding 0.45em
+		transition background-color 250ms
+		&:hover 
+			background-color lighten(#00a27c, 10)
+			
+// company
+.company
+	padding 1em
+	background white
+	color black
+	display flex
+	a 
+		color black
+		text-decoration none
+		border-bottom 1px solid #00a27c
+	p, ul
+		font-weight 400
+		font-size 12px 
+		line-height 19px
+	&__wrapper
+		max-width 60rem
+		margin 0 auto
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		+mq('bp-3')
+			flex-wrap nowrap
+		clearfix()
+	&__left
+		max-width 25em
+		padding 0 1em
+	&__description
+		max-width 25em
+		padding 1em 0 
+	&__right
+		max-width 25em
+		padding 0 1em
+		text-align left
+		+mq('bp-3')
+			text-align center
+	svg 
+		fill black
+	ul
+		max-width 40rem
+		margin 1em auto
+		display inline-block
+		clearfix()
+		li 
+			margin-right 1.5em
+			float left
+			a 
+				text-decoration none
+				border-bottom none
+				font-weight 500
+		
