@@ -6,7 +6,8 @@ A starter template for projects.
 * Stylus for CSS pre-processor
 * Bundles, minifies JS with Webpack
 * Bundles, minifies, auto-prefixes CSS
-* Inlines CSS and JS to a single html file
+* Inlines CSS
+* Async font loading (using FOUT)
 
 ## Dependencies
 [node](http://nodejs.org)
@@ -21,13 +22,15 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make;
 ## Usage
 
 #### Development
-`npm run start` and open `localhost:4000` in your browser.
+`gulp`
 
 Any changes to the **src** folder will trigger live reload.
 
 Put JS in **src/js/entry.js** and CSS in **src/css/story/story.styl**.
 
 #### Deploy
-`npm run dist`
+<!-- * [custom d3 bundle](https://gist.github.com/russellgoldenberg/83b3a0973d8a04f208d72f2eb9f14dc1) -->
 
-Generates a single html file and assets in the **dist** folder.
+Run `gulp prod`
+
+Generates a single html file and assets in the **dist/prod** folder.

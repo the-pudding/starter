@@ -1,3 +1,12 @@
+// mq(breakpoint)
+//     if breakpoint in $mq_vars
+//         condition = unquote($mq_vars[breakpoint])
+//         condition = 'only screen and %s' % condition
+//         @media condition
+//             {block}
+//     else
+//         error('Not a defined media query')
+        
 // -------------------
 // BREAKPOINT CACHE
 // -------------------
@@ -22,11 +31,22 @@ apply_mq_cache()
 			for $block in $blocks
 				{$block}
 
+.hack 
+	+mq('bp-1')
+		display none
+	+mq('bp-2')
+		display none
+	+mq('bp-3')
+		display none
+	+mq('bp-4')
+		display none
+		
+
 // -------------------
 // CLEARFIX
 // -------------------
 clearfix()
-	overflow auto
+	overflow hidden
 	zoom 1
 
 // -------------------
@@ -93,3 +113,12 @@ center(type, child = false)
 			position absolute
 			top 50%
 			width 100%
+
+//===============================
+// Z-INDEX
+//===============================
+set-index(layer)
+	if layer in $z-index
+		return $z-index[layer]
+	else
+		error('Not a layer in z-index')

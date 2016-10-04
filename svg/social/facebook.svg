@@ -1,0 +1,9 @@
+<svg version="1.1" id="icon-facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7px" height="15px" viewBox="-0.7 -1.5 7 15" enable-background="new -0.7 -1.5 7 15" xml:space="preserve" aria-labelledby="facebook-title facebook-desc">
+	<title id="facebook-title">Facebook</title>
+	<desc id="facebook-desc">Logo</desc>
+	<g>
+		<path d="M3.966,3.414H6.3l-0.275,2.58H3.952V13.5H0.847V5.994H-0.7v-2.58h1.547V1.862c0-1.11,0.261-1.949,0.788-2.513
+		C2.155-1.215,3.016-1.5,4.213-1.5h2.07v2.578H4.995c-0.238,0-0.432,0.023-0.571,0.067c-0.144,0.042-0.246,0.114-0.311,0.21
+		c-0.066,0.098-0.11,0.204-0.129,0.311c-0.024,0.11-0.032,0.26-0.032,0.457v1.289L3.966,3.414L3.966,3.414z" />
+	</g>
+</svg>

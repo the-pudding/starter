@@ -7,10 +7,12 @@ html
 	text-size-adjust 100%
 
 body
-	font-feature-settings 'kern' 1, 'onum' 1, 'liga' 1
-		
-nav ul
-	list-style none
+	font-feature-settings 'kern' 1, 'onum' 1, 'liga' 0
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	
+ul
+	list-style-type none
 
 img, video
 	display block
@@ -18,7 +20,24 @@ img, video
 
 button
 	cursor pointer
+	border none
+	outline none
+	margin 0
+	padding 0
+	font-size 1rem
 
+sub, sup
+	font-size 75%
+	line-height 0
+	position relative
+	vertical-align baseline
+
+sup
+	top -0.5em
+
+sub
+	bottom -0.25em
+	
 // Various hides
 .hide-accessible
 	hidden(accessible)

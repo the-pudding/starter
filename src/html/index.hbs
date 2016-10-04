@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang='en' data-version='{{timestamp}}'>
+<head>
+	{{> base/meta}}
+	
+	<!-- smoosh -->
+	<link rel='stylesheet' href='bundle.css' />
+	<!-- endsmoosh -->
+	
+	{{> base/font}}
+	
+	<!-- smoosh -->
+	<script src='critical.js'></script>
+	<!-- endsmoosh -->
+</head>
+<body class=''>
+	
+	{{> header }}
+
+	<div class='container'>
+		<div class='story'>
+
+		</div>
+		<footer>
+			{{> base/share }}
+			{{> base/recirc }}
+			{{> base/newsletter }}
+			{{> base/company }}
+		</footer>
+
+	</div>
+
+
+	<script src='bundle.js?v={{timestamp}}'></script>
+	
+	{{> base/social }}
+
+	{{> base/analytics }}
+
+</body>
+</html>

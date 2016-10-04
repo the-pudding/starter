@@ -14,8 +14,8 @@ const selectionToArray = (selection) => {
 const select = (selector) =>
 	document.querySelector(selector)
 
-const selectAll = (selector) =>
-	selectionToArray(document.querySelectorAll(selector))
+const selectAll = (selector, parent = document) =>
+	selectionToArray(parent.querySelectorAll(selector))
 
 const find = (el, selector) =>
 	selectionToArray(el.querySelectorAll(selector))

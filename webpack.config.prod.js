@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 module.exports = {
 	module: {
 		loaders: [
@@ -6,5 +8,9 @@ module.exports = {
 			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
 		]
 	},
-	devtool: 'inline-source-map',
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.optimize.DedupePlugin()
+	]
 }
