@@ -21,13 +21,17 @@ const find = (el, selector) =>
 	selectionToArray(el.querySelectorAll(selector))
 
 const removeClass = (el, className) =>
-	el.classList.remove(className)
+	el.classList ? el.classList.remove(className)
+	: el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
 
 const addClass = (el, className) =>
-	el.classList.add(className)
+	el.classList ? el.classList.add(className)
+	: el.className += ' ' + className
 
 const hasClass = (el, className) =>
-	el.classList.contains(className)
+	el.classList ? el.classList.contains(className)
+	: new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
+
 
 const jumpTo = (el) => {
 	if (document.body.scrollTop) document.body.scrollTop = el.offsetTop + 1
