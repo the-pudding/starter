@@ -4,7 +4,7 @@ import isMobile from './utils/is-mobile'
 import graphic from './graphic'
 
 const dev = window.location.hostname.indexOf('localhost') > -1
-const containerEl = $.select('container')
+const containerEl = $.select('.container')
 let previousWidth = 0
 
 const logVersion = () => {
