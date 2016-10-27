@@ -1,7 +1,6 @@
 import debounce from 'lodash.debounce'
 import * as $ from './utils/dom'
 import isMobile from './utils/is-mobile'
-import graphic from './graphic'
 
 const dev = window.location.hostname.indexOf('localhost') > -1
 const containerEl = $.select('.container')
@@ -30,7 +29,6 @@ const init = () => {
 	logVersion()
 	addMobileClass()
 	window.addEventListener('resize', debounce(handleResize, 150))
-	graphic.init()
 }
 
 init()
