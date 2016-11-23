@@ -1,12 +1,17 @@
-// mq(breakpoint)
-//     if breakpoint in $mq_vars
-//         condition = unquote($mq_vars[breakpoint])
-//         condition = 'only screen and %s' % condition
-//         @media condition
-//             {block}
-//     else
-//         error('Not a defined media query')
-        
+// -------------------
+// WEB FONT LOADING
+// -------------------
+// font = the actual font name (eg. Open Sans)
+// hash = the hashed version (eg. open-sans)
+// weight = font weight (eg. 400)
+// fallback = fallback stack (eg. $sans or 'Helvetica, Arial')
+fontify(font, hash, weight, fallback)
+	.tk-{hash}-{weight}
+		font-family fallback
+		font-weight weight
+		.loaded-{hash}-{weight} & 
+			font-family font, fallback
+			
 // -------------------
 // BREAKPOINT CACHE
 // -------------------
