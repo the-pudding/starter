@@ -1,4 +1,4 @@
-const loadImage = (url, cb) => {
+function loadImage(url, cb) {
     const img = new Image()
     
     img.onload = () => cb(null, img)
