@@ -2,22 +2,23 @@ import debounce from 'lodash.debounce'
 import * as $ from './utils/dom'
 import isMobile from './utils/is-mobile'
 
-const dev = window.location.hostname.indexOf('localhost') > -1
+const DEV_MODE = window.location.hostname.indexOf('localhost') > -1
+
 const containerEl = $.select('.container')
 let previousWidth = 0
 
-const logVersion = () => {
+function logVersion() {
 	const el = $.select('html')
 	const v = el.getAttribute('data-version') 
 	console.log(`version: ${v.slice(5, v.length)}`)
 }
 
-const addMobileClass = () => {
+function addMobileClass() {
 	const el = $.select('html')
 	if (isMobile.any()) $.addClass(el, 'is-mobile')
 }
 
-const handleResize = () => {
+function handleResize() {
 	const width = containerEl.offsetWidth
 	if (previousWidth !== width) {
 		// resize here
@@ -25,7 +26,7 @@ const handleResize = () => {
 	}
 }
 
-const init = () => {
+function init() {
 	logVersion()
 	addMobileClass()
 	window.addEventListener('resize', debounce(handleResize, 150))
