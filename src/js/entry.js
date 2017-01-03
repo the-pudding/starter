@@ -4,7 +4,7 @@ import isMobile from './utils/is-mobile'
 
 const DEV_MODE = window.location.hostname.indexOf('localhost') > -1
 
-const containerEl = $.select('.container')
+const bodyEl = $.select('body')
 let previousWidth = 0
 
 function logVersion() {
@@ -19,7 +19,7 @@ function addMobileClass() {
 }
 
 function handleResize() {
-	const width = containerEl.offsetWidth
+	const width = bodyEl.offsetWidth
 	if (previousWidth !== width) {
 		// resize here
 		previousWidth = width
