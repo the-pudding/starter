@@ -31,15 +31,13 @@
     "json-loader": "^0.5.4",
     "request": "^2.76.0",
     "require-dir": "^0.3.0",
-    "rollup": "^0.36.1",
-    "rollup-plugin-node-resolve": "^2.0.0",
     "run-sequence": "^1.2.2",
     "webpack": "^1.13.1",
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "d3": "^4.3.0",
-    "fontfaceobserver": "^2.0.5",
+    "d3": "^4.4.0",
+    "fontfaceobserver": "^2.0.7",
     "lodash.debounce": "^4.0.8",
     "promis": "^1.1.4"
   }
