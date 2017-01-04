@@ -4,6 +4,7 @@ all:
 	mv starter-master/* .
 	mv starter-master/.babelrc .
 	mv starter-master/.gitignore .
+	mv starter-master/.eslintrc.json .
 	rm -rf temp.zip starter-master Makefile
 	rm src/assets/.gitkeep
 	mv Makefile.story Makefile
