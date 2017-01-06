@@ -29,8 +29,13 @@ Any changes to the **src** folder will trigger live reload.
 Put JS in **src/js/entry.js** and CSS in **src/css/story/story.styl**.
 
 #### Deploy
-<!-- * [custom d3 bundle](https://gist.github.com/russellgoldenberg/83b3a0973d8a04f208d72f2eb9f14dc1) -->
-
 Run `gulp prod`
 
 Generates a single html file and assets in the **dist/prod** folder.
+
+#### Fonts
+Our serif font is [Mercury](https://typography.com/fonts/mercury-text/styles/screensmart/) and our sans-serif is [Whitney](https://typography.com/fonts/whitney/styles/screensmart/). We have two weights, *400* and *700*, and normal and italic.
+
+Simply add the class `tk-mercury` or `tk-whitney` to any element. It will apply that font to all children. Apply one to the `body` tag to set your default font for the page.
+
+It is recommended to use html markup (`em` and `strong`) to apply weighting and styling. The proper css is already applied.

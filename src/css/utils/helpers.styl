@@ -3,14 +3,16 @@
 // -------------------
 // font = the actual font name (eg. Open Sans)
 // hash = the hashed version (eg. open-sans)
-// weight = font weight (eg. 400)
 // fallback = fallback stack (eg. $sans or 'Helvetica, Arial')
-fontify(font, hash, weight, fallback)
-	.tk-{hash}-{weight}
-		font-family fallback
-		font-weight weight
-		.loaded-{hash}-{weight} & 
-			font-family font, fallback
+// fb-weight = 
+fontify($font, $hash, $fallback, $fb-weight, $fb-letter-spacing = normal)
+	.tk-{$hash}
+		font-family $fallback
+		letter-spacing $fb-letter-spacing
+		font-weight $fb-weight
+		.loaded-{$hash} & 
+			font-family $font, $fallback
+			letter-spacing normal
 			
 // -------------------
 // BREAKPOINT CACHE
