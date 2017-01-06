@@ -4,7 +4,7 @@
 function selectionToArray(selection) {
 	const len = selection.length
 	const result = []
-	for (var i = 0; i < len; i++) {
+	for (let i = 0; i < len; i += 1) {
 		result.push(selection[i])
 	}
 	return result
@@ -24,20 +24,18 @@ function find(el, selector) {
 }
 
 function removeClass(el, className) {
-	el.classList ?
-	el.classList.remove(className) :
-	el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
+	if (el.classList) el.classList.remove(className)
+	else el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
+}
 
 function addClass(el, className) {
-	el.classList ?
-	el.classList.add(className) :
-	el.className += ' ' + className
+	if (el.classList) el.classList.add(className)
+	else el.className = `${el.className} ${className}`
 }
 
 function hasClass(el, className) {
-	el.classList ?
-	el.classList.contains(className) :
-	new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
+	if(el.classList) return el.classList.contains(className)
+	return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
 }
 
 function jumpTo(el) {
@@ -45,6 +43,7 @@ function jumpTo(el) {
 	document.body.scrollTop = el.offsetTop + 1 :
 	document.documentElement.scrollTop = el.offsetTop + 1
 }
+
 
 export {
 	select,
