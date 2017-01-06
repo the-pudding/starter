@@ -13,7 +13,7 @@ A starter template for projects.
 [node](http://nodejs.org)
 
 ## Setup
-Create a new project directory then:
+Create a new project directory and `cd` into it, then:
 
 ```
 curl -Lk http://bit.ly/2bgptna > Makefile; make;
