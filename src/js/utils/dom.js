@@ -12,15 +12,15 @@ function selectionToArray(selection) {
 
 // public
 function select(selector) {
-	document.querySelector(selector)
+	return document.querySelector(selector)
 }
 
 function selectAll(selector, parent = document) {
-	selectionToArray(parent.querySelectorAll(selector))
+	return selectionToArray(parent.querySelectorAll(selector))
 }
 
 function find(el, selector) {
-	selectionToArray(el.querySelectorAll(selector))
+	return selectionToArray(el.querySelectorAll(selector))
 }
 
 function removeClass(el, className) {
