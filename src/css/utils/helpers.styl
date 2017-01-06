@@ -37,9 +37,9 @@ apply_mq_cache()
 				{$block}
 
 .hack-for-mq-cache
-    for var in $mq_vars
-        +mq(var)
-            height
+	for $var in $mq_vars
+		+mq($var)
+			height 0
 		
 
 // -------------------
