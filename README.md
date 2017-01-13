@@ -31,13 +31,20 @@ Put JS in **src/js/entry.js** and CSS in **src/css/story/story.styl**.
 #### Deploy
 Run `gulp prod`
 
-Thus generates a single html file with inlined css, a single js file, and a folder with assets in the **dist/prod** folder.
+This generates a single html file with inlined css, a single js file, and a folder with assets in the **dist/prod** folder.
 
 To deploy new dev version on github run `make github`
 
-To deploy live to s3, you must install [awscli](https://aws.amazon.com/cli/) and [configure](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html) your settings. Then run the following, replacing  `year/month/name` with our own (eg. `2017/01/nba`):
+To deploy live to s3, you must install [awscli](https://aws.amazon.com/cli/) and [configure](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html) your settings. Then run the following, replacing  `year/month/name` with your own (eg. `2017/01/nba`):
 
 `aws s3 sync dist/prod s3://pudding.cool/year/month/name --delete`
+
+To force cloudfront to fetch latest html file (replacing `id-here` with the cloudfront distro id, and *year/month/name* with your project filepath):
+
+`aws cloudfront create-invalidation --distribution-id id-here \
+  --paths year/month/name year/month/name/index.html`
+
+*Note*: For cloudfront you must add [extra configuration](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)
 
 #### Fonts
 Our serif font is [Mercury](https://typography.com/fonts/mercury-text/styles/screensmart/) and our sans-serif is [Whitney](https://typography.com/fonts/whitney/styles/screensmart/). We have two weights, *400* and *700*, and normal and italic.
