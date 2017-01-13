@@ -31,7 +31,13 @@ Put JS in **src/js/entry.js** and CSS in **src/css/story/story.styl**.
 #### Deploy
 Run `gulp prod`
 
-Generates a single html file and assets in the **dist/prod** folder.
+Thus generates a single html file with inlined css, a single js file, and a folder with assets in the **dist/prod** folder.
+
+To deploy new dev version on github run `make github`
+
+To deploy live to s3, you must install [awscli](https://aws.amazon.com/cli/) and [configure](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html) your settings. Then run the following, replacing  `year/month/name` with our own (eg. `2017/01/nba`):
+
+`aws s3 sync dist/prod s3://pudding.cool/year/month/name --delete`
 
 #### Fonts
 Our serif font is [Mercury](https://typography.com/fonts/mercury-text/styles/screensmart/) and our sans-serif is [Whitney](https://typography.com/fonts/whitney/styles/screensmart/). We have two weights, *400* and *700*, and normal and italic.

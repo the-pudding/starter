@@ -1,6 +1,6 @@
-# requires gac
-live:
+github:
 	rm -rf docs
 	cp -r dist/prod/ docs
-	gac 'update dev version'
+	git add -A
+	git commit -m "update dev version"
 	git push
