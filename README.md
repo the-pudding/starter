@@ -41,8 +41,7 @@ To deploy live to s3, you must install [awscli](https://aws.amazon.com/cli/) and
 
 To force cloudfront to fetch latest html file (replacing `id-here` with the cloudfront distro id, and `year/month/name` with your project filepath):
 
-`aws cloudfront create-invalidation --distribution-id id-here \
-  --paths year/month/name year/month/name/index.html`
+`aws cloudfront create-invalidation --distribution-id id-here --paths /year/month/name/`
 
 *Note*: For cloudfront you must add [extra configuration](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)
 
