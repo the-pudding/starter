@@ -5,14 +5,14 @@
 // hash = the hashed version (eg. open-sans)
 // fallback = fallback stack (eg. $sans or 'Helvetica, Arial')
 // fb-weight = fallback weight
-// fb-letter-spacing = fallback letter-spacing
-fontify($font, $hash, $fallback, $fb-weight, $fb-letter-spacing = normal)
+fontify($font, $hash, $weight, $fallback, $fb-weight, $fb-letter-spacing = normal)
 	.tk-{$hash}
 		font-family $fallback
 		letter-spacing $fb-letter-spacing
 		font-weight $fb-weight
 		.loaded-{$hash} & 
 			font-family $font, $fallback
+			font-weight $weight
 			letter-spacing normal
 			
 // -------------------
@@ -39,10 +39,15 @@ apply_mq_cache()
 			for $block in $blocks
 				{$block}
 
-.hack-for-mq-cache
-	for $var in $mq_vars
-		+mq($var)
-			height 0
+.hack 
+	+mq('bp-1')
+		display none
+	+mq('bp-2')
+		display none
+	+mq('bp-3')
+		display none
+	+mq('bp-4')
+		display none
 		
 
 // -------------------
@@ -125,3 +130,9 @@ set-index(layer)
 		return $z-index[layer]
 	else
 		error('Not a layer in z-index')
+
+//===============================
+// RANDOM
+//===============================
+random(min, max)
+	return math(math(0, 'random')*(max - min + 1) + min, 'floor')

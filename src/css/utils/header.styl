@@ -1,27 +1,29 @@
-$logo-height = 36px
-$logo-width = 126px
+$logo-size = 42px
 
 header 
 	position absolute
-	top 1.5em
-	left 0
-	width 100%
-	padding 0 0.5em
+	top 1em
+	left 1em
 	text-align center
-	clearfix()
-	.logo
-		display inline-block
-		height $logo-height
-		.logo__part
+	z-index set-index('overlay')
+	a.logo
+		clearfix()
+		border-bottom none
+		display block
+		.logo__text
+			text-transform uppercase
+			color white
 			display inline-block
 			float left
-			line-height $logo-height
+			text-align left
+			line-height 1
 			margin 0
-			padding 0 2px
-			font-size 10px
-			font-weight 500
-			color darken($gray, 10)
-		.logo__polygraph 
-			width $logo-width
-			height $logo-height
-			fill $off-black
+			padding 0
+			line-height $logo-size
+			font-size 14px
+			margin-left 14px
+		.logo__svg 
+			width $logo-size
+			height $logo-size
+			fill white
+			float left
