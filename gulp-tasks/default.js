@@ -7,7 +7,7 @@ gulp.task('default', ['dev'], () => {
 	gulp.watch('src/html/**/*.hbs', ['html-dev'])
 	gulp.watch('src/js/**/*.js', ['js-dev-critical', 'js-dev'])
 	gulp.watch('src/assets/**/*', ['assets-dev'])
-	gulp.watch('src/template-data/*.json', ['html-dev'])
+	gulp.watch('template-data/*.json', ['html-dev'])
 })
 
 gulp.task('dev', () => {
