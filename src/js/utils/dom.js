@@ -29,9 +29,10 @@ function hasClass(el, className) {
 }
 
 function jumpTo(el) {
+	const top = el.getBoundingClientRect().top
 	document.body.scrollTop ?
-	document.body.scrollTop = el.offsetTop + 1 :
-	document.documentElement.scrollTop = el.offsetTop + 1
+	document.body.scrollTop += top :
+	document.documentElement.scrollTop += top
 }
 
 
