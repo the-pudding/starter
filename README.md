@@ -36,7 +36,7 @@ To deploy new dev version on github run `make github`
 
 To deploy live to s3, you must install [awscli](https://aws.amazon.com/cli/) and [configure](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html) your settings. Then run the following, replacing  `year/month/name` with your own (eg. `2017/01/nba`):
 
-`aws s3 sync prod s3://pudding.cool/year/month/name --delete`
+`aws s3 sync dist s3://pudding.cool/year/month/name --delete`
 
 To force cloudfront to fetch latest html file (replacing `id-here` with the cloudfront distro id, and `year/month/name` with your project filepath):
 
