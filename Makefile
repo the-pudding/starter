@@ -7,5 +7,6 @@ all:
 	mv starter-master/.eslintrc.json .
 	rm -rf temp.zip starter-master Makefile
 	rm src/assets/.gitkeep
+	rm template-data/.gitkeep
 	mv Makefile.story Makefile
 	npm i
