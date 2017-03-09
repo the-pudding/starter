@@ -25,7 +25,7 @@ gulp.task('css-dev', () => {
 		.pipe(browserSync.stream({ match: '**/*.css' }))
 })
 
-//compile all styl and autoprefix, and minify
+// compile all styl and autoprefix, and minify
 gulp.task('css-dist', () => {
 	gulp.src(src)
 		.pipe(stylus())

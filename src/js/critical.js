@@ -1,11 +1,26 @@
 import { loadFontGroup } from './utils/load-font'
 
-const test = [
+const ptSerif = [
 	{
-		family: 'Test',
+		family: 'PT Serif',
 		weight: 400,
-		style: 'normal',
+	},
+	{
+		family: 'PT Serif',
+		weight: 700,
 	},
 ]
 
-loadFontGroup(test)
+const roboto = [
+	{
+		family: 'Roboto',
+		weight: 400,
+	},
+	{
+		family: 'Roboto',
+		weight: 700,
+	},
+]
+
+loadFontGroup(ptSerif)
+loadFontGroup(roboto)
