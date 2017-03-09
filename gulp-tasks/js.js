@@ -11,11 +11,12 @@ gulp.task('js-dev', (cb) => {
 		'dev/bundle.js': '> entry.js',
 		'dev/critical.js': '> critical.js',
 	}
-	fuse.bundle(bundles, (err) => {
-		if (err) console.log(err)
-		browserSync.reload()
-		cb()
-	})
+	fuse.bundle(bundles)
+		.then(() => {
+			browserSync.reload()
+			cb()
+		})
+		.catch(err => console.log(err))
 })
 
 gulp.task('js-dist', (cb) => {
