@@ -1,29 +1,29 @@
-$logo-size = 42px
+$logo-size = 48px
 
 header 
-	position absolute
-	top 1em
-	left 1em
 	text-align center
 	z-index set-index('overlay')
+	width 10rem
+	margin 2.5rem auto
 	a.logo
 		clearfix()
 		border-bottom none
 		display block
 		.logo__text
 			text-transform uppercase
-			color white
+			color $off-black
 			display inline-block
-			float left
-			text-align left
+			width 100%
 			line-height 1
 			margin 0
 			padding 0
 			line-height $logo-size
-			font-size 14px
-			margin-left 14px
+			font-size 0.9rem
+			font-weight 400
+			letter-spacing 0.05em
 		.logo__svg 
 			width $logo-size
 			height $logo-size
-			fill white
-			float left
+			fill $off-black
+			display block
+			margin 0 auto

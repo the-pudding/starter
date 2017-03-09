@@ -5,7 +5,7 @@ import { addClass } from './dom'
 const htmlEl = document.documentElement
 const TIMEOUT = 5000
 
-function addFont({ family }) {
+function addFont(family) {
 	const name = family.toLowerCase().replace(/ /g, '-')
 	const className = `loaded-${name}`
 	addClass(htmlEl, className)
@@ -16,7 +16,7 @@ function handleError(err) {
 }
 
 function loadFont(font) {
-	const { family, weight } = font
+	const { family, weight, style = 'normal' } = font
 	const fontObserver = new FontFaceObserver(family, { weight })
 	fontObserver
 		.load(null, TIMEOUT)
@@ -24,17 +24,21 @@ function loadFont(font) {
 		.catch(handleError)
 }
 
-function loadFontGroup(font) {
-	const { family, weight, style, parts } = font
+function loadFontGroup(group) {
+	const promises = group.map(font =>
+		new Promise((resolve, reject) => {
+			const { family, weight, style = 'normal' } = font
 
-	const promises = parts.map((part) => {
-		const fontObserver = new FontFaceObserver(part, { weight, style })
-		return fontObserver
-			.load(null, TIMEOUT)
-	})
+			const fontObserver = new FontFaceObserver(family, { weight, style })
+			return fontObserver
+				.load(null, TIMEOUT)
+				.then(() => resolve(family))
+				.catch(err => reject(err))
+		})
+	)
 
 	Promise.all(promises)
-		.then(() => addFont({ family, weight }))
+		.then(result => addFont(result[0]))
 		.catch(handleError)
 }
 

@@ -14,26 +14,26 @@ gulp.task('html-dev', () => {
 		.partials('./src/html/partials/**/*.hbs')
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
-		.data({timestamp: Date.now()})
-	
+		.data({ timestamp: Date.now() })
+
 	return gulp.src(srcIndex)
-		.pipe(plumber({ errorHandler: report}))
+		.pipe(plumber({ errorHandler: report }))
 		.pipe(hbStream)
 		.pipe(include({ basepath: svgPath }))
 		.pipe(rename('index.html'))
-		.pipe(gulp.dest('dist/dev'))
+		.pipe(gulp.dest('dev'))
 		.pipe(browserSync.reload({ stream: true }))
 })
 
-gulp.task('html-prod', () => {
+gulp.task('html-dist', () => {
 	const hbStream = hb()
 		.partials('./src/html/partials/**/*.hbs')
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
-		.data({timestamp: Date.now()})
-		
+		.data({ timestamp: Date.now() })
+
 	return gulp.src(srcIndex)
-		.pipe(plumber({ errorHandler: report}))
+		.pipe(plumber({ errorHandler: report }))
 		.pipe(hbStream)
 		.pipe(include({ basepath: svgPath }))
 		.pipe(rename('index.html'))

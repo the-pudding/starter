@@ -5,7 +5,7 @@ const runSequence = require('run-sequence')
 gulp.task('default', ['dev'], () => {
 	gulp.watch('src/css/**/*.styl', ['css-dev'])
 	gulp.watch('src/html/**/*.hbs', ['html-dev'])
-	gulp.watch('src/js/**/*.js', ['js-dev-critical', 'js-dev'])
+	gulp.watch('src/js/**/*.js', ['js-dev'])
 	gulp.watch('src/assets/**/*', ['assets-dev'])
 	gulp.watch('template-data/*.json', ['html-dev'])
 })
@@ -15,7 +15,6 @@ gulp.task('dev', () => {
 		'clean-dev',
 		'css-dev',
 		'js-dev',
-		'js-dev-critical',
 		'assets-dev',
 		'html-dev',
 		'browser-sync'

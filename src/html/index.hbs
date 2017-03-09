@@ -2,9 +2,7 @@
 <html lang='en' data-version='{{timestamp}}'>
 <head>
 	{{> base/meta}}
-		
-
-	<meta property="hide-footer-recirc" content="true">
+{{!-- 	<meta property="hide-footer-recirc" content="true"> --}}
 	
 	<link rel='stylesheet' href='https://cloud.typography.com/7124072/6455372/css/fonts.css' />
 
@@ -12,7 +10,7 @@
 	<link rel='stylesheet' href='bundle.css' />
 	<!-- endsmoosh -->
 	
-	{{!-- {{> base/font}} --}}
+	{{> base/font}}
 	
 	<!-- smoosh -->
 	<script src='critical.js'></script>
@@ -20,7 +18,7 @@
 
 	{{> base/analytics }}
 </head>
-<body class='tk-mercury'>
+<body class=''>
 	
 	{{> base/header }}
 
@@ -30,6 +28,6 @@
 	</main>
 
 	<script src='bundle.js?version={{timestamp}}'></script>
-	<script src='https://pudding.cool/assets/scripts/pudding-footer.js'></script>
+	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>
 </body>
 </html>

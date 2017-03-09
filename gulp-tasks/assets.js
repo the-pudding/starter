@@ -1,18 +1,14 @@
 const gulp = require('gulp')
-// const imagemin = require('gulp-imagemin')
 const browserSync = require('browser-sync')
 const src = 'src/assets/**/*'
 
 gulp.task('assets-dev', () => {
 	return gulp.src(src)
-		.pipe(gulp.dest('dist/dev/assets'))
-		.pipe(browserSync.reload({stream:true}))
+		.pipe(gulp.dest('dev/assets'))
+		.pipe(browserSync.reload( { stream:true }))
 })
 
-gulp.task('assets-prod', () => {
+gulp.task('assets-dist', () => {
 	return gulp.src(src)
-		// .pipe(imagemin({
-		// 	progressive: true
-		// }))
-		.pipe(gulp.dest('dist/prod/assets'))
+		.pipe(gulp.dest('dist/assets'))
 })

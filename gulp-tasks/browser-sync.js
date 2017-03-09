@@ -5,7 +5,7 @@ const browserSync = require('browser-sync')
 gulp.task('browser-sync', () => {
 	browserSync.init({
 		server: {
-			baseDir: 'dist/dev/',
+			baseDir: 'dev/',
 			index: 'index.html',
 		},
 		port: 4000,

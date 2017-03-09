@@ -10,7 +10,7 @@ const report = require('../report-error.js')
 
 const src = 'src/css/config.styl'
 
-//compile styl to css and autoprefix
+// compile styl to css and autoprefix
 gulp.task('css-dev', () => {
 	gulp.src(src)
 		.pipe(plumber({ errorHandler: report }))
@@ -21,13 +21,12 @@ gulp.task('css-dev', () => {
 		}))
 		.pipe(rename('bundle.css'))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('dist/dev'))
-		.pipe(browserSync.stream({match: '**/*.css'}))
-		// .pipe(browserSync.reload({ stream: true }))
+		.pipe(gulp.dest('dev'))
+		.pipe(browserSync.stream({ match: '**/*.css' }))
 })
 
 //compile all styl and autoprefix, and minify
-gulp.task('css-prod', () => {
+gulp.task('css-dist', () => {
 	gulp.src(src)
 		.pipe(stylus())
 		.pipe(autoprefixer({

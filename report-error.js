@@ -1,7 +1,5 @@
-'use strict';
-
-const notify = require('gulp-notify');
-const gutil  = require('gulp-util');
+const notify = require('gulp-notify')
+const gutil = require('gulp-util')
 
 module.exports = function(error) {
 	const lineNumber = (error.lineNumber) ? 'LINE ' + error.lineNumber + ' -- ' : '';
@@ -27,4 +25,4 @@ module.exports = function(error) {
 	console.error(report);
 
 	this.emit('end');
-};
+}
