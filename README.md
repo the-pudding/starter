@@ -1,12 +1,11 @@
 # starter
 
-A starter template for projects.
+A starter template for projects. Features include:
 
-* Write in ES6 (preset with d3)
-* Stylus for CSS pre-processor
-* Bundles, minifies JS with Webpack
-* Bundles, minifies, auto-prefixes CSS
-* Inlines CSS
+* Transpiles ES6 with [Babel](http://babeljs.io)
+* [Stylus](http://stylus-lang.com/) for CSS pre-processor
+* Bundles and minifies JavaScript with [FuseBox](http://fuse-box.org)
+* Bundles, minifies, auto-prefixes, and inlines CSS
 * Async font loading (using FOUT)
 
 ## Dependencies
@@ -47,7 +46,5 @@ To force cloudfront to fetch latest html file (replacing `id-here` with the clou
 
 #### Fonts
 Our serif font is [Mercury](https://typography.com/fonts/mercury-text/styles/screensmart/) and our sans-serif is [Whitney](https://typography.com/fonts/whitney/styles/screensmart/). We have two weights, *400* and *700*, and normal and italic.
-
-Simply add the class `tk-mercury` or `tk-whitney` to any element. It will apply that font to all children. Apply one to the `body` tag to set your default font for the page.
 
 It is recommended to use html markup (`em` and `strong`) to apply weighting and styling. The proper css is already applied.
