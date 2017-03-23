@@ -22,11 +22,10 @@ gulp.task('js-dev', (cb) => {
 gulp.task('js-dist', (cb) => {
 	const fuse = fsbx.FuseBox.init(configDist)
 	const bundles = {
-		'dev/bundle.js': '> entry.js',
+		'dist/bundle.js': '> entry.js',
 		'.tmp/critical.js': '> critical.js',
 	}
-	fuse.bundle(bundles, (err) => {
-		if (err) console.log(err)
-		cb()
-	})
+	fuse.bundle(bundles)
+		.then(() => cb())
+		.catch(err => console.log(err))
 })
