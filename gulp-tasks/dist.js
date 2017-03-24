@@ -5,8 +5,8 @@ const runSequence = require('run-sequence')
 gulp.task('dist', (cb) => {
 	runSequence(
 		'clean-dist',
-		'html-dist',
 		'css-dist',
+		'html-dist',
 		'js-dist',
 		'smoosh-dist',
 		'minify-dist',
