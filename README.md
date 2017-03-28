@@ -26,7 +26,7 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make;
 Any changes to the `src/	` folder will trigger live reload.
 
 * **JS**: Put JS in `src/js/`, and take a look at `entry.js` and `graphic.js`, it has some basic skeleton stuff setup for you.
-* **CSS**: Put CSS in `src/css/story/`. You can put everything in `story.styl`, or create any new files you want in that directory, that are auto-included. Checkout `src/css/base/` for helper variables and functions.
+* **CSS**: Put CSS in `src/css/story/`. You can put everything in `story.styl`, or create any new files you want in that directory wich are included automatically. Checkout `src/css/base/` for helper variables and functions.
 * **HTML**: Put HTML in `src/html/partials/story/`. Be sure to include your partials in `src/html/index.hbs`.
 
 #### Deploy
