@@ -10,6 +10,7 @@ A starter template for projects. Features include:
 
 ## Dependencies
 [node](http://nodejs.org)
+[gulp](http://gulpjs.com)
 
 ## Setup
 If creating a brand new project from scratch, create a directory and `cd` into it, then:
