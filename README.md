@@ -12,11 +12,13 @@ A starter template for projects. Features include:
 [node](http://nodejs.org)
 
 ## Setup
-Create a new project directory and `cd` into it, then:
+If creating a brand new project from scratch, create a directory and `cd` into it, then:
 
 ```
 curl -Lk http://bit.ly/2bgptna > Makefile; make;
 ```
+
+If contributing to an existing project, clone the repo and run `npm i`.
 
 ## Usage
 
