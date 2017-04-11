@@ -1,14 +1,16 @@
-$logo-size = 48px
+$logo-w = (360px / 2)
+$logo-h = (70px / 2)
 
 header 
-	text-align center
+	position relative
 	z-index set-index('overlay')
-	width 10rem
-	margin 2.5rem auto
+	width $logo-w
+	margin 0 auto
 	a.logo
+		padding 1rem
 		clearfix()
 		border-bottom none
-		display block
+		display inline-block
 		.logo__text
 			text-transform uppercase
 			color $off-black
@@ -16,13 +18,13 @@ header
 			width 100%
 			margin 0
 			padding 0
-			line-height $logo-size
 			font-size 0.9rem
 			font-weight 400
 			letter-spacing 0.05em
-		.logo__svg 
-			width $logo-size
-			height $logo-size
+			display none
+		svg 
+			width $logo-w
+			height $logo-h
 			fill $off-black
 			display block
 			margin 0 auto

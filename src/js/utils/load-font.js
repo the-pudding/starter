@@ -6,7 +6,8 @@ const htmlEl = document.documentElement
 const TIMEOUT = 5000
 
 function addFont(family) {
-	const name = family.toLowerCase().replace(/ /g, '-')
+	const first = family.split(' ')[0]
+	const name = first.toLowerCase().replace(/ /g, '-')
 	const className = `loaded-${name}`
 	addClass(htmlEl, className)
 }
