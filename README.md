@@ -50,4 +50,12 @@ To force cloudfront to fetch latest html file (replacing `id-here` with the clou
 *Note*: For cloudfront you must add [extra configuration](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)
 
 #### Fonts
-WIP
+Fonts are loaded async and use the FOUT practice. We have three font families.
+
+* Headlines: Canela (class name: `tk-canela`)
+* Copy: Publico Text (class name: `tk-publico`)
+* Graphics / Captions: (class name: `tk-atlas`)
+
+Simply include the class on the element, eg. `<p class='tk-publico'>...` and all children will inherit it. Publico is included on the body tag by default.
+
+Set the font weights like normal in the CSS. See the file `critical.js` for available font weights.
