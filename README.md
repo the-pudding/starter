@@ -58,4 +58,8 @@ Fonts are loaded async and use the FOUT practice. We have three font families.
 
 Simply include the class on the element, eg. `<p class='tk-publico'>...` and all children will inherit it. Publico is included on the body tag by default.
 
-Set the font weights like normal in the CSS. See the file `critical.js` for available font weights.
+Available weights:
+
+* Canela (700, 300)
+* Publico (400, 700)
+* Atlast (300, 400, 500)
