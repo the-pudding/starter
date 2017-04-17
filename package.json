@@ -37,6 +37,7 @@
     "request": "^2.81.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
-    "source-map": "^0.5.6"
+    "source-map": "^0.5.6",
+    "superagent": "^3.5.2"
   }
 }
