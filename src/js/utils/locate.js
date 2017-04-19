@@ -6,7 +6,6 @@ const debug = false
 const MAX_TIME = 4000
 
 function getIP() {
-	// console.time('ip')
 	if (debug) return Promise.resolve(test)
 	const url = 'https://api.ipify.org?format=json'
 	return new Promise((resolve, reject) => {
@@ -14,28 +13,22 @@ function getIP() {
 			.get(url)
 			.end((err, res) => {
 				if (err) reject(err)
-				else if (res && res.status >= 200 && res.status < 400) {
-					// console.timeEnd('ip')
-					resolve(JSON.parse(res.text))
-				} else reject()
+				else if (res && res.status >= 200 && res.status < 400) resolve(JSON.parse(res.text))
+				else reject()
 			})
 	})
 }
 
 function getGeocode({ ip }) {
-	// console.time('geocode')
 	if (debug) return Promise.resolve(test)
 	const url = `https://freegeoip.net/json/${ip}`
-	// const url = 'http://httpstat.us/403'
 	return new Promise((resolve, reject) => {
 		request
 			.get(url)
 			.end((err, res) => {
 				if (err) reject(err)
-				else if (res && res.status >= 200 && res.status < 400) {
-					// console.timeEnd('geocode')
-					resolve(JSON.parse(res.text))
-				} else reject()
+				else if (res && res.status >= 200 && res.status < 400) resolve(JSON.parse(res.text))
+				else reject()
 			})
 	})
 }
