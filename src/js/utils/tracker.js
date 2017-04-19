@@ -9,7 +9,9 @@ function check({ category, action, once }) {
 		const act = action.toString().replace(/\W+/g, '')
 		const key = `${cat}${act}`
 		if (fired[key]) return false
-		return fired[key] = true
+
+		fired[key] = true
+		return true
 	}
 	return true
 }

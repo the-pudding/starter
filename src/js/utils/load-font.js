@@ -17,7 +17,7 @@ function handleError(err) {
 }
 
 function loadFont(font) {
-	const { family, weight, style = 'normal' } = font
+	const { family, weight = 'normal' } = font
 	const fontObserver = new FontFaceObserver(family, { weight })
 	fontObserver
 		.load(null, TIMEOUT)
