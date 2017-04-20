@@ -55,7 +55,6 @@ gulp.task('css-boilerplate-story', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions'],
 		}))
-		.pipe(cleanCSS())
 		.pipe(rename('story.css'))
 		.pipe(gulp.dest('boilerplate'))
 })

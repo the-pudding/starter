@@ -1,1 +1,79 @@
-.intro{margin:5rem auto}.intro__hed{max-width:60rem;margin:0 auto;font-size:2rem;margin-bottom:4rem;text-align:center}.intro__byline{font-size:.85rem;text-align:center;margin-bottom:1rem}.intro__dek{font-size:1.1rem;max-width:30rem;margin:0 auto}.tk-canela{font-family:Georgia,Times,serif}.loaded-canela .tk-canela{font-family:'Canela Web',Georgia,Times,serif}.tk-publico{font-family:Georgia,Times,serif}.loaded-publico .tk-publico{font-family:'Publico Text Web',Georgia,Times,serif}.tk-atlas{font-family:Helvetica,Arial,sans-serif}.loaded-atlas .tk-atlas{font-family:'Atlas Grotesk Web',Helvetica,Arial,sans-serif}body,html{background-color:#fff;color:#2a2a2a;font-size:17px}p{line-height:1.8}a{text-decoration:none;border-bottom:1px solid #f30;color:#2a2a2a}a:hover,a:visited{color:#2a2a2a}@media only screen and (min-width:25em){.hack{display:none}}@media only screen and (min-width:40em){.hack{display:none}}@media only screen and (min-width:50em){.hack{display:none}.intro__hed{font-size:4rem}}@media only screen and (min-width:60em){.hack{display:none}}
+.intro {
+  margin: 5rem auto;
+}
+.intro__hed {
+  max-width: 60rem;
+  margin: 0 auto;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.intro__byline {
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.intro__dek {
+  font-size: 1.1rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+.tk-canela {
+  font-family: Georgia, Times, serif;
+}
+.loaded-canela .tk-canela {
+  font-family: 'Canela Web', Georgia, Times, serif;
+}
+.tk-publico {
+  font-family: Georgia, Times, serif;
+}
+.loaded-publico .tk-publico {
+  font-family: 'Publico Text Web', Georgia, Times, serif;
+}
+.tk-atlas {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.loaded-atlas .tk-atlas {
+  font-family: 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
+}
+html,
+body {
+  background-color: #fff;
+  color: #2a2a2a;
+  font-size: 17px;
+}
+p {
+  line-height: 1.8;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #f30;
+  color: #2a2a2a;
+}
+a:visited,
+a:hover {
+  color: #2a2a2a;
+}
+@media only screen and (min-width: 25em) {
+  .hack {
+    display: none;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .hack {
+    display: none;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .hack {
+    display: none;
+  }
+  .intro__hed {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 60em) {
+  .hack {
+    display: none;
+  }
+}

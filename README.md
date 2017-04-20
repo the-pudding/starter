@@ -1,33 +1,40 @@
 # starter
 
-A starter template for projects. Features include:
+A starter template for projects.
 
+**If creating a brand new project from scratch:** create a directory and `cd` into it, then follow setup instructions for the [basic](basic) (plain HTML/JS/CSS) or [enhanced](enhanced) (node + gulp) version.
+
+**If you are contributing to an existing project:** clone the repo and run `npm i`.
+
+## Basic
+```
+curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
+```
+
+* **HTML:** Goes in `index.html` file in the `main` tag where it says `<!-- PUT ALL YOUR HTML HERE-->`.
+* **CSS:** Goes in `story.css`. `bundle.css` has some defaults like resets and basic layout stuff, do not modify this.
+* **JS:** Goes in `bundle.js`. Do not modify `critical.js`, which handles font loading.
+
+See [this guide below](fonts) on how to use our fonts.
+
+## Enhanced
 * Transpiles ES6 with [Babel](http://babeljs.io)
 * [Stylus](http://stylus-lang.com/) for CSS pre-processor
 * Bundles and minifies JavaScript with [FuseBox](http://fuse-box.org)
 * Bundles, minifies, auto-prefixes, and inlines CSS
 * Async font loading (using FOUT)
 
-## Dependencies
+### Dependencies
 * [node](http://nodejs.org)
 * [gulp](http://gulpjs.com)
 
-## Setup
-If creating a brand new project from scratch, create a directory and `cd` into it, then:
+### Setup
 
 ```
 curl -Lk http://bit.ly/2bgptna > Makefile; make;
 ```
 
-If you don't have node and just want basic HTML/CSS/JS (no build system stuff), createa directory and `cd` into it, then:
-
-```
-curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
-```
-
-If contributing to an existing project, clone the repo and run `npm i`.
-
-## Usage
+### Usage
 
 #### Development
 `gulp`
@@ -55,7 +62,7 @@ To force cloudfront to fetch latest html file (replacing `id-here` with the clou
 
 *Note*: For cloudfront you must add [extra configuration](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)
 
-#### Fonts
+## Fonts
 Fonts are loaded async and use the FOUT practice. We have three font families.
 
 * Headlines: Canela (class name: `tk-canela`)
