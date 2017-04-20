@@ -5,10 +5,16 @@ const src = 'src/assets/**/*'
 gulp.task('assets-dev', () => {
 	return gulp.src(src)
 		.pipe(gulp.dest('dev/assets'))
-		.pipe(browserSync.reload( { stream:true }))
+		.pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('assets-dist', () => {
 	return gulp.src(src)
 		.pipe(gulp.dest('dist/assets'))
+})
+
+
+gulp.task('assets-boilerplate', () => {
+	return gulp.src(src)
+		.pipe(gulp.dest('boilerplate/assets'))
 })

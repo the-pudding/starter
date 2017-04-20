@@ -4,8 +4,8 @@ const autoprefixer = require('gulp-autoprefixer')
 const rename = require('gulp-rename')
 const browserSync = require('browser-sync')
 const plumber = require('gulp-plumber')
-const replace = require('gulp-replace')
 const sourcemaps = require('gulp-sourcemaps')
+const cleanCSS = require('gulp-clean-css')
 const report = require('../report-error.js')
 
 const src = 'src/css/config.styl'
@@ -32,7 +32,30 @@ gulp.task('css-dist', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions'],
 		}))
-		// .pipe(replace(/\.\.\/assets/g, 'assets'))
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('.tmp'))
+})
+
+
+// compile all styl and autoprefix, and minify
+gulp.task('css-boilerplate-base', () => {
+	gulp.src('src/css/boilerplate-base.styl')
+		.pipe(stylus())
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions'],
+		}))
+		.pipe(cleanCSS())
+		.pipe(rename('bundle.css'))
+		.pipe(gulp.dest('boilerplate'))
+})
+
+gulp.task('css-boilerplate-story', () => {
+	gulp.src('src/css/boilerplate-story.styl')
+		.pipe(stylus())
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions'],
+		}))
+		.pipe(cleanCSS())
+		.pipe(rename('story.css'))
+		.pipe(gulp.dest('boilerplate'))
 })

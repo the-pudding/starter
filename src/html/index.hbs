@@ -1,11 +1,14 @@
 <!doctype html>
 <html lang='en' data-version='{{timestamp}}'>
 <head>
+
 	{{> base/meta}}
 	
 	<!-- smoosh -->
 	<link rel='stylesheet' href='bundle.css' />
 	<!-- endsmoosh -->
+	
+	<!-- boilerplate.css -->
 	
 	{{> base/font}}
 	
@@ -14,14 +17,25 @@
 	<!-- endsmoosh -->
 
 	{{> base/analytics }}
+
 </head>
 <body class='tk-publico'>
-	
+
 	{{> base/header }}
+
+
 
 	<main id='content'>
 
+		{{> story/intro }}	
+
+		<!-- PUT ALL YOUR HTML HERE-->
+
+
+
 	</main>
+
+
 
 	<script src='bundle.js?version={{timestamp}}'></script>
 	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>

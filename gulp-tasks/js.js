@@ -29,3 +29,13 @@ gulp.task('js-dist', (cb) => {
 		.then(() => cb())
 		.catch(err => console.log(err))
 })
+
+gulp.task('js-boilerplate', (cb) => {
+	const fuse = fsbx.FuseBox.init(configDist)
+	const bundles = {
+		'boilerplate/critical.js': '> critical.js',
+	}
+	fuse.bundle(bundles)
+		.then(() => cb())
+		.catch(err => console.log(err))
+})

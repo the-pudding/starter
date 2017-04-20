@@ -3,6 +3,7 @@ const hb = require('gulp-hb')
 const rename = require('gulp-rename')
 const include = require('gulp-file-include')
 const plumber = require('gulp-plumber')
+const replace = require('gulp-replace')
 const report = require('../report-error.js')
 const browserSync = require('browser-sync')
 
@@ -38,4 +39,20 @@ gulp.task('html-dist', () => {
 		.pipe(include({ basepath: svgPath }))
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest('.tmp'))
+})
+
+gulp.task('html-boilerplate', () => {
+	const hbStream = hb()
+		.partials('./src/html/partials/**/*.hbs')
+		// .helpers('./src/html/helpers/*.js')
+		.data('./template-data/**/*.{js,json}')
+		.data({ timestamp: Date.now() })
+
+	return gulp.src(srcIndex)
+		.pipe(plumber({ errorHandler: report }))
+		.pipe(hbStream)
+		.pipe(include({ basepath: svgPath }))
+		.pipe(replace('<!-- boilerplate.css -->', '<link rel="stylesheet" href="story.css" />'))
+		.pipe(rename('index.html'))
+		.pipe(gulp.dest('boilerplate'))
 })

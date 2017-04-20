@@ -19,6 +19,12 @@ If creating a brand new project from scratch, create a directory and `cd` into i
 curl -Lk http://bit.ly/2bgptna > Makefile; make;
 ```
 
+If you don't have node and just want basic HTML/CSS/JS (no build system stuff), createa directory and `cd` into it, then:
+
+```
+curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
+```
+
 If contributing to an existing project, clone the repo and run `npm i`.
 
 ## Usage
