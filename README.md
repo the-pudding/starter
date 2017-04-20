@@ -2,7 +2,7 @@
 
 A starter template for projects.
 
-**If creating a brand new project from scratch:** create a directory and `cd` into it, then follow setup instructions for the [basic](basic) (plain HTML/JS/CSS) or [enhanced](enhanced) (node + gulp) version.
+**If creating a brand new project from scratch:** create a directory and `cd` into it, then follow setup instructions for the [basic](#basic) (plain HTML/JS/CSS) or [enhanced](#enhanced) (node + gulp) version.
 
 **If you are contributing to an existing project:** clone the repo and run `npm i`.
 
