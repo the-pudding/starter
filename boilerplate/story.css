@@ -2,7 +2,7 @@
   margin: 5rem auto;
 }
 .intro__hed {
-  max-width: 60rem;
+  max-width: 55rem;
   margin: 0 auto;
   font-size: 2rem;
   margin-bottom: 4rem;
@@ -15,7 +15,7 @@
 }
 .intro__dek {
   font-size: 1.1rem;
-  max-width: 30rem;
+  max-width: 25rem;
   margin: 0 auto;
 }
 .tk-canela {
@@ -40,14 +40,14 @@ html,
 body {
   background-color: #fff;
   color: #2a2a2a;
-  font-size: 17px;
+  font-size: 18px;
 }
 p {
   line-height: 1.8;
 }
 a {
   text-decoration: none;
-  border-bottom: 1px solid #f30;
+  border-bottom: 2px solid #f06;
   color: #2a2a2a;
 }
 a:visited,
