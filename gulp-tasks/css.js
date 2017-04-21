@@ -17,7 +17,7 @@ gulp.task('css-dev', () => {
 		.pipe(sourcemaps.init())
 		.pipe(stylus())
 		.pipe(autoprefixer({
-			browsers: ['last 3 versions'],
+			browsers: ['last 4 versions'],
 		}))
 		.pipe(rename('bundle.css'))
 		.pipe(sourcemaps.write('.'))
@@ -30,7 +30,7 @@ gulp.task('css-dist', () => {
 	gulp.src(src)
 		.pipe(stylus())
 		.pipe(autoprefixer({
-			browsers: ['last 3 versions'],
+			browsers: ['last 4 versions'],
 		}))
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('.tmp'))
