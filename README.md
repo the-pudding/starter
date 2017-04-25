@@ -12,7 +12,7 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
 ```
 
 * **HTML:** Goes in `index.html` file in the `main` tag where it says `<!-- PUT ALL YOUR HTML HERE-->`.
-* **CSS:** Goes in `story.css`. `bundle.css` has some defaults like resets and basic layout stuff, do not modify this.
+* **CSS:** Goes in `bundle.css`. `critical.css` has some defaults like resets and basic layout stuff, do not modify this.
 * **JS:** Goes in `bundle.js`. Do not modify `critical.js`, which handles font loading.
 
 See [this guide below](fonts) on how to use our fonts.

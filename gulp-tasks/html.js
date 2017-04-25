@@ -52,7 +52,11 @@ gulp.task('html-boilerplate', () => {
 		.pipe(plumber({ errorHandler: report }))
 		.pipe(hbStream)
 		.pipe(include({ basepath: svgPath }))
-		.pipe(replace('<!-- boilerplate.css -->', '<link rel="stylesheet" href="story.css" />'))
+		.pipe(replace('<!-- boilerplate.css -->', `
+	<link rel="stylesheet" href="critical.css" />
+	<link rel="stylesheet" href="bundle.css" />
+		`))
+		.pipe(replace("<link rel='stylesheet' href='bundle.css' />", ''))
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest('boilerplate'))
 })
