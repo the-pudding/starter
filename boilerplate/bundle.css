@@ -37,3 +37,26 @@ a:hover {
   max-width: 25rem;
   margin: 0 auto;
 }
+@media only screen and (min-width: 25em) {
+  .hack {
+    display: none;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .hack {
+    display: none;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .hack {
+    display: none;
+  }
+  .intro__hed {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 60em) {
+  .hack {
+    display: none;
+  }
+}
