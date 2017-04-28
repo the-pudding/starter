@@ -3,19 +3,23 @@
 	
 	&__hed
 		max-width 55rem
-		margin 0 auto
-		font-size 2rem
-		margin-bottom 4rem
+		margin 0 auto 4rem auto
+		padding 0 1rem
 		text-align center
+		set-type-size('x-large', true)
+		+mq('bp-2')
+			set-type-size('xx-large', true)
 		+mq('bp-3')
-			font-size 4rem
+			set-type-size('xxx-large', true)
 	
 	&__byline
-		font-size 0.85rem
+		set-type-size('x-small', true)
 		text-align center
 		margin-bottom 1rem
+		padding 0 1rem
 		
 	&__dek
-		font-size 1.1rem
 		max-width 25rem
 		margin 0 auto
+		padding 0 1rem
+		set-type-size('medium', true)

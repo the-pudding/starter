@@ -132,3 +132,10 @@ set-index(layer)
 //===============================
 random(min, max)
 	return math(math(0, 'random')*(max - min + 1) + min, 'floor')
+	
+//===============================
+// MODULAR SCALE
+//===============================
+ms(scale)
+	modularScale(scale, 18, 'golden', rem)
+

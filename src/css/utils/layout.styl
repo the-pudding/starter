@@ -1,24 +1,29 @@
 // -------------------
-// Fonts
-// -------------------
-
-fontify($canela, $canela-hash, $serif)
-fontify($publico, $publico-hash, $serif)
-fontify($atlas, $atlas-hash, $sans)
-
-// -------------------
 // Layouts
 // -------------------
 
 // Setting root sizes and base styles.
-html
-	text-size-adjust 100%
 
 body
 	font-feature-settings 'kern' 1, 'onum' 1, 'liga' 0, 'tnum' 1
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
 	-webkit-tap-highlight-color rgba(0,0,0,0)
+	background-color #fff
+	color $off-black
+	font-size $root-size
+p 
+	margin-top 1.5rem
+	margin-bottom 1.5rem
+
+a
+	text-decoration none
+	border-bottom 2px solid $primary
+	color $off-black
+
+	&:visited, &:hover
+		color $off-black
+
 
 strong, b
 	font-weight bold
@@ -42,7 +47,7 @@ button
 	font-size 1rem
 
 sub, sup
-	font-size 75%
+	font-size 0.75rem
 	line-height 0
 	position relative
 	vertical-align baseline

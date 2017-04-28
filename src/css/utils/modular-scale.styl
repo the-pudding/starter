@@ -1,0 +1,52 @@
+/* from https://github.com/juice49/StylusModularScale */
+/* ==========================================================================
+   Config
+   ========================================================================== */
+
+msConfig = {}
+
+
+
+/* Scales - from http://modularscale.com/
+   ========================================================================== */
+
+msConfig.scales = {
+	minorSecond: 16 / 15,
+	majorSecond: 9 / 8,
+	minorThird: 6 / 5,
+	majorThird: 5 / 4,
+	perfectFourth: 4 / 3,
+	augFourthDimFifth: 1.414,
+	perfectFifth: 3 / 2,
+	minorSixth: 8 / 5,
+	golden: 1.618,
+	majorSixth: 5 / 3,
+	minorSeventh: 16 / 9,
+	majorSeventh: 15 / 8,
+	octave: 2,
+	majorTenth: 5 / 2,
+	majorEleventh: 8 / 3,
+	majorTwelfth: 3,
+	doubleOctave: 4
+}
+
+
+
+
+
+/* ==========================================================================
+   Modular Scale
+   ========================================================================== */
+
+modularScale(scale = 1, baseFontSize = 16, ratio = 'golden', unit = px, i = 0)
+
+	if ratio is a 'string' and ratio in msConfig.scales
+		ratio = msConfig.scales[ratio]
+
+	if scale > 0 && i < scale
+		return modularScale(scale, baseFontSize * ratio, ratio, unit, i + 1)
+
+	if scale < 0 && i > scale
+		return modularScale(scale, baseFontSize / ratio, ratio, unit, i - 1)
+
+	unit(baseFontSize, unit)
