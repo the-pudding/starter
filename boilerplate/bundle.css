@@ -1,62 +1,37 @@
-html {
-  font-size: 18px;
-}
-body {
-  background-color: #fff;
-  color: #2a2a2a;
-}
-p {
-  line-height: 1.8;
-}
-a {
-  text-decoration: none;
-  border-bottom: 2px solid #f06;
-  color: #2a2a2a;
-}
-a:visited,
-a:hover {
-  color: #2a2a2a;
-}
 .intro {
   margin: 5rem auto;
 }
 .intro__hed {
   max-width: 55rem;
-  margin: 0 auto;
-  font-size: 2rem;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
   text-align: center;
+  font-size: 32px;
+  line-height: 1.2;
 }
 .intro__byline {
-  font-size: 0.85rem;
+  font-size: 14px;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 1rem;
+  padding: 0 1rem;
 }
 .intro__dek {
-  font-size: 1.1rem;
   max-width: 25rem;
   margin: 0 auto;
-}
-@media only screen and (min-width: 25em) {
-  .hack {
-    display: none;
-  }
+  padding: 0 1rem;
+  font-size: 18px;
+  line-height: 1.5;
 }
 @media only screen and (min-width: 40em) {
-  .hack {
-    display: none;
+  .intro__hed {
+    font-size: 48px;
+    line-height: 1.2;
   }
 }
 @media only screen and (min-width: 50em) {
-  .hack {
-    display: none;
-  }
   .intro__hed {
-    font-size: 4rem;
-  }
-}
-@media only screen and (min-width: 60em) {
-  .hack {
-    display: none;
+    font-size: 64px;
+    line-height: 1.2;
   }
 }
