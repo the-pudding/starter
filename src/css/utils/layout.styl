@@ -12,9 +12,30 @@ body
 	background-color #fff
 	color $off-black
 	font-size $root-size
+
+h1
+	set-type-size(xxx-large, true)
+	margin-bottom 1rem
+h2
+	set-type-size(xx-large, true)
+	margin-bottom 1rem
+h3
+	set-type-size(x-large, true)
+	margin-bottom 1rem
+h4
+	set-type-size(large, true)
+	margin-bottom 1rem
+h5
+	set-type-size(large, true)
+	margin-bottom 1rem
+h6
+	set-type-size(large, true)
+	margin-bottom 1rem
+	
 p 
 	margin-top 1.5rem
 	margin-bottom 1.5rem
+	set-type-size(medium, true)
 
 a
 	text-decoration none
@@ -24,7 +45,6 @@ a
 	&:visited, &:hover
 		color $off-black
 
-
 strong, b
 	font-weight bold
 
@@ -33,6 +53,9 @@ em, i
 	
 ul
 	list-style-type none
+
+li
+	set-type-size(medium, true)
 
 img, video
 	display block
@@ -46,6 +69,9 @@ button
 	padding 0
 	font-size 1rem
 
+h1
+	set-type-size(xxx-large, true)
+
 sub, sup
 	font-size 0.75rem
 	line-height 0
@@ -57,31 +83,3 @@ sup
 
 sub
 	bottom -0.25em
-	
-// Various hides
-.hide-accessible
-	hidden(accessible)
-.hide-invisible
-	hidden(invisible)
-.hide-display
-	hidden()
-	
-// Skip to main for accessibility
-.skip-to-main
-	hidden(accessible)
-	&:focus 
-		width auto
-		height auto
-		background-color #efefef
-		padding 0.5em
-		z-index 1
-
-.hack 
-	+mq('bp-1')
-		display none
-	+mq('bp-2')
-		display none
-	+mq('bp-3')
-		display none
-	+mq('bp-4')
-		display none

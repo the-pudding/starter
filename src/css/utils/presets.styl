@@ -1,0 +1,27 @@
+// Various hides
+.hide-accessible
+	hidden(accessible)
+.hide-invisible
+	hidden(invisible)
+.hide-display
+	hidden()
+	
+// Skip to main for accessibility
+.skip-to-main
+	hidden(accessible)
+	&:focus 
+		width auto
+		height auto
+		background-color #efefef
+		padding 0.5em
+		z-index 1
+
+.hack 
+	+mq('bp-1')
+		display none
+	+mq('bp-2')
+		display none
+	+mq('bp-3')
+		display none
+	+mq('bp-4')
+		display none

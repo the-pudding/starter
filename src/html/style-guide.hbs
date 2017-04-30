@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang='en' data-version='{{timestamp}}'>
+<head>
+
+	{{> base/meta}}
+	
+	<!-- smoosh -->
+	<link rel='stylesheet' href='bundle.css' />
+	<!-- endsmoosh -->
+	
+	<!-- boilerplate.css -->
+	
+	{{> base/font}}
+	
+	<!-- smoosh -->
+	<script src='critical.js'></script>
+	<!-- endsmoosh -->
+
+
+</head>
+<body class='tk-publico'>
+
+	{{> base/header }}
+
+
+	<main id='content'>
+		<h1 class='tk-canela'>Style Guide</h1>
+		<p>Welcome to The Pudding style guide. Use this as a reference to structure your HTML and CSS, and follow our best practices.</p>
+
+		<section id='usage'>
+			<h2 class='tk-canela'>Usage</h2>
+			<p>Everything you need is already included in your new project template. Simply follow these guidelines and use the proper CSS classes outlined and you should be good to go.</p>
+		</section>
+		
+		<section id='typography'>
+			<h2 class='tk-canela'>Typography</h2>
+			<h3 class='tk-atlas'>Fonts</h3>
+			<p>
+				Fonts are loaded async and use the <a href='https://www.zachleat.com/web/comprehensive-webfonts/#fout-class' target='_blank'>FOUT</a> practice. We have three font families:</p>
+			<ul>
+				<li><strong>Headlines:</strong> Canela (class name: <em>tk-canela</em>)</li>
+				<li><strong>Copy:</strong> Publico Text (class name: <em>tk-publico</em>)</li>
+				<li><strong>Graphics / Captions:</strong> (class name: <em>tk-atlas</em>)</li>
+			</ul>
+			<p>
+				Simply include the class on the element, and all children will inherit it. Publico is included on the body tag by default.
+			</p>
+			{{!-- <pre><code>
+				<p class='tk-atlas'>Test</p>
+			</code></pre> --}}
+
+			<p>Available weights:</p>
+			<ul>
+				<li>Canela (700, 300)</li>
+				<li>Publico (400, 700)</li>
+				<li>Atlast (300, 400, 500)</li>
+			</ul>
+			<h3 class='tk-atlas'>Headings</h3>
+			<h3 class='tk-atlas'>Paragraphs</h3>
+			<h3 class='tk-atlas'>Modifiers</h3>
+			<div class='example'>
+				<h1>
+			</div>
+		</section>
+
+
+		<section id='colors'>
+			<h2 class='tk-canela'>Colors</h2>
+		</section>
+
+		<section id='breakpoints'>
+			<h2 class='tk-canela'>Breakpoints</h2>
+		</section>
+
+		<section id='tables'>
+			<h2 class='tk-canela'>Tables</h2>
+		</section>
+
+		<section id='buttons'>
+			<h2 class='tk-canela'>Buttons</h2>
+		</section>
+
+		<section id='helpers'>
+			<h2 class='tk-canela'>Helpers</h2>
+		</section>
+
+	</main>
+</body>
+</html>
