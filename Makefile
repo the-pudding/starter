@@ -6,7 +6,7 @@ all:
 	mv starter-master/.gitignore .
 	mv starter-master/.eslintrc.json .
 	rm -rf temp.zip starter-master Makefile boilerplate docs
-	rm template-data/.gitkeep src/css/boilerplate* src/css/style-guide*
+	rm template-data/.gitkeep src/css/boilerplate* src/css/style-guide.styl src/html/style-guide.hbs
 	mv Makefile.story Makefile
 	npm i
 
