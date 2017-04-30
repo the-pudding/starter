@@ -58,3 +58,14 @@ gulp.task('css-boilerplate-story', () => {
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('boilerplate'))
 })
+
+// compile styl to css and autoprefix
+gulp.task('css-style-guide', () => {
+	gulp.src('src/css/style-guide.styl')
+		.pipe(stylus())
+		.pipe(autoprefixer({
+			browsers: ['last 4 versions'],
+		}))
+		.pipe(rename('bundle.css'))
+		.pipe(gulp.dest('docs'))
+})

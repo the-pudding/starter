@@ -39,3 +39,13 @@ gulp.task('js-boilerplate', (cb) => {
 		.then(() => cb())
 		.catch(err => console.log(err))
 })
+
+gulp.task('js-style-guide', (cb) => {
+	const fuse = fsbx.FuseBox.init(configDist)
+	const bundles = {
+		'docs/critical.js': '> critical.js',
+	}
+	fuse.bundle(bundles)
+		.then(() => cb())
+		.catch(err => console.log(err))
+})

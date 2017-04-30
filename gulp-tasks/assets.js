@@ -18,3 +18,8 @@ gulp.task('assets-boilerplate', () => {
 	return gulp.src(src)
 		.pipe(gulp.dest('boilerplate/assets'))
 })
+
+gulp.task('assets-style-guide', () => {
+	return gulp.src(src)
+		.pipe(gulp.dest('docs/assets'))
+})

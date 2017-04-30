@@ -1,0 +1,37 @@
+@require 'utils/unicode'
+@require 'utils/variables'
+@require 'utils/helpers'
+
+@require 'utils/reset'
+@require 'utils/presets'
+@require 'utils/font'
+@require 'utils/layout'
+@require 'story/*'
+
+main 
+	padding 5rem 1rem 0 1rem
+	max-width 45rem
+	margin 0 auto
+
+section 
+	margin 3rem 0
+
+h1,h2,h3,h4,h5,h6
+	font-weight bold
+
+.hed 
+	text-align center
+
+.example
+	background $off-white
+	border-radius 0.2rem
+	border 1px solid $gray-light
+	whitespace pre-wrap
+	padding 0.5rem
+
+code
+	font-family $mono
+	set-type-size(small, true)
+
+// Combine media queries (Don't remove)
+apply_mq_cache()
