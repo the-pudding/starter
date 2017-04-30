@@ -1,6 +1,6 @@
 # starter
 
-A starter template for projects.
+A starter template for projects. Check out the companion [style guide](https://polygraph-cool.github.io/starter) for best practices.
 
 **If creating a brand new project from scratch:** create a directory and `cd` into it, then follow setup instructions for the [basic](#basic) (plain HTML/JS/CSS) or [enhanced](#enhanced) (node + gulp) version.
 
@@ -39,7 +39,7 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make;
 #### Development
 `gulp`
 
-Any changes to the `src/	` folder will trigger live reload.
+Any changes to the `src/` folder will trigger live reload.
 
 * **JS**: Put JS in `src/js/`, and take a look at `entry.js` and `graphic.js`, it has some basic skeleton stuff setup for you.
 * **CSS**: Put CSS in `src/css/story/`. You can put everything in `story.styl`, or create any new files you want in that directory wich are included automatically. Checkout `src/css/base/` for helper variables and functions.
@@ -61,18 +61,3 @@ To force cloudfront to fetch latest html file (replacing `id-here` with the clou
 `aws cloudfront create-invalidation --distribution-id id-here --paths /year/month/name/`
 
 *Note*: For cloudfront you must add [extra configuration](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)
-
-## Fonts
-Fonts are loaded async and use the FOUT practice. We have three font families.
-
-* Headlines: Canela (class name: `tk-canela`)
-* Copy: Publico Text (class name: `tk-publico`)
-* Graphics / Captions: (class name: `tk-atlas`)
-
-Simply include the class on the element, eg. `<p class='tk-publico'>...` and all children will inherit it. Publico is included on the body tag by default.
-
-Available weights:
-
-* Canela (700, 300)
-* Publico (400, 700)
-* Atlast (300, 400, 500)
