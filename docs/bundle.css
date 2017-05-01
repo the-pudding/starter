@@ -151,22 +151,22 @@ td {
   z-index: 1;
 }
 .tk-canela {
-  font-family: Georgia, Times, serif;
-}
-.loaded-canela .tk-canela {
-  font-family: 'Canela Web', Georgia, Times, serif;
-}
-.tk-publico {
-  font-family: Georgia, Times, serif;
-}
-.loaded-publico .tk-publico {
   font-family: 'Publico Text Web', Georgia, Times, serif;
 }
+.loaded-canela .tk-canela {
+  font-family: 'Canela Web', 'Publico Text Web', Georgia, Times, serif;
+}
+.tk-publico {
+  font-family: 'Publico Text Web', Georgia, Times, serif;
+}
+.loaded-publico .tk-publico {
+  font-family: 'Publico Text Web', 'Publico Text Web', Georgia, Times, serif;
+}
 .tk-atlas {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
 }
 .loaded-atlas .tk-atlas {
-  font-family: 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
+  font-family: 'Atlas Grotesk Web', 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
 }
 .xxx-small {
   font-size: 10px;
@@ -186,7 +186,7 @@ td {
 }
 .medium {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 .large {
   font-size: 24px;
@@ -235,7 +235,7 @@ h4 {
 }
 h5 {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
   margin: 1.5rem 0;
 }
 h6 {
@@ -246,7 +246,7 @@ h6 {
 p {
   margin: 1.5rem 0;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 a {
   text-decoration: none;
@@ -270,7 +270,7 @@ ul {
 }
 li {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 img,
 video {
@@ -341,7 +341,7 @@ header a.logo svg {
   margin: 0 auto;
   padding: 0 1rem;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 main {
   padding: 5rem 1rem 0 1rem;
