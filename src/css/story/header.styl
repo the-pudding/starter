@@ -1,18 +1,14 @@
-$logo-w = (360px / 2)
-$logo-h = (70px / 2)
-
 header
 	z-index set-index('overlay')
-	width $logo-w
-	margin 0 auto
+	margin 1rem auto
+	max-width 12rem
+	padding 1rem
 
 	a.logo
 		display block
-		padding 1rem
 		border none
 
-		svg 
-			width $logo-w
-			height $logo-h
+		svg
 			fill $off-black
 			display block
+			width 100%

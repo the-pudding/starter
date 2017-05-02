@@ -304,19 +304,18 @@ sub {
 }
 header {
   z-index: 1000;
-  width: 180px;
-  margin: 0 auto;
+  margin: 1rem auto;
+  max-width: 12rem;
+  padding: 1rem;
 }
 header a.logo {
   display: block;
-  padding: 1rem;
   border: none;
 }
 header a.logo svg {
-  width: 180px;
-  height: 35px;
   fill: #2a2a2a;
   display: block;
+  width: 100%;
 }
 .intro {
   margin: 5rem auto;
