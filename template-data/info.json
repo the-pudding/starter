@@ -1,9 +1,12 @@
 {
   "title": "title tk",
   "description": "description tk",
+  "url": "tk",
+  "keywords": "tk",
+  "img": "tk",
   "author": {
     "name": "Author Name",
-    "twitterHandle": "@puddingviz",
-    "url": "https://twitter.com/puddingviz"
+    "url": "https://twitter.com/puddingviz",
+    "twitterHandle": "@puddingviz"
   }
 }
