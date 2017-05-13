@@ -7,6 +7,7 @@ gulp.task('dist', (cb) => {
 		'clean-dist',
 		'css-dist',
 		'html-dist',
+		'js-dist-critical',
 		'js-dist',
 		'smoosh-dist',
 		'minify-dist',

@@ -14,6 +14,7 @@ gulp.task('dev', () => {
 	runSequence(
 		'clean-dev',
 		'css-dev',
+		'js-dev-critical',
 		'js-dev',
 		'assets-dev',
 		'html-dev',
