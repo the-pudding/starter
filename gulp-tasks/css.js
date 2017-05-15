@@ -5,6 +5,7 @@ const rename = require('gulp-rename')
 const browserSync = require('browser-sync')
 const plumber = require('gulp-plumber')
 const sourcemaps = require('gulp-sourcemaps')
+const combineMq = require('gulp-combine-mq')
 const cleanCSS = require('gulp-clean-css')
 const report = require('../report-error.js')
 
@@ -19,6 +20,7 @@ gulp.task('css-dev', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 4 versions'],
 		}))
+		.pipe(combineMq())
 		.pipe(rename('bundle.css'))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('dev'))
@@ -32,6 +34,7 @@ gulp.task('css-dist', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 4 versions'],
 		}))
+		.pipe(combineMq())
 		.pipe(cleanCSS())
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('.tmp'))
@@ -45,6 +48,7 @@ gulp.task('css-boilerplate-base', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions'],
 		}))
+		.pipe(combineMq())
 		.pipe(cleanCSS())
 		.pipe(rename('critical.css'))
 		.pipe(gulp.dest('boilerplate'))
@@ -56,6 +60,7 @@ gulp.task('css-boilerplate-story', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions'],
 		}))
+		.pipe(combineMq())
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('boilerplate'))
 })
@@ -67,6 +72,7 @@ gulp.task('css-style-guide', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 4 versions'],
 		}))
+		.pipe(combineMq())
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('docs'))
 })

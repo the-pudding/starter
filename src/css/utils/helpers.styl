@@ -59,28 +59,16 @@ fontify($font, $hash, $fallback)
 			font-family $font, $fallback
 			
 // -------------------
-// BREAKPOINT CACHE
+// BREAKPOINTS
 // -------------------
-$mq_cache = {}
-
-mq($condition)
-	helper($condition)
-		unless $mq_cache[$condition]
-			$mq_cache[$condition] = ()
-		push($mq_cache[$condition], block)
-
-	+helper($condition)
-		{selector() + ''}
+mq(breakpoint)
+	if breakpoint in $mq_vars
+		condition = unquote($mq_vars[breakpoint])
+		condition = 'only screen and %s' % condition
+		@media condition
 			{block}
-			
-apply_mq_cache()
-	for $mq, $blocks in $mq_cache
-		$mq = unquote($mq_vars[$mq] || $mq)
-		$mq = '(%s)' % $mq unless match('\(', $mq)
-		$mq = 'only screen and %s' % $mq
-		@media $mq
-			for $block in $blocks
-				{$block}
+	else
+		error('Not a defined media query')
 
 // -------------------
 // CLEARFIX
