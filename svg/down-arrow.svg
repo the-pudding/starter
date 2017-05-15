@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="48px" height="26px" viewBox="0 0 48 26" enable-background="new 0 0 48 26" xml:space="preserve">
-<g>
-	<path fill="#FFFFFF" d="M24.146,26c-0.53,0-1.039-0.284-1.414-0.659L0.586,3.158c-0.781-0.781-0.781-2.066,0-2.846
-		c0.78-0.781,2.048-0.791,2.828-0.009L24.137,21.02L44.576,0.305c0.776-0.787,2.042-0.796,2.829-0.021
-		c0.786,0.776,0.794,2.042,0.019,2.828L25.57,25.332C25.196,25.711,24.686,26,24.153,26C24.151,26,24.149,26,24.146,26z"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="26" viewBox="0 0 48 26" aria-labelledby="down-arrow-title" role="img">
+	<title id="down-arrow-title">Scroll down</title>
+  	<path fill="#FFF" d="M24.15 26c-.53 0-1.04-.28-1.42-.66L.6 3.16C-.2 2.38-.2 1.1.6.3c.77-.77 2.03-.78 2.8 0l20.74 20.72L44.58.3c.77-.78 2.04-.8 2.83-.02.8.78.8 2.05.03 2.83L25.57 25.35c-.37.38-.88.67-1.42.67z"/>
 </svg>

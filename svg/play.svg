@@ -1,6 +1,4 @@
-<svg version="1.1" id="icon-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="39.89px" height="49.998px" viewBox="0 0 39.89 49.998" enable-background="new 0 0 39.89 49.998" xml:space="preserve" aria-labelledby="play-title">
+<svg xmlns="http://www.w3.org/2000/svg" width="39.89" height="50" viewBox="0 0 39.89 49.998" aria-labelledby="play-title" role="img">
 	<title id="play-title">Play</title>
-	<path d="M37.677,29.194L7.735,49.156c-2.246,1.497-5.49,0.998-6.987-1.497C0.25,46.911,0,45.912,0,44.914V4.991
-		C0,2.246,2.246,0,4.99,0c0.998,0,1.997,0.249,2.745,0.749L37.677,20.71c2.247,1.498,2.994,4.742,1.248,6.987
-		C38.675,28.196,38.176,28.696,37.677,29.194z"/>
+	<path d="M37.68 29.2L7.73 49.15c-2.24 1.5-5.5 1-6.98-1.5C.25 46.9 0 45.9 0 44.9V5c0-2.75 2.25-5 5-5 1 0 2 .25 2.74.75L37.68 20.7c2.24 1.5 3 4.75 1.24 7-.25.5-.74 1-1.24 1.5z"/>
 </svg>
