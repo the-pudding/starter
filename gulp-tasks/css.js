@@ -32,6 +32,7 @@ gulp.task('css-dist', () => {
 		.pipe(autoprefixer({
 			browsers: ['last 4 versions'],
 		}))
+		.pipe(cleanCSS())
 		.pipe(rename('bundle.css'))
 		.pipe(gulp.dest('.tmp'))
 })

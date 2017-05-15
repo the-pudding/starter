@@ -10,7 +10,6 @@ gulp.task('dist', (cb) => {
 		'js-dist-critical',
 		'js-dist',
 		'smoosh-dist',
-		'minify-dist',
 		'assets-dist',
 		cb
 	)
