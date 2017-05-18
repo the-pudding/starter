@@ -43,21 +43,20 @@ gulp.task('js-dist-critical', (cb) => {
 })
 
 gulp.task('js-boilerplate', (cb) => {
-	const fuse = fsbx.FuseBox.init(configDist)
-	const bundles = {
-		'boilerplate/critical.js': '> critical.js',
-	}
-	fuse.bundle(bundles)
-		.then(() => cb())
-		.catch(err => console.log(err))
+	const output = 'boilerplate/$name.js'
+	const fuse = fsbx.FuseBox.init({ ...configDist, output })
+	fuse.bundle('critical')
+		.instructions('> critical.js')
+		.completed(() => cb())
+	fuse.run()
 })
 
+
 gulp.task('js-style-guide', (cb) => {
-	const fuse = fsbx.FuseBox.init(configDist)
-	const bundles = {
-		'docs/critical.js': '> critical.js',
-	}
-	fuse.bundle(bundles)
-		.then(() => cb())
-		.catch(err => console.log(err))
+	const output = 'docs/$name.js'
+	const fuse = fsbx.FuseBox.init({ ...configDist, output })
+	fuse.bundle('critical')
+		.instructions('> critical.js')
+		.completed(() => cb())
+	fuse.run()
 })
