@@ -20,7 +20,7 @@ See [this guide below](fonts) on how to use our fonts.
 ## Enhanced
 * Transpiles ES6 with [Babel](http://babeljs.io)
 * [Stylus](http://stylus-lang.com/) for CSS pre-processor
-* Bundles and minifies JavaScript with [FuseBox](http://fuse-box.org)
+* Bundles and minifies JavaScript with [Webpack](http://webpack.js.org)
 * Bundles, minifies, auto-prefixes, and inlines CSS
 * Async font loading (using FOUT)
 
