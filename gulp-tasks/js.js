@@ -1,62 +1,74 @@
 const gulp = require('gulp')
+const rename = require('gulp-rename')
 const browserSync = require('browser-sync')
 
-const fsbx = require('fuse-box')
-const configDev = require('../fusebox.config.dev.js')
-const configDist = require('../fusebox.config.dist.js')
+const webpack = require('webpack')
+const webpackStream = require('webpack-stream')
+const configDev = require('../webpack.config.dev.js')
+const configDist = require('../webpack.config.dist.js')
 
-gulp.task('js-dev', (cb) => {
-	const fuse = fsbx.FuseBox.init(configDev)
-	fuse.bundle('bundle')
-		.instructions('> entry.js')
-		.completed(() => {
-			browserSync.reload()
-			cb()
-		})
-	fuse.run()
+const srcEntry = 'src/js/entry.js'
+const srcCritical = 'src/js/critical.js'
+
+gulp.task('js-dev', () => {
+	return gulp.src(srcEntry)
+		.pipe(webpackStream(configDev, webpack, (error, stats) => {
+			const time = stats.toJson().time
+			console.log(`Built in ${time} ms.`)
+		}))
+		.pipe(rename('bundle.js'))
+		.pipe(gulp.dest('dev'))
+		.pipe(browserSync.reload({ stream: true }))
 })
 
-gulp.task('js-dev-critical', (cb) => {
-	const fuse = fsbx.FuseBox.init(configDev)
-	fuse.bundle('critical')
-		.instructions('> critical.js')
-		.completed(() => cb())
-	fuse.run()
+gulp.task('js-dev-critical', () => {
+	return gulp.src(srcCritical)
+		.pipe(webpackStream(configDev, webpack, (error, stats) => {
+			const time = stats.toJson().time
+			console.log(`Built in ${time} ms.`)
+		}))
+		.pipe(rename('critical.js'))
+		.pipe(gulp.dest('dev'))
+		.pipe(browserSync.reload({ stream: true }))
 })
 
-gulp.task('js-dist', (cb) => {
-	const fuse = fsbx.FuseBox.init(configDist)
-	fuse.bundle('bundle')
-		.instructions('> entry.js')
-		.completed(() => cb())
-	fuse.run()
+gulp.task('js-dist', () => {
+	return gulp.src(srcEntry)
+		.pipe(webpackStream(configDist, webpack, (error, stats) => {
+			const time = stats.toJson().time
+			console.log(`Built in ${time} ms.`)
+		}))
+		.pipe(rename('bundle.js'))
+		.pipe(gulp.dest('dist'))
 })
 
-gulp.task('js-dist-critical', (cb) => {
-	// overide
-	const output = '.tmp/$name.js'
-	const fuse = fsbx.FuseBox.init({ ...configDist, output })
-	fuse.bundle('critical')
-		.instructions('> critical.js')
-		.completed(() => cb())
-	fuse.run()
+gulp.task('js-dist-critical', () => {
+	return gulp.src(srcCritical)
+		.pipe(webpackStream(configDist, webpack, (error, stats) => {
+			const time = stats.toJson().time
+			console.log(`Built in ${time} ms.`)
+		}))
+		.pipe(rename('critical.js'))
+		.pipe(gulp.dest('.tmp'))
 })
 
-gulp.task('js-boilerplate', (cb) => {
-	const output = 'boilerplate/$name.js'
-	const fuse = fsbx.FuseBox.init({ ...configDist, output })
-	fuse.bundle('critical')
-		.instructions('> critical.js')
-		.completed(() => cb())
-	fuse.run()
+gulp.task('js-boilerplate', () => {
+	return gulp.src(srcCritical)
+		.pipe(webpackStream(configDist, webpack, (error, stats) => {
+			const time = stats.toJson().time
+			console.log(`Built in ${time} ms.`)
+		}))
+		.pipe(rename('critical.js'))
+		.pipe(gulp.dest('boilerplate'))
 })
 
 
-gulp.task('js-style-guide', (cb) => {
-	const output = 'docs/$name.js'
-	const fuse = fsbx.FuseBox.init({ ...configDist, output })
-	fuse.bundle('critical')
-		.instructions('> critical.js')
-		.completed(() => cb())
-	fuse.run()
+gulp.task('js-style-guide', () => {
+	return gulp.src(srcCritical)
+		.pipe(webpackStream(configDist, webpack, (error, stats) => {
+			const time = stats.toJson().time
+			console.log(`Built in ${time} ms.`)
+		}))
+		.pipe(rename('critical.js'))
+		.pipe(gulp.dest('docs'))
 })

@@ -1,4 +1,4 @@
-import * as d3 from 'd3'
+// D3 is included by globally by default
 
 function resize() {
 

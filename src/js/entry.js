@@ -1,3 +1,4 @@
+// D3 is included by globally by default
 import debounce from 'lodash.debounce'
 import { select, addClass } from './utils/dom'
 import isMobile from './utils/is-mobile'
