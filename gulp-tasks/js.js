@@ -1,17 +1,19 @@
 const gulp = require('gulp')
 const rename = require('gulp-rename')
 const browserSync = require('browser-sync')
-
+const plumber = require('gulp-plumber')
 const webpack = require('webpack')
 const webpackStream = require('webpack-stream')
 const configDev = require('../webpack.config.dev.js')
 const configDist = require('../webpack.config.dist.js')
+const report = require('../report-error.js')
 
 const srcEntry = 'src/js/entry.js'
 const srcCritical = 'src/js/critical.js'
 
 gulp.task('js-dev', () => {
 	return gulp.src(srcEntry)
+		.pipe(plumber({ errorHandler: report }))
 		.pipe(webpackStream(configDev, webpack, (error, stats) => {
 			const time = stats.toJson().time
 			console.log(`Built in ${time} ms.`)
