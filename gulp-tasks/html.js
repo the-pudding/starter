@@ -15,7 +15,7 @@ gulp.task('html-dev', () => {
 		.partials('./src/html/partials/**/*.hbs')
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
-		.data({ timestamp: Date.now() })
+		.data({ basepath: '', timestamp: Date.now() })
 
 	return gulp.src(srcIndex)
 		.pipe(plumber({ errorHandler: report }))
@@ -31,7 +31,7 @@ gulp.task('html-dist', () => {
 		.partials('./src/html/partials/**/*.hbs')
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
-		.data({ timestamp: Date.now() })
+		.data({ basepath: 'https://pudding.cool/', timestamp: Date.now() })
 
 	return gulp.src(srcIndex)
 		.pipe(plumber({ errorHandler: report }))
@@ -46,7 +46,7 @@ gulp.task('html-boilerplate', () => {
 		.partials('./src/html/partials/**/*.hbs')
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
-		.data({ timestamp: Date.now() })
+		.data({ basepath: 'https://pudding.cool/', timestamp: Date.now() })
 
 	return gulp.src(srcIndex)
 		.pipe(plumber({ errorHandler: report }))
@@ -66,7 +66,7 @@ gulp.task('html-style-guide', () => {
 		.partials('./src/html/partials/**/*.hbs')
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
-		.data({ timestamp: Date.now() })
+		.data({ basepath: 'https://pudding.cool/', timestamp: Date.now() })
 
 	return gulp.src('./src/html/style-guide.hbs')
 		.pipe(plumber({ errorHandler: report }))
