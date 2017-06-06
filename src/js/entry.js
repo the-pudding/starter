@@ -7,7 +7,7 @@ import graphic from './graphic'
 const bodyEl = select('body')
 let previousWidth = 0
 
-function handleResize() {
+function resize() {
 	const width = bodyEl.offsetWidth
 	if (previousWidth !== width) {
 		previousWidth = width
@@ -19,7 +19,7 @@ function init() {
 	// add mobile class to body tag
 	if (isMobile.any()) addClass(bodyEl, 'is-mobile')
 	// setup resize event
-	window.addEventListener('resize', debounce(handleResize, 150))
+	window.addEventListener('resize', debounce(resize, 150))
 	// kick off graphic code
 	graphic.init()
 }
