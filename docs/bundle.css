@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -55,6 +56,7 @@ caption,th,td {
 }
 
 .skip-to-main {
+  border: none;
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -93,101 +95,112 @@ caption,th,td {
   font-family: 'Atlas Grotesk Web', 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
 }
 
-.xx-small {
-  font-size: 10px;
+.x2-small {
+  font-size: 0.702rem;
   line-height: 1.5;
 }
 
 .x-small {
-  font-size: 12px;
+  font-size: 0.79rem;
   line-height: 1.5;
 }
 
 .small {
-  font-size: 14px;
+  font-size: 0.889rem;
   line-height: 1.5;
 }
 
 .medium {
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
 .large {
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
 .x-large {
-  font-size: 32px;
+  font-size: 1.44rem;
+  line-height: 1.5;
+}
+
+.x2-large {
+  font-size: 2.074rem;
   line-height: 1.2;
 }
 
-.xx-large {
-  font-size: 48px;
+.x3-large {
+  font-size: 2.986rem;
   line-height: 1.2;
 }
 
-.xxx-large {
-  font-size: 64px;
+.x4-large {
+  font-size: 4.3rem;
+  line-height: 1.2;
+}
+
+.x5-large {
+  font-size: 5.16rem;
   line-height: 1.2;
 }
 
 body {
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 0, 'tnum' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 0, 'tnum' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   background-color: #fff;
   color: #2a2a2a;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 4.3rem;
   line-height: 1.2;
   margin: 1.5rem 0;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 2.986rem;
   line-height: 1.2;
   margin: 1.5rem 0;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 2.074rem;
   line-height: 1.2;
   margin: 1.5rem 0;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 1.44rem;
   line-height: 1.5;
   margin: 1.5rem 0;
 }
 
 h5 {
-  font-size: 17px;
-  line-height: 1.7;
-  margin: 1.5rem 0;
-}
-
-h6 {
-  font-size: 14px;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin: 1.5rem 0;
 }
 
+h6 {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+}
+
 p {
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 1.7;
   margin: 1.5rem 0;
 }
 
 a {
   text-decoration: none;
-  border-bottom: 2px solid #f33;
+  border-bottom: 1px solid #f33;
   color: #2a2a2a;
 }
 
@@ -208,7 +221,7 @@ ul {
 }
 
 li {
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
@@ -224,11 +237,6 @@ button {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-}
-
-h1 {
-  font-size: 64px;
-  line-height: 1.2;
 }
 
 sub,sup {
@@ -273,24 +281,23 @@ header a.logo svg {
   margin: 0 auto 4rem auto;
   padding: 0 1rem;
   text-align: center;
-  font-size: 32px;
+  font-size: 2.986rem;
   line-height: 1.2;
 }
 
 .intro__byline {
-  font-size: 14px;
+  font-size: 0.889rem;
   line-height: 1.5;
   text-align: center;
-  margin-bottom: 1rem;
   padding: 0 1rem;
 }
 
 .intro__dek {
-  max-width: 25rem;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 0 1rem;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 main {
@@ -321,20 +328,20 @@ h1,h2,h3,h4,h5,h6 {
 
 code {
   font-family: Consolas, Monaco, 'Courier New', monospace;
-  font-size: 14px;
+  font-size: 0.889rem;
   line-height: 1.5;
 }
 
 @media only screen and (min-width: 40em) {
   .intro__hed {
-    font-size: 48px;
+    font-size: 4.3rem;
     line-height: 1.2;
   }
 }
 
 @media only screen and (min-width: 50em) {
   .intro__hed {
-    font-size: 64px;
+    font-size: 5.16rem;
     line-height: 1.2;
   }
 }
