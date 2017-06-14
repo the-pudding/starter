@@ -1,13 +1,15 @@
 .intro {
-  margin: 5rem auto;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  background-color: #e2e2e2;
 }
 
 .intro__hed {
   max-width: 55rem;
-  margin: 0 auto 4rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding-top: 5rem;
   text-align: center;
-  font-size: 32px;
+  font-size: 40px;
   line-height: 1.2;
 }
 
@@ -15,16 +17,15 @@
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
 }
 
 .intro__dek {
-  max-width: 25rem;
+  max-width: 40rem;
   margin: 0 auto;
-  padding: 0 1rem;
-  font-size: 17px;
+  padding-top: 5rem;
+  font-size: 18px;
   line-height: 1.7;
+  text-align: center;
 }
 
 @media only screen and (min-width: 40em) {
