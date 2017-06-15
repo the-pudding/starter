@@ -95,53 +95,58 @@ caption,th,td {
   font-family: 'Atlas Grotesk Web', 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
 }
 
-.x2-small {
-  font-size: 0.702rem;
+.xxx-small {
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.xx-small {
+  font-size: 11px;
   line-height: 1.5;
 }
 
 .x-small {
-  font-size: 0.79rem;
+  font-size: 12px;
   line-height: 1.5;
 }
 
 .small {
-  font-size: 0.889rem;
+  font-size: 14px;
   line-height: 1.5;
 }
 
+.root {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 .medium {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.7;
 }
 
 .large {
-  font-size: 1.2rem;
+  font-size: 24px;
   line-height: 1.5;
 }
 
 .x-large {
-  font-size: 1.44rem;
+  font-size: 32px;
   line-height: 1.5;
 }
 
-.x2-large {
-  font-size: 2.074rem;
+.xx-large {
+  font-size: 40px;
   line-height: 1.2;
 }
 
-.x3-large {
-  font-size: 2.986rem;
+.xxx-large {
+  font-size: 48px;
   line-height: 1.2;
 }
 
-.x4-large {
-  font-size: 4.3rem;
-  line-height: 1.2;
-}
-
-.x5-large {
-  font-size: 5.16rem;
+.xxxx-large {
+  font-size: 64px;
   line-height: 1.2;
 }
 
@@ -153,47 +158,53 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   background-color: #fff;
   color: #2a2a2a;
-  font-size: 16px;
+  font-size: ;
 }
 
 h1 {
-  font-size: 4.3rem;
+  font-size: 48px;
   line-height: 1.2;
   margin: 1.5rem 0;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: 2.986rem;
+  font-size: 40px;
   line-height: 1.2;
   margin: 1.5rem 0;
+  font-weight: bold;
 }
 
 h3 {
-  font-size: 2.074rem;
-  line-height: 1.2;
+  font-size: 32px;
+  line-height: 1.5;
   margin: 1.5rem 0;
+  font-weight: bold;
 }
 
 h4 {
-  font-size: 1.44rem;
+  font-size: 24px;
   line-height: 1.5;
   margin: 1.5rem 0;
+  font-weight: bold;
 }
 
 h5 {
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.7;
   margin: 1.5rem 0;
+  font-weight: bold;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.7;
   margin: 1.5rem 0;
+  font-weight: bold;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.7;
   margin: 1.5rem 0;
 }
@@ -221,7 +232,7 @@ ul {
 }
 
 li {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.7;
 }
 
@@ -256,14 +267,18 @@ sub {
 
 header {
   z-index: 1000;
-  margin: 1rem auto;
-  max-width: 12rem;
-  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 header a.logo {
   display: block;
   border: none;
+  max-width: 12rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 header a.logo svg {
@@ -273,31 +288,33 @@ header a.logo svg {
 }
 
 .intro {
-  margin: 5rem auto;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  background-color: #e2e2e2;
 }
 
 .intro__hed {
   max-width: 55rem;
-  margin: 0 auto 4rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding-top: 5rem;
   text-align: center;
-  font-size: 2.986rem;
+  font-size: 40px;
   line-height: 1.2;
 }
 
 .intro__byline {
-  font-size: 0.889rem;
+  font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  padding: 0 1rem;
 }
 
 .intro__dek {
   max-width: 40rem;
   margin: 0 auto;
-  padding: 0 1rem;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  padding-top: 5rem;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
 }
 
 main {
@@ -308,10 +325,6 @@ main {
 
 section {
   margin: 3rem 0;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  font-weight: bold;
 }
 
 .hed {
@@ -328,20 +341,20 @@ h1,h2,h3,h4,h5,h6 {
 
 code {
   font-family: Consolas, Monaco, 'Courier New', monospace;
-  font-size: 0.889rem;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 @media only screen and (min-width: 40em) {
   .intro__hed {
-    font-size: 4.3rem;
+    font-size: 48px;
     line-height: 1.2;
   }
 }
 
 @media only screen and (min-width: 50em) {
   .intro__hed {
-    font-size: 5.16rem;
+    font-size: 64px;
     line-height: 1.2;
   }
 }
