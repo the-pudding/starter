@@ -11,7 +11,9 @@ body
 	-webkit-tap-highlight-color rgba(0,0,0,0)
 	background-color #fff
 	color $off-black
-	font-size set-type-size(medium, false)
+	font-size set-type-size(root, false)
+	+mq('bp-2')
+		font-size set-type-size(medium, false)
 
 h1
 	set-type-size(xxx-large, true)
@@ -38,7 +40,6 @@ h6
 	margin 1.5rem 0
 	font-weight bold
 p 
-	set-type-size(medium, true)
 	margin 1.5rem 0
 
 a
