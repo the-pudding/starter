@@ -9,30 +9,38 @@ body
 	-webkit-tap-highlight-color rgba(0,0,0,0)
 	background-color #fff
 	color $off-black
+	set-type-size(root, false)
+	+mq('bp-2')
+		set-type-size(medium, false)
 
 h1
 	set-type-size(xxx-large, true)
+	margin-top 1.5rem
 h2
 	set-type-size(xx-large, true)
+	margin-top 1.5rem
 h3
 	set-type-size(x-large, true)
+	margin-top 1.5rem
 h4
 	set-type-size(large, true)
+	margin-top 1.5rem
 h5
 	set-type-size(medium, true)
+	margin-top 1.5rem
 h6
-	set-type-size(default, true)
+	set-type-size(root, true)
+	margin-top 1.5rem
 p 
 	margin 1.5rem 0
-	set-type-size(default, true)
+	set-type-size(root, true)
 	+mq('bp-2')
 		set-type-size(medium, true)
 
 a
 	text-decoration none
-	border-bottom 1px solid $primary
+	border-bottom 1px solid $off-black
 	color $off-black
-
 	&:visited, &:hover
 		color $off-black
 
@@ -46,7 +54,9 @@ ul
 	list-style-type none
 
 li
-	set-type-size(medium, true)
+	set-type-size(root, false)
+	+mq('bp-2')
+		set-type-size(medium, false)
 
 img, video
 	display block
@@ -59,6 +69,9 @@ button
 	margin 0
 	padding 0
 	font-size 1rem
+	set-type-size(root, false)
+	+mq('bp-2')
+		set-type-size(medium, false)
 
 sub, sup
 	font-size 0.75rem

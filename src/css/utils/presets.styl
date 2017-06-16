@@ -13,7 +13,7 @@
 	&:focus 
 		width auto
 		height auto
-		background-color #efefef
+		background-color $off-white
 		padding 0.5em
 		z-index 1
 
@@ -23,3 +23,31 @@
 	padding 0 1rem
 	&__hed
 		font-weight 500
+
+.graphic
+	&__hed
+		font-weight 700
+	&__dek
+		margin 0
+		margin-bottom 1.5rem
+	&__chart
+		width 100%
+	&__key
+		display flex
+		flex-wrap wrap
+		margin-bottom 0.5rem
+		justify-content flex-end
+		li 
+			padding 0
+			margin-left 0.75em
+			letter-spacing 0.05em
+			text-transform uppercase
+			font-weight 500
+			line-height 1
+			&:before
+				content ''
+				display inline-block
+				width 0.8em
+				height 0.8em
+				background-color $gray-dark
+				margin-right 0.25em
