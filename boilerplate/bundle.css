@@ -1,11 +1,12 @@
 .intro {
   margin: 0 auto;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 2.5rem 1rem;
   background-color: #e2e2e2;
 }
 
 .intro__hed {
-  max-width: 55rem;
+  font-weight: bold;
+  max-width: 60rem;
   margin: 0 auto;
   padding-top: 5rem;
   text-align: center;
@@ -17,13 +18,14 @@
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
+  padding-top: 5rem;
 }
 
 .intro__dek {
   max-width: 40rem;
   margin: 0 auto;
-  padding-top: 5rem;
-  font-size: 18px;
+  padding-top: 1rem;
+  font-size: 17px;
   line-height: 1.7;
   text-align: center;
 }
