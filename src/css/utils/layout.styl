@@ -2,8 +2,6 @@
 // Layouts
 // -------------------
 
-// Setting root sizes and base styles.
-
 body
 	font-feature-settings 'kern' 1, 'onum' 1, 'liga' 0, 'tnum' 1
 	-webkit-font-smoothing antialiased
@@ -11,36 +9,24 @@ body
 	-webkit-tap-highlight-color rgba(0,0,0,0)
 	background-color #fff
 	color $off-black
-	font-size set-type-size(root, false)
-	+mq('bp-2')
-		font-size set-type-size(medium, false)
 
 h1
 	set-type-size(xxx-large, true)
-	margin 1.5rem 0
-	font-weight bold
 h2
 	set-type-size(xx-large, true)
-	margin 1.5rem 0
-	font-weight bold
 h3
 	set-type-size(x-large, true)
-	margin 1.5rem 0
-	font-weight bold
 h4
 	set-type-size(large, true)
-	margin 1.5rem 0
-	font-weight bold
 h5
 	set-type-size(medium, true)
-	margin 1.5rem 0
-	font-weight bold
 h6
-	set-type-size(root, true)
-	margin 1.5rem 0
-	font-weight bold
+	set-type-size(default, true)
 p 
 	margin 1.5rem 0
+	set-type-size(default, true)
+	+mq('bp-2')
+		set-type-size(medium, true)
 
 a
 	text-decoration none

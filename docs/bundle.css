@@ -71,6 +71,16 @@ caption,th,td {
   z-index: 1;
 }
 
+.prose {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.prose__hed {
+  font-weight: 500;
+}
+
 .tk-canela {
   font-family: 'Publico Text Web', Georgia, Times, serif;
 }
@@ -115,13 +125,13 @@ caption,th,td {
   line-height: 1.5;
 }
 
-.root {
+.default {
   font-size: 16px;
   line-height: 1.7;
 }
 
 .medium {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.7;
 }
 
@@ -158,55 +168,42 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   background-color: #fff;
   color: #2a2a2a;
-  font-size: ;
 }
 
 h1 {
   font-size: 48px;
   line-height: 1.2;
-  margin: 1.5rem 0;
-  font-weight: bold;
 }
 
 h2 {
   font-size: 40px;
   line-height: 1.2;
-  margin: 1.5rem 0;
-  font-weight: bold;
 }
 
 h3 {
   font-size: 32px;
   line-height: 1.5;
-  margin: 1.5rem 0;
-  font-weight: bold;
 }
 
 h4 {
   font-size: 24px;
   line-height: 1.5;
-  margin: 1.5rem 0;
-  font-weight: bold;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.7;
-  margin: 1.5rem 0;
-  font-weight: bold;
 }
 
 h6 {
   font-size: 16px;
   line-height: 1.7;
-  margin: 1.5rem 0;
-  font-weight: bold;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.7;
   margin: 1.5rem 0;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 a {
@@ -232,7 +229,7 @@ ul {
 }
 
 li {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.7;
 }
 
@@ -312,7 +309,7 @@ header a.logo svg {
   max-width: 40rem;
   margin: 0 auto;
   padding-top: 5rem;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.7;
   text-align: center;
 }
@@ -346,6 +343,11 @@ code {
 }
 
 @media only screen and (min-width: 40em) {
+  p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
   .intro__hed {
     font-size: 48px;
     line-height: 1.2;
