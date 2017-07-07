@@ -78,11 +78,11 @@ caption,th,td {
 }
 
 .prose__hed {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .graphic__hed {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .graphic__dek {
@@ -111,7 +111,7 @@ caption,th,td {
   margin-left: 0.75em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -120,7 +120,7 @@ caption,th,td {
   display: inline-block;
   width: 0.8em;
   height: 0.8em;
-  background-color: #666;
+  background-color: #2a2a2a;
   margin-right: 0.25em;
 }
 
@@ -215,38 +215,38 @@ body {
 }
 
 h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  margin-top: 1.5rem;
-}
-
-h2 {
   font-size: 40px;
   line-height: 1.2;
   margin-top: 1.5rem;
 }
 
-h3 {
+h2 {
   font-size: 32px;
   line-height: 1.5;
   margin-top: 1.5rem;
 }
 
-h4 {
+h3 {
   font-size: 24px;
   line-height: 1.5;
   margin-top: 1.5rem;
 }
 
-h5 {
+h4 {
   font-size: 17px;
   line-height: 1.7;
   margin-top: 1.5rem;
 }
 
-h6 {
+h5 {
   font-size: 16px;
   line-height: 1.7;
+  margin-top: 1.5rem;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 1.5;
   margin-top: 1.5rem;
 }
 
@@ -335,34 +335,36 @@ header a.logo svg {
 
 .intro {
   margin: 0 auto;
-  padding: 5rem 1rem 2.5rem 1rem;
-  background-color: #e2e2e2;
+  padding: 4rem 1rem 1.5rem 1rem;
 }
 
 .intro__hed {
-  font-weight: bold;
   max-width: 60rem;
   margin: 0 auto;
   padding-top: 5rem;
+  font-weight: bold;
   text-align: center;
   font-size: 40px;
   line-height: 1.2;
 }
 
 .intro__byline {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
   font-size: 14px;
   line-height: 1.5;
-  text-align: center;
-  padding-top: 5rem;
 }
 
 .intro__dek {
   max-width: 40rem;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  text-align: center;
   font-size: 17px;
   line-height: 1.7;
-  text-align: center;
 }
 
 main {
@@ -399,10 +401,15 @@ mark {
   padding: 0.25em 0.5em;
 }
 
+.graphic {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
 .graphic__chart {
   width: 100%;
   height: 20vh;
-  border: 1px solid #999;
+  background-color: #ff8;
 }
 
 @media only screen and (min-width: 40em) {
