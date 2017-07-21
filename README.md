@@ -44,6 +44,7 @@ Any changes to the `src/` folder will trigger live reload.
 * **JS**: Put JS in `src/js/`, and take a look at `entry.js` and `graphic.js`, it has some basic skeleton stuff setup for you.
 * **CSS**: Put CSS in `src/css/story/`. You can put everything in `story.styl`, or create any new files you want in that directory wich are included automatically. Checkout `src/css/base/` for helper variables and functions.
 * **HTML**: Put HTML in `src/html/partials/story/`. Be sure to include your partials in `src/html/index.hbs`.
+* **Icons**: We have a whole set of svg icons in the `svg` folder. You can add your own too. To use, simply put this code in your `hbs` file, `@@include('name-of-icon.svg')` and it will inject it into the HTML.
 
 #### Deploy
 Run `gulp dist`
