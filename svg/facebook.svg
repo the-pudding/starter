@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="7" height="15" viewBox="-0.7 -1.5 7 15" aria-labelledby="facebook-title" role="img">
-	<title id="facebook-title">Share this on facebook</title>
-  	<path d="M3.97 3.4H6.3L6.02 6H3.95v7.5H.85V6H-.7V3.4H.85V1.87c0-1.1.26-1.95.8-2.5C2.15-1.2 3-1.5 4.2-1.5h2.1v2.6H5c-.22 0-.42 0-.56.05-.14.05-.24.12-.3.2-.07.1-.12.22-.14.33-.02.1-.03.26-.03.45v1.3H4z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
