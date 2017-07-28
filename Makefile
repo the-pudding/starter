@@ -11,6 +11,7 @@ all:
 	rm src/html/style-guide.hbs
 	mv Makefile.story Makefile
 	npm i
+	rm package-lock.json
 
 boilerplate: 
 	curl -Lk https://github.com/russellgoldenberg/starter/archive/master.zip > temp.zip
