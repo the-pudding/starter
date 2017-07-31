@@ -13,7 +13,7 @@ const svgPath = `${process.cwd()}/svg/`
 gulp.task('html-dev', () => {
 	const hbStream = hb()
 		.partials('./src/html/partials/**/*.hbs')
-		// .helpers('./src/html/helpers/*.js')
+		.helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
 		.data({ basepath: '', timestamp: Date.now() })
 
@@ -29,7 +29,7 @@ gulp.task('html-dev', () => {
 gulp.task('html-dist', () => {
 	const hbStream = hb()
 		.partials('./src/html/partials/**/*.hbs')
-		// .helpers('./src/html/helpers/*.js')
+		.helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
 		.data({ basepath: 'https://pudding.cool/', timestamp: Date.now() })
 
