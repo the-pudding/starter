@@ -14,6 +14,7 @@ const atlas = [
 	{ family: 'Atlas Grotesk Web', weight: 300 },
 	{ family: 'Atlas Grotesk Web', weight: 400 },
 	{ family: 'Atlas Grotesk Web', weight: 500 },
+	{ family: 'Atlas Grotesk Web', weight: 600 },
 ];
 
 loadFontGroup(canela);
