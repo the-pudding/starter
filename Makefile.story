@@ -1,3 +1,5 @@
+PHONY: github live
+
 github:
 	rm -rf docs
 	cp -r dist/ docs

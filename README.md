@@ -31,7 +31,7 @@ See [this guide below](fonts) on how to use our fonts.
 ### Setup
 
 ```
-curl -Lk http://bit.ly/2bgptna > Makefile; make;
+curl -Lk http://bit.ly/2bgptna > Makefile; make enhanced;
 ```
 
 ### Usage

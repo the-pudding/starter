@@ -1,4 +1,6 @@
-all: 
+.PHONY: enhanced boilerplate
+
+enhanced: 
 	curl -Lk https://github.com/russellgoldenberg/starter/archive/master.zip > temp.zip
 	unzip -q temp.zip
 	mv starter-master/* .
@@ -18,3 +20,4 @@ boilerplate:
 	unzip -q temp.zip
 	mv starter-master/boilerplate/* .
 	rm -rf temp.zip starter-master Makefile boilerplate style-guide
+
