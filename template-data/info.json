@@ -1,9 +1,9 @@
 {
   "title": "Title Case Headline Goes Here",
   "description": "Your dek goes here. It is probably one or two sentences that succinctly describe more explicitly what the story will be about.",
-  "url": "tk",
+  "url": "https://pudding.cool/year/month/name/",
   "keywords": "tk",
-  "img": "tk",
+  "img": "https://pudding.cool/year/month/name/",
   "author": {
     "name": "Author Name",
     "url": "https://twitter.com/puddingviz",
