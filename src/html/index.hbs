@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang='en' data-version='{{timestamp}}'>
+
 <head>
 
 	{{> base/meta}}
-	
+
 	<!-- smoosh -->
 	<link rel='stylesheet' href='bundle.css' />
 	<!-- endsmoosh -->
-	
+
 	<!-- boilerplate.css -->
-	
+
 	{{> base/font}}
-	
+
 	<!-- smoosh -->
 	<script src='critical.js'></script>
 	<!-- endsmoosh -->
@@ -19,6 +20,7 @@
 	{{> base/analytics }}
 
 </head>
+
 <body class='tk-publico'>
 
 	{{> base/header }}
@@ -28,19 +30,13 @@
 		{{> story/intro }}
 
 		<!-- PUT ALL YOUR HTML HERE-->
-		<h1 class='tk-atlas'>Heading 1</h1>
-		<h2 class='tk-atlas'>Heading 2</h2>
-		<h3 class='tk-atlas'>Heading 3</h3>
-		<h4 class='tk-atlas'>Heading 4</h4>
-		<h5 class='tk-atlas'>Heading 5</h5>
-		<h6 class='tk-atlas'>Heading 6</h6>
-
 
 	</main>
 
 
-	<script src='{{path}}assets/scripts/d3.v4.9.1.min.js'></script>
-	<script src='bundle.js?version={{timestamp}}'></script>
+	<script src='{{basepath}}assets/scripts/d3.v4.9.1.min.js'></script>
+	<script src='bundle.js?version={{timestamp}}' async></script>
 	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>
 </body>
+
 </html>
