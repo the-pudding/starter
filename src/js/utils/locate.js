@@ -4,7 +4,6 @@ locate((err, result) => {
 })
 */
 
-import 'promis';
 import request from 'superagent';
 
 const test = {

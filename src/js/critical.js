@@ -1,3 +1,4 @@
+import Promise from 'promise-polyfill';
 import { loadFontGroup } from './utils/load-font';
 
 const canela = [
@@ -16,6 +17,10 @@ const atlas = [
 	{ family: 'Atlas Grotesk Web', weight: 600 },
 ];
 
+// polyfill promise
+if (!window.Promise) window.Promise = Promise;
+
+// load fonts
 loadFontGroup(canela);
 loadFontGroup(publico);
 loadFontGroup(atlas);

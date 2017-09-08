@@ -1,4 +1,3 @@
-import 'promis'
 import FontFaceObserver from 'fontfaceobserver'
 import { addClass } from './dom'
 

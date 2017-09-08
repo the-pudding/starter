@@ -39,7 +39,7 @@
     "gulp-util": "^3.0.7",
     "lodash.debounce": "^4.0.8",
     "prettier": "^1.5.3",
-    "promis": "^1.1.4",
+    "promise-polyfill": "^6.0.2",
     "request": "^2.81.0",
     "require-dir": "^0.3.2",
     "run-sequence": "^1.2.2",

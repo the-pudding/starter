@@ -1,5 +1,3 @@
-import 'promis';
-
 function cleanTk(d) {
 	return {
 		...d,
