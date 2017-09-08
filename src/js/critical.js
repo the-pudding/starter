@@ -1,4 +1,8 @@
 import Promise from 'promise-polyfill';
+import './polyfills/endswith';
+import './polyfills/find-index';
+import './polyfills/find';
+import './polyfills/includes';
 import { loadFontGroup } from './utils/load-font';
 
 const canela = [
