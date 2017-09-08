@@ -38,6 +38,7 @@
     "gulp-stylus": "^2.5.0",
     "gulp-util": "^3.0.7",
     "lodash.debounce": "^4.0.8",
+    "nouislider": "^10.1.0",
     "prettier": "^1.5.3",
     "promise-polyfill": "^6.0.2",
     "request": "^2.81.0",
