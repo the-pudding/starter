@@ -21,7 +21,7 @@ function init() {
 	let textEl = null;
 	let stepEl = null;
 
-	let isDisabled = false;
+	let isEnabled = false;
 
 	const callback = {};
 	const notification = {};
@@ -129,15 +129,17 @@ function init() {
 
 	// UPDATE
 	function update() {
-		const bbox = textEl.getBoundingClientRect();
-		updateDirection();
+		if (textEl) {
+			const bbox = textEl.getBoundingClientRect();
+			updateDirection();
 
-		const off = vh * offset;
-		if (bbox.top < off && bbox.bottom > off) checkStep({ bbox, off });
+			const off = vh * offset;
+			if (bbox.top < off && bbox.bottom > off) checkStep({ bbox, off });
 
-		if (bbox.top < 0 && bbox.bottom > bboxGraphic.height) checkEnter();
-		else checkExit();
-		ticking = false;
+			if (bbox.top < 0 && bbox.bottom > bboxGraphic.height) checkEnter();
+			else checkExit();
+			ticking = false;
+		}
 	}
 
 	// EVENTS
@@ -157,13 +159,13 @@ function init() {
 	}
 
 	function handleEnable(enable) {
-		if (enable && isDisabled) {
+		if (enable && !isEnabled) {
 			window.addEventListener('scroll', handleScroll, true);
+			isEnabled = true;
 		} else if (!enable) {
 			window.removeEventListener('scroll', handleScroll, true);
+			isEnabled = false;
 		}
-
-		isDisabled = !enable;
 	}
 
 	const scrolly = {};
@@ -174,7 +176,7 @@ function init() {
 		stepEl = selectAll(params.step);
 		offset = 1 - params.offset;
 		numSteps = stepEl.length;
-		window.addEventListener('scroll', handleScroll, true);
+		handleEnable(true);
 		handleResize();
 		handleScroll();
 		update();
