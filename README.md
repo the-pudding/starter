@@ -62,3 +62,39 @@ To force cloudfront to fetch latest html file (replacing `id-here` with the clou
 `aws cloudfront create-invalidation --distribution-id id-here --paths /year/month/name/`
 
 *Note*: For cloudfront you must add [extra configuration](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)
+
+#### JS Utilties
+In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
+
+##### dom.js
+Super minimial wrapper on basic vanilla dom selection for convenience and cross-browser.
+
+##### is-mobile.js
+Device sniffing to detect if on mobile hardware.
+
+##### load-image.js
+Async image loading to detect when image completely loaded.
+
+##### locate.js
+Estimate user location via ip address.
+
+##### scrollytelling.js
+In-house scrollytelling library for enter-exit-step pattern.
+
+##### tracker.js
+Fire simple GA tracking on events.
+
+##### url-parameter.js
+Get and set the paremeters of the URL in address bar.
+
+#### The Pudding's Favorite Libraries
+* d3-annotation
+* lodash.uniqby
+* moveto
+* jump.js
+* nouislider
+* geolib
+* scrollmagic
+* in-view
+* enter-view
+* ScrollWatch
