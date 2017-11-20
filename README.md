@@ -6,6 +6,8 @@ A starter template for projects. Check out the companion [style guide](https://p
 
 **If you are contributing to an existing project:** clone the repo and run `npm i`.
 
+*Please note: do not use or reproduce The Pudding logos or fonts without written permission.*
+
 ## Basic
 ```
 curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
