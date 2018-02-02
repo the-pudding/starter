@@ -4,6 +4,41 @@ Run `gulp` to fire up the project server.
 
 Any changes to the `src/` folder will trigger live reload.
 
+## HTML
+
+**Where it goes:** `src/html/partials/story/`.
+
+The main HTML file ins `src/html/index.hbs`. Generally speaking, You should mostly just include new partials in there and not modify too much of it since there are a bunch of presets.
+
+Partials are not automatically included. You must add them to `index.hbs`. If you created a new file `content.hbs` it would be referenced as `{{> story/content }}`.
+
+#### Metadata
+
+Fill out `template-data/info.json`
+
+#### Copy
+
+Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.org) as a micro CMS.
+
+**Setup Google Doc**
+
+* Create a Google Doc
+* Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
+* In the address bar, grab the ID - eg. ...com/document/d/ **1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
+* In the file `config.js` in root of project, paste in the ID
+
+Running `gulp fetch-google` at any point (even in new tab while server is running) will pull down the latest, and output a file `template-data/copy.json`.
+
+You can now reference the JSON in your HTML, namespaced by `copy` (eg. `<h1>{{copy.title}}</h1>`).
+
+#### SVG Icons
+
+There is a directory called `svg` in the root of project, it contains a bunch of [icons](https://feathericons.com/). To include them in the HTML, simply do this:
+
+`<div>@@include('arrow-left.svg')</div>`
+
+This way you can drop in svg icons anywhere in your HTML code whilst keeping it uncluttered.
+
 ## JavaScript
 
 **Where it goes:** `src/js/`
@@ -46,40 +81,14 @@ There is a file for you to start off with, `story.styl`. You can create as many 
 
 Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, `helpers.styl`, `presets.styl`). You can modify these, especially `variables.styl`.
 
-## HTML
+## Assets
 
-**Where it goes:** `src/html/partials/story/`.
+**Where it goes:** `src/assets/`
 
-The main HTML file ins `src/html/index.hbs`. Generally speaking, You should mostly just include new partials in there and not modify too much of it since there are a bunch of presets.
+I reccommend creating separate directories for images, data, etc. Assets can always be referenced relative to `assets` directory. For example:
 
-Partials are not automatically included. You must add them to `index.hbs`. If you created a new file `content.hbs` it would be referenced as `{{> story/content }}`.
-
-### Metadata
-
-Fill out `template-data/info.json`
-
-### Copy
-
-Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.org) as a micro CMS.
-
-**Setup Google Doc**
-
-* Create a Google Doc
-* Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
-* In the address bar, grab the ID - eg. ...com/document/d/ **1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
-* In the file `config.js` in root of project, paste in the ID
-
-Running `gulp fetch-google` at any point (even in new tab while server is running) will pull down the latest, and output a file `template-data/copy.json`.
-
-You can now reference the JSON in your HTML, namespaced by `copy` (eg. `<h1>{{copy.title}}</h1>`).
-
-### SVG Icons
-
-There is a directory called `svg` in the root of project, it contains a bunch of [icons](https://feathericons.com/). To include them in the HTML, simply do this:
-
-`<div>@@include('arrow-left.svg')</div>`
-
-This way you can drop in svg icons anywhere in your HTML code whilst keeping it uncluttered.
+* `<img src='assets/img/test.jpg'>`
+* `d3.csv('assets/data/test.csv')`
 
 ## Deploy
 
@@ -101,3 +110,12 @@ Requirements:
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
 Run `make live` to deploy and bust cache.
+
+## Pre-launch Checklist
+
+* optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also crunched with something like [imageoptim](https://imageoptim.com/online).
+* clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
+* remove console logs: aesthetics :smile:
+* enable anayltics: be sure analytics partial is included (`analytics.hbs`)
+* fill out metadata: `template-data/info.json`
+* create an og image: It should be 1200x600, try not have anything important near edges. Make sure it aligns with the img file url in metadata.
