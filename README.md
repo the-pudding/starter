@@ -6,14 +6,16 @@ A starter template for projects.
 
 **Else contributing to an existing project:** clone the repo (enhanced version: + run `npm install`).
 
-*Please note: do not use or reproduce The Pudding logos or fonts without written permission.*
+_Please note: do not use or reproduce The Pudding logos or fonts without written permission._
 
 # Setup
 
 ## Basic
 
 #### Setup
+
 To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
+
 ```
 curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
 ```
@@ -21,10 +23,12 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
 ## Enhanced
 
 #### Dependencies
+
 * [node](http://nodejs.org)
 * [gulp](http://gulpjs.com)
 
 #### Features
+
 * Transpiles ES6 with [Babel](http://babeljs.io)
 * [Stylus](http://stylus-lang.com/) for CSS pre-processor
 * [Handlebars](http://handlebarsjs.com/) for HTML templating
@@ -35,10 +39,13 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
 * Preloaded [icon set](https://feathericons.com/)
 
 #### Setup
+
 To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
+
 ```
 curl -Lk http://bit.ly/2bgptna > Makefile; make enhanced;
 ```
 
 #### Documentation
-See the generated README file in the new project directory for intstructions.
+
+See the generated README file in the new project directory for instructions.
