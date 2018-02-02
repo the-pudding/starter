@@ -4,7 +4,7 @@ A starter template for projects.
 
 **If creating a brand new project from scratch:** Follow setup instructions for the [basic](#basic):bread: (plain HTML/JS/CSS) or [enhanced](#enhanced):fire: (node + gulp + awesome sauce) version.
 
-**Else contributing to an existing project:** clone the repo and run `npm i`.
+**Else contributing to an existing project:** clone the repo (enhanced version: + run `npm install`).
 
 *Please note: do not use or reproduce The Pudding logos or fonts without written permission.*
 
