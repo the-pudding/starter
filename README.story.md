@@ -97,6 +97,7 @@ Run `gulp dist`
 This generates a single html file with inlined css, a single js file, and a folder with assets in the `dist` folder.
 
 **Update Github Pages version (during development)**
+
 Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
 
 **Update The Pudding version (launch)**
