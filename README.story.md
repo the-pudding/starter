@@ -81,6 +81,30 @@ There is a file for you to start off with, `story.styl`. You can create as many 
 
 Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, `helpers.styl`, `presets.styl`). You can modify these, especially `variables.styl`.
 
+## Fonts
+
+Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have three font families:
+
+* **Canela** (class name: `tk-canela`)
+* **Publico** (class name: `tk-publico`)
+* **Atlas Grotesk** (class name: `tk-atlas`)
+
+Simply include the class on the element, and all children will inherit it. Publico is included on the body tag by default.
+
+Example:
+
+```html
+<div class='example'>
+	<p class='tk-atlas'>test</p>
+</div>
+```
+
+Use the **font-weight** CSS property to per-usual. Available weights:
+
+* Canela: 300, 700
+* Publico: 400, 700
+* Atlas: 400, 500, 600
+
 ## Assets
 
 **Where it goes:** `src/assets/`
