@@ -59,6 +59,7 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 * `is-mobile.js`: Device sniffing to detect if on mobile hardware.
 * `load-image.js`: Async image loading to detect when image completely loaded.
 * `locate.js`: Estimate user location via ip address.
+* `truncate.js`: Truncate string with options to break on space and add ellipses.
 * `tracker.js`: Fire simple GA tracking on events.
 * `url-parameter.js`: Get and set the paremeters of the URL in address bar.
 

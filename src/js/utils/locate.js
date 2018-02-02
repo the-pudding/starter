@@ -17,7 +17,7 @@ const test = {
 	time_zone: 'America/New_York',
 	latitude: 42.1617,
 	longitude: -73.3277,
-	metro_code: 532,
+	metro_code: 532
 };
 const debug = false;
 const MAX_TIME = 4000;
@@ -48,8 +48,12 @@ function getGeocode({ ip }) {
 	});
 }
 
+/**
+ * Get users approx. location according to IP address
+ * @param {function} cb callback funtion
+ */
+
 function init(cb) {
-	// const p = new Promise((resolve, reject) => {
 	const timeout = setTimeout(() => cb('timeout'), MAX_TIME);
 
 	getIP()
