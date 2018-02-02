@@ -48,7 +48,7 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 ## HTML
 
-** Where it goes:** `src/html/partials/story/`.
+**Where it goes:** `src/html/partials/story/`.
 
 The main HTML file ins `src/html/index.hbs`. Generally speaking, You should mostly just include new partials in there and not modify too much of it since there are a bunch of presets.
 
