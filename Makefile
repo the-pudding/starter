@@ -12,7 +12,7 @@ enhanced:
 	rm src/css/style-guide.styl
 	rm src/html/style-guide.hbs
 	rm README.md
-	mv README.md.story README.md
+	mv README.story.md README.md
 	mv Makefile.story Makefile
 	npm i
 	rm package-lock.json
