@@ -10,7 +10,7 @@ gulp.task('clean-dist', (cb) => {
 })
 
 gulp.task('clean-boilerplate', (cb) => {
-	del(['boilerplate/**/!(*.js)']).then(() => cb())
+	del(['boilerplate/**/!(bundle.js)']).then(() => cb())
 })
 
 gulp.task('clean-style-guide', (cb) => {
