@@ -60,8 +60,10 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 * `load-image.js`: Async image loading to detect when image completely loaded.
 * `locate.js`: Estimate user location via ip address.
 * `truncate.js`: Truncate string with options to break on space and add ellipses.
-* `tracker.js`: Fire simple GA tracking on events.
 * `url-parameter.js`: Get and set the paremeters of the URL in address bar.
+* `lookup-state-name.js`: Get state name from state abbrevation.
+* `lookup-state-abbr.js`: Get state abbrevation from state name.
+* `tracker.js`: Fire simple GA tracking on events.
 
 #### The Pudding's Favorite Libraries
 
