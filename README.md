@@ -48,4 +48,4 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make enhanced;
 
 #### Documentation
 
-See the generated README file in the new project directory for instructions.
+See the generated [README](https://github.com/polygraph-cool/starter/blob/master/README.story.md#development) file in the new project directory for instructions.
