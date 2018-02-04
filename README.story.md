@@ -25,7 +25,7 @@ Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.or
 * Create a Google Doc
 * Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
 * In the address bar, grab the ID - eg. ...com/document/d/ **1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
-* In the file `config.js` in root of project, paste in the ID
+* In the file `config.json` in root of project, paste in the ID
 
 Running `gulp fetch-google` at any point (even in new tab while server is running) will pull down the latest, and output a file `template-data/copy.json`.
 
