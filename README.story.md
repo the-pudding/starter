@@ -14,7 +14,7 @@ Partials are not automatically included. You must add them to `index.hbs`. If yo
 
 #### Metadata
 
-Fill out `template-data/info.json`
+Fill out `template-data/meta.json`
 
 #### Copy
 
@@ -143,5 +143,5 @@ Run `make live` to deploy and bust cache.
 * clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
 * remove console logs: aesthetics :smile:
 * enable anayltics: be sure analytics partial is included (`analytics.hbs`)
-* fill out metadata: `template-data/info.json`
+* fill out metadata: `template-data/meta.json`
 * create an og image: It should be 1200x600, try not have anything important near edges. Make sure it aligns with the img file url in metadata.
