@@ -29,7 +29,7 @@ Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.or
 
 Running `gulp fetch-google` at any point (even in new tab while server is running) will pull down the latest, and output a file `template-data/copy.json`.
 
-You can now reference the JSON in your HTML, namespaced by `copy` (eg. `<h1>{{copy.title}}</h1>`).
+You can now reference the JSON in your HTML, namespaced by `copy` (eg. `<p>{{copy.explanation}}</p>`).
 
 #### SVG Icons
 
