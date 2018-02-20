@@ -146,4 +146,7 @@ Run `make live` to deploy and bust cache.
 * remove console logs: aesthetics :smile:
 * enable anayltics: be sure analytics partial is included (`analytics.hbs`)
 * fill out metadata: `template-data/meta.json`
-* create an og image: It should be 1200x600, try not have anything important near edges. Make sure it aligns with the img file url in metadata.
+* create two social images:
+	* Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
+	* Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
+
