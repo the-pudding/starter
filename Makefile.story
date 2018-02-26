@@ -8,7 +8,7 @@ github:
 	git push
 
 # aws-assets:
-# 	aws s3 sync dist s3://pudding.cool/year/month/name --delete --cache-control 'max-age=31536000' --exclude 'index.html'
+# 	aws s3 sync dist s3://pudding.cool/year/month/name --delete --cache-control 'max-age=31536000' --exclude 'index.html' --exclude 'bundle.js'
 
 # aws-htmljs:
 # 	aws s3 cp dist/index.html s3://pudding.cool/year/month/name/index.html
