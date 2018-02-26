@@ -137,7 +137,7 @@ Requirements:
 
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
-Run `make live` to deploy and bust cache.
+Run `make live` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
 
 ## Pre-launch Checklist
 
@@ -147,6 +147,5 @@ Run `make live` to deploy and bust cache.
 * enable anayltics: be sure analytics partial is included (`analytics.hbs`)
 * fill out metadata: `template-data/meta.json`
 * create two social images:
-	* Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
-	* Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
-
+  _ Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
+  _ Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
