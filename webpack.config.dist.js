@@ -1,4 +1,4 @@
-const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 	module: {
@@ -9,18 +9,14 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: [
-							require.resolve('babel-preset-env'),
-						],
+						presets: [require.resolve('babel-preset-env')],
 						plugins: [
-							require.resolve('babel-plugin-transform-object-rest-spread'),
-						],
-					},
-				},
-			},
-		],
+							require.resolve('babel-plugin-transform-object-rest-spread')
+						]
+					}
+				}
+			}
+		]
 	},
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin(),
-	],
-}
+	plugins: [new UglifyJsPlugin()]
+};
