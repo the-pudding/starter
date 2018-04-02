@@ -32,7 +32,7 @@ curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
 * Transpiles ES6 with [Babel](http://babeljs.io)
 * [Stylus](http://stylus-lang.com/) for CSS pre-processor
 * [Handlebars](http://handlebarsjs.com/) for HTML templating
-* Google Docs -> JSON (with [ArchieML](http://archieml.org/) integration for a micro CMS
+* Google Docs -> JSON (with [ArchieML](http://archieml.org/)) integration for a micro CMS
 * Bundles and minifies JavaScript with [Webpack](http://webpack.js.org)
 * Bundles, minifies, auto-prefixes, and inlines CSS
 * Async font loading (using FOUT)
