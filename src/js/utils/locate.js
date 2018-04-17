@@ -5,25 +5,14 @@ locate((err, result) => {
 */
 
 import request from 'superagent';
+import testData from './locate-test';
 
-const test = {
-	ip: '24.194.26.74',
-	country_code: 'US',
-	country_name: 'United States',
-	region_code: 'MA',
-	region_name: 'Massachusetts',
-	city: 'Great Barrington',
-	zip_code: '01230',
-	time_zone: 'America/New_York',
-	latitude: 42.1617,
-	longitude: -73.3277,
-	metro_code: 532
-};
 const debug = false;
+const IPSTACK_KEY = '19abf1356afaccae9f9e2213a3dbe4c0';
 const MAX_TIME = 4000;
 
 function getIP() {
-	if (debug) return Promise.resolve(test);
+	if (debug) return Promise.resolve(testData);
 	const url = 'https://api.ipify.org?format=json';
 	return new Promise((resolve, reject) => {
 		request.get(url).end((err, res) => {
@@ -36,8 +25,8 @@ function getIP() {
 }
 
 function getGeocode({ ip }) {
-	if (debug) return Promise.resolve(test);
-	const url = `https://freegeoip.net/json/${ip}`;
+	if (debug) return Promise.resolve(testData);
+	const url = `https://api.ipstack.com/${ip}?access_key=${IPSTACK_KEY}`;
 	return new Promise((resolve, reject) => {
 		request.get(url).end((err, res) => {
 			if (err) reject(err);
