@@ -1,5 +1,5 @@
 /* USAGE:
-locate((err, result) => {
+locate(key, (err, result) => {
   ...
 })
 */
@@ -8,8 +8,8 @@ import request from 'superagent';
 import testData from './locate-test';
 
 const debug = false;
-const IPSTACK_KEY = '19abf1356afaccae9f9e2213a3dbe4c0';
 const MAX_TIME = 4000;
+let key = null;
 
 function getIP() {
 	if (debug) return Promise.resolve(testData);
@@ -26,7 +26,7 @@ function getIP() {
 
 function getGeocode({ ip }) {
 	if (debug) return Promise.resolve(testData);
-	const url = `https://api.ipstack.com/${ip}?access_key=${IPSTACK_KEY}`;
+	const url = `https://api.ipstack.com/${ip}?access_key=${key}`;
 	return new Promise((resolve, reject) => {
 		request.get(url).end((err, res) => {
 			if (err) reject(err);
@@ -42,16 +42,19 @@ function getGeocode({ ip }) {
  * @param {function} cb callback funtion
  */
 
-function init(cb) {
-	const timeout = setTimeout(() => cb('timeout'), MAX_TIME);
+function init(k, cb) {
+	if (k) {
+		key = k;
+		const timeout = setTimeout(() => cb('timeout'), MAX_TIME);
 
-	getIP()
-		.then(getGeocode)
-		.then(response => {
-			clearTimeout(timeout);
-			cb(null, response);
-		})
-		.catch(err => cb(err));
+		getIP()
+			.then(getGeocode)
+			.then(response => {
+				clearTimeout(timeout);
+				cb(null, response);
+			})
+			.catch(err => cb(err));
+	} else cb('error: must pass ipstack key');
 }
 
 export default init;
