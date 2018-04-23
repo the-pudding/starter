@@ -21,35 +21,35 @@ d3.selection.prototype.puddingChartName = function init(options) {
 		const marginLeft = 0;
 		const marginRight = 0;
 
-		const chart = {
+		const Chart = {
 			// called once at start
 			init() {
 				console.log('init');
-				chart.resize();
-				chart.render();
+				Chart.resize();
+				Chart.render();
 			},
 			// on resize, update new dimensions
 			resize() {
 				console.log('resize');
-				return chart;
+				return Chart;
 			},
 			// update scales and render chart
 			render() {
 				console.log('render');
-				return chart;
+				return Chart;
 			},
 			// get / set data
 			data(val) {
 				if (!arguments.length) return data;
 				data = val;
 				$sel.datum(data);
-				chart.render();
-				return chart;
+				Chart.render();
+				return Chart;
 			}
 		};
-		chart.init();
+		Chart.init();
 
-		return chart;
+		return Chart;
 	}
 
 	return this.nodes().map(createChart);
