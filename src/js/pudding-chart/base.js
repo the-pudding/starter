@@ -4,7 +4,7 @@
  2. change puddingChartName to puddingChartLine
  3. in graphic file: import './pudding-chart/line'
  4a. const charts = d3.selectAll('.thing').data(data).puddingChartLine();
- 4b. const chart = d3.select('.thing').datum(data).puddingChartLine();
+ 4b. const chart = d3.select('.thing').datum(datum).puddingChartLine();
 */
 
 d3.selection.prototype.puddingChartName = function init(options) {
@@ -77,5 +77,7 @@ d3.selection.prototype.puddingChartName = function init(options) {
 		return Chart;
 	}
 
-	return this.nodes().map(createChart);
+	// create charts
+	const charts = this.nodes().map(createChart);
+	return charts.length > 1 ? charts : charts.pop();
 };
