@@ -19,7 +19,7 @@ function getIP() {
 			if (err) reject(err);
 			else if (res && res.status >= 200 && res.status < 400)
 				resolve(JSON.parse(res.text));
-			else reject();
+			else reject(err);
 		});
 	});
 }
@@ -30,9 +30,11 @@ function getGeocode({ ip }) {
 	return new Promise((resolve, reject) => {
 		request.get(url).end((err, res) => {
 			if (err) reject(err);
-			else if (res && res.status >= 200 && res.status < 400)
-				resolve(JSON.parse(res.text));
-			else reject();
+			else if (res && res.status >= 200 && res.status < 400) {
+				const j = JSON.parse(res.text);
+				if (j.error) reject(j.error);
+				else resolve(j);
+			} else reject(err);
 		});
 	});
 }
