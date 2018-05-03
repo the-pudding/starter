@@ -8,7 +8,7 @@ Any changes to the `src/` folder will trigger live reload.
 
 **Where it goes:** `src/html/partials/story/`.
 
-The main HTML file ins `src/html/index.hbs`. Generally speaking, You should mostly just include new partials in there and not modify too much of it since there are a bunch of presets.
+The main HTML file is `src/html/index.hbs`. Generally speaking, You should mostly just include new partials in there and not modify too much of it since there are a bunch of presets.
 
 Partials are not automatically included. You must add them to `index.hbs`. If you created a new file `content.hbs` it would be referenced as `{{> story/content }}`.
 
