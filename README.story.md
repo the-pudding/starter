@@ -88,6 +88,8 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 * [scrollama](https://github.com/russellgoldenberg/scrollama)
 * [ScrollWatch](https://edull24.github.io/ScrollWatch/)
 
+NoUISlider is included by default, with some preset pudding styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
+
 ## CSS
 
 **Where it goes:** `src/css/story/`.
