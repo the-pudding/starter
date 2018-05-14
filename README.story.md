@@ -117,6 +117,8 @@ I reccommend creating separate directories for images, data, etc. Assets can alw
 * `<img src='assets/img/test.jpg'>`
 * `d3.csv('assets/data/test.csv')`
 
+When deployed, assets paths will remain relative. *However*, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
+
 ## Deploy
 
 Run `gulp dist`
