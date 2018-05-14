@@ -4,6 +4,9 @@ Run `gulp` to fire up the project server.
 
 Any changes to the `src/` folder will trigger live reload.
 
+#### Device testing
+To view local dev link on a mobile device connected to same network, update the option to `online: true` in `gulp-tasks/browser-sync.js`. Then after you run `gulp`, grab the url from the terminal and you're good to go.
+
 ## HTML
 
 **Where it goes:** `src/html/partials/story/`.
