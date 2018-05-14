@@ -20,7 +20,7 @@ Fill out `template-data/meta.json`
 
 Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.org) as a micro CMS.
 
-**Setup Google Doc**
+**Setup Google doc**
 
 * Create a Google Doc
 * Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
@@ -31,7 +31,7 @@ Running `gulp fetch-google` at any point (even in new tab while server is runnin
 
 You can now reference the JSON in your HTML, namespaced by `copy` (eg. `<p>{{copy.explanation}}</p>`).
 
-#### SVG Icons
+#### SVG icons
 
 There is a directory called `svg` in the root of project, it contains a bunch of [icons](https://feathericons.com/). To include them in the HTML, simply do this:
 
@@ -51,7 +51,16 @@ Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you
 
 The JavaScript is transpiled from ES6, and uses Webpack to bundle into a single file. That means each file creates its own closure, so a "global" variable is scoped to a file unless you declare it as `window.variable = ....`.
 
-#### JavaScript Utilties
+#### Installing libraries
+**NPM way**:
+`npm install [name] --save`.
+Usage: (see library docs, but usually) `import [library] from '[library]'`
+
+**Old school**
+Put JS file in the `src/assets/scripts` directory.
+Usage: reference in the `index.hbs` file `<script src='assets/scripts/[name].js'></script>`
+
+#### JavaScript utilties
 
 In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 
@@ -65,7 +74,7 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 * `lookup-state-abbr.js`: Get state abbrevation from state name.
 * `tracker.js`: Fire simple GA tracking on events.
 
-#### The Pudding's Favorite Libraries
+#### The Pudding's favorite libraries
 
 * [d3-annotation](http://d3-annotation.susielu.com/)
 * [lodash](https://lodash.com/)
@@ -125,7 +134,7 @@ Run `gulp dist`
 
 This generates a single html file with inlined css, a single js file, and a folder with assets in the `dist` folder.
 
-**Update Github Pages version (during development)**
+**Update Github pages version (during development)**
 
 Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
 
@@ -141,7 +150,7 @@ In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Unco
 
 Run `make live` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
 
-## Pre-launch Checklist
+## Pre-launch checklist
 
 * optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also crunched with something like [imageoptim](https://imageoptim.com/online).
 * clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
