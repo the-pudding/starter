@@ -33,7 +33,7 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
 
 ```
-curl -Lk http://bit.ly/2bgptna > Makefile; make enhanced;
+curl -Lk https://bit.ly/2J0L3MD > Makefile; make enhanced;
 ```
 
 #### Documentation
@@ -47,5 +47,5 @@ See the generated [README](https://github.com/polygraph-cool/starter/blob/master
 To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
 
 ```
-curl -Lk http://bit.ly/2bgptna > Makefile; make boilerplate;
+curl -Lk https://bit.ly/2J0L3MD > Makefile; make boilerplate;
 ```
