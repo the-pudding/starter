@@ -5,6 +5,7 @@ Run `gulp` to fire up the project server.
 Any changes to the `src/` folder will trigger live reload.
 
 #### Device testing
+
 To view local dev link on a mobile device connected to same network, update the option to `online: true` in `gulp-tasks/browser-sync.js`. Then after you run `gulp`, grab the url from the terminal and you're good to go.
 
 ## HTML
@@ -55,6 +56,7 @@ Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you
 The JavaScript is transpiled from ES6, and uses Webpack to bundle into a single file. That means each file creates its own closure, so a "global" variable is scoped to a file unless you declare it as `window.variable = ....`.
 
 #### Installing libraries
+
 **NPM way**:
 `npm install [name] --save`.
 Usage: (see library docs, but usually) `import [library] from '[library]'`
@@ -116,7 +118,7 @@ Example:
 </div>
 ```
 
-Use the **font-weight** CSS property to per-usual. Available weights:
+Use the **font-weight** CSS property. Available weights:
 
 * Canela: 300, 700
 * Publico: 400, 700
@@ -131,7 +133,7 @@ I reccommend creating separate directories for images, data, etc. Assets can alw
 * `<img src='assets/img/test.jpg'>`
 * `d3.csv('assets/data/test.csv')`
 
-When deployed, assets paths will remain relative. *However*, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
+When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
 
 ## Deploy
 
@@ -163,5 +165,5 @@ Run `make live` to deploy and bust cache. If you only made changes to html/css/j
 * enable anayltics: be sure analytics partial is included (`analytics.hbs`)
 * fill out metadata: `template-data/meta.json`
 * create two social images:
-	* Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
-	* Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
+  _ Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
+  _ Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
