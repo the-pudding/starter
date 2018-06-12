@@ -155,7 +155,7 @@ Requirements:
 
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
-Run `make live` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
+Run `make pudding` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
 
 ## Pre-launch checklist
 
