@@ -20,4 +20,4 @@ archive:
 # aws-cache:
 # 	aws cloudfront create-invalidation --distribution-id E13X38CRR4E04D --paths '/year/month/name*'	
 
-# live: aws-assets aws-htmljs aws-cache archive
+# pudding: aws-assets aws-htmljs aws-cache archive
