@@ -16,6 +16,11 @@ The main HTML file is `src/html/index.hbs`. Generally speaking, You should mostl
 
 Partials are not automatically included. You must add them to `index.hbs`. If you created a new file `content.hbs` it would be referenced as `{{> story/content }}`.
 
+#### Sticky header with menu
+
+* `{{> base/header 'sticky' }}`
+* `{{> base/header 'sticky-dark' }}`
+
 #### Metadata
 
 Fill out `template-data/meta.json`
