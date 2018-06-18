@@ -18,6 +18,8 @@ Partials are not automatically included. You must add them to `index.hbs`. If yo
 
 #### Sticky header with menu
 
+Change `base/header` in `index.hbs`:
+
 * `{{> base/header 'sticky' }}`
 * `{{> base/header 'sticky-dark' }}`
 
