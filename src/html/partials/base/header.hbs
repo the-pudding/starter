@@ -1,6 +1,23 @@
 <a href='#content' class='skip-to-main'>Skip to main content</a>
-<header>
+
+<header class='{{#ifEquals this 'sticky'}}is-sticky{{/ifEquals}}{{#ifEquals this 'sticky-dark'}}is-sticky is-dark{{/ifEquals}}'>
 	<a href='https://pudding.cool' target='_blank' class='logo'>
 		@@include('logo.svg')
 	</a>
+	 {{#if 'sticky'}}
+	 <div class='header__menu tk-atlas'>
+		 	<btn class='menu__toggle'>
+				 <span>@@include('menu.svg')</span>
+				 <span>@@include('x.svg')</span>
+			 </btn>
+			<p class='menu__tagline'><a href='https://pudding.cool' target='_blank'>The Pudding</a> explains ideas debated in culture with visual essays.</p>
+			<ul class='menu__links'>
+				<li><a class='x-large' onclick='trackOutboundLink('https://pudding.cool/#greatest'); return false;' href='https://pudding.cool/#greatest'>Greatest Hits</a></li>
+				<li><a class='x-large' onclick='trackOutboundLink('https://pudding.cool/#new'); return false;' href='https://pudding.cool/#new'>What’s New</a></li>
+				<li><a class='x-large' onclick='trackOutboundLink('https://pudding.cool/#all'); return false;' href='https://pudding.cool/#all'>All Essays</a></li>
+				<li><a class='' href="https://pudding.cool/about/" class="about">About</a></li>
+			</ul>
+	</div>
+	 {{/if}}
 </header>
+

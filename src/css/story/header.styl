@@ -4,6 +4,7 @@ header
 	top 0
 	left 0
 	width 100%
+	background-color transparent
 
 	a.logo
 		display block
@@ -15,3 +16,91 @@ header
 			fill $off-black
 			display block
 			width 100%
+	
+header.is-sticky
+	
+	position fixed
+	background-color $white
+	box-shadow 0 0 7px 1px $gray-light
+	a.logo
+		margin 0 auto
+
+	.header__menu
+		position fixed
+		top 0
+		right -17rem
+		height 100vh
+		width 17rem
+		padding 2rem
+		background-color $off-black
+		color $off-white
+		z-index set-index(overlay)
+		transition right 200ms ease-in-out
+		border-left 1px solid $gray-dark
+
+		&.is-visible
+			right 0
+
+		a
+			color $off-white
+			border-bottom 1px solid $off-white
+			&:hover
+				color $gray-light
+
+		.menu__links li
+			margin-bottom 0.5rem
+			&:last-of-type
+				margin-top 2rem
+
+		.menu__toggle
+			position fixed
+			top 0
+			right 0
+			padding 0.75rem
+			cursor pointer
+			line-height 1
+			svg
+				stroke $off-black
+			
+			span
+				&:first-of-type
+					display block
+				&:last-of-type
+					display none
+			
+			&.is-visible span
+				&:first-of-type
+					display none
+				&:last-of-type
+					display block
+
+				svg
+					stroke $off-white			
+
+// dark color version
+header.is-sticky.is-dark
+	background-color $off-black
+	box-shadow 0 0 7px 1px $gray-dark
+
+	svg
+		fill $off-white
+
+	.header__menu
+		background-color $white
+		color $off-black
+		border-left 1px solid $gray-light
+
+		a
+			color $off-black
+			border-bottom 1px solid $off-black
+			&:hover
+				color $gray-dark
+
+		.menu__toggle
+			svg
+				stroke $off-white
+			
+			&.is-visible span
+				svg
+					stroke $off-black
+				
