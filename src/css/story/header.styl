@@ -47,35 +47,35 @@ header.is-sticky
 			&:hover
 				color $gray-light
 
-		.menu__links li
-			margin-bottom 0.5rem
+	.menu__links li
+		margin-bottom 0.5rem
+		&:last-of-type
+			margin-top 2rem
+
+	.menu__toggle
+		position fixed
+		top 0
+		right 0
+		padding 0.75rem
+		cursor pointer
+		line-height 1
+		svg
+			stroke $off-black
+		
+		span
+			&:first-of-type
+				display block
 			&:last-of-type
-				margin-top 2rem
+				display none
+		
+		&.is-visible span
+			&:first-of-type
+				display none
+			&:last-of-type
+				display block
 
-		.menu__toggle
-			position fixed
-			top 0
-			right 0
-			padding 0.75rem
-			cursor pointer
-			line-height 1
 			svg
-				stroke $off-black
-			
-			span
-				&:first-of-type
-					display block
-				&:last-of-type
-					display none
-			
-			&.is-visible span
-				&:first-of-type
-					display none
-				&:last-of-type
-					display block
-
-				svg
-					stroke $off-white			
+				stroke $off-white
 
 // dark color version
 header.is-sticky.is-dark
@@ -96,11 +96,11 @@ header.is-sticky.is-dark
 			&:hover
 				color $gray-dark
 
-		.menu__toggle
+	.menu__toggle
+		svg
+			stroke $off-white
+		
+		&.is-visible span
 			svg
-				stroke $off-white
-			
-			&.is-visible span
-				svg
-					stroke $off-black
+				stroke $off-black
 				
