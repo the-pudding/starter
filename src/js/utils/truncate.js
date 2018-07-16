@@ -9,8 +9,8 @@
  */
 function truncate({ text, chars = 100, clean = true, ellipses = false }) {
 	const a = text.substring(0, chars);
-	const end = clean ? sub.lastIndexOf(' ') : a.length;
-	const b = sub.substring(0, end);
+	const end = clean ? a.lastIndexOf(' ') : a.length;
+	const b = a.substring(0, end);
 	const e = ellipses ? '...' : '';
 	return `${b}${e}`;
 }
