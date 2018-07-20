@@ -8,10 +8,11 @@
  * @returns {string} truncated text
  */
 function truncate({ text, chars = 100, clean = true, ellipses = false }) {
+	const over = text.length > chars;
 	const a = text.substring(0, chars);
 	const end = clean ? a.lastIndexOf(' ') : a.length;
-	const b = a.substring(0, end);
-	const e = ellipses ? '...' : '';
+	const b = over ? a.substring(0, end) : text;
+	const e = over && ellipses ? '...' : '';
 	return `${b}${e}`;
 }
 
