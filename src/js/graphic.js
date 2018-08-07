@@ -1,4 +1,4 @@
-// D3 is included by globally by default
+/* global d3 */
 
 function resize() {}
 
