@@ -27,7 +27,7 @@ Change `base/header` in `index.hbs`:
 
 Fill out `template-data/meta.json`
 
-### Analytics
+##### Analytics
 
 For The Pudding analytics use `UA-90567923-1`.
 
@@ -176,5 +176,5 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 - enable anayltics: put `UA-90567923-1` in `template-data/meta.json`
 - fill out metadata: `template-data/meta.json`
 - create two social images:
-  _ Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
-  _ Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
+  * Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
+  * Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
