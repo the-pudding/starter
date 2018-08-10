@@ -20,12 +20,16 @@ Partials are not automatically included. You must add them to `index.hbs`. If yo
 
 Change `base/header` in `index.hbs`:
 
-* `{{> base/header 'sticky' }}`
-* `{{> base/header 'sticky-dark' }}`
+- `{{> base/header 'sticky' }}`
+- `{{> base/header 'sticky-dark' }}`
 
 #### Metadata
 
 Fill out `template-data/meta.json`
+
+### Analytics
+
+For The Pudding analytics use `UA-90567923-1`.
 
 #### Copy
 
@@ -33,10 +37,10 @@ Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.or
 
 **Setup Google doc**
 
-* Create a Google Doc
-* Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
-* In the address bar, grab the ID - eg. ...com/document/d/**1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
-* In the file `config.json` in root of project, paste in the ID
+- Create a Google Doc
+- Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
+- In the address bar, grab the ID - eg. ...com/document/d/**1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
+- In the file `config.json` in root of project, paste in the ID
 
 Running `gulp fetch-google` at any point (even in new tab while server is running) will pull down the latest, and output a file `template-data/copy.json`.
 
@@ -76,26 +80,26 @@ Usage: reference in the `index.hbs` file `<script src='assets/scripts/[name].js'
 
 In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 
-* `dom.js`: Super minimial wrapper on basic vanilla dom selection for convenience and cross-browser.
-* `is-mobile.js`: Device sniffing to detect if on mobile hardware.
-* `load-image.js`: Async image loading to detect when image completely loaded.
-* `locate.js`: Estimate user location via ip address.
-* `truncate.js`: Truncate string with options to break on space and add ellipses.
-* `url-parameter.js`: Get and set the paremeters of the URL in address bar.
-* `lookup-state-name.js`: Get state name from state abbrevation.
-* `lookup-state-abbr.js`: Get state abbrevation from state name.
-* `tracker.js`: Fire simple GA tracking on events.
+- `dom.js`: Super minimial wrapper on basic vanilla dom selection for convenience and cross-browser.
+- `is-mobile.js`: Device sniffing to detect if on mobile hardware.
+- `load-image.js`: Async image loading to detect when image completely loaded.
+- `locate.js`: Estimate user location via ip address.
+- `truncate.js`: Truncate string with options to break on space and add ellipses.
+- `url-parameter.js`: Get and set the paremeters of the URL in address bar.
+- `lookup-state-name.js`: Get state name from state abbrevation.
+- `lookup-state-abbr.js`: Get state abbrevation from state name.
+- `tracker.js`: Fire simple GA tracking on events.
 
 #### The Pudding's favorite libraries
 
-* [d3-annotation](http://d3-annotation.susielu.com/)
-* [lodash](https://lodash.com/)
-* [moveto](https://github.com/hsnaydd/moveTo)
-* [jump.js](http://callmecavs.com/jump.js/)
-* [nouislider](https://refreshless.com/nouislider/)
-* [geolib](https://github.com/manuelbieh/geolib)
-* [scrollama](https://github.com/russellgoldenberg/scrollama)
-* [ScrollWatch](https://edull24.github.io/ScrollWatch/)
+- [d3-annotation](http://d3-annotation.susielu.com/)
+- [lodash](https://lodash.com/)
+- [moveto](https://github.com/hsnaydd/moveTo)
+- [jump.js](http://callmecavs.com/jump.js/)
+- [nouislider](https://refreshless.com/nouislider/)
+- [geolib](https://github.com/manuelbieh/geolib)
+- [scrollama](https://github.com/russellgoldenberg/scrollama)
+- [ScrollWatch](https://edull24.github.io/ScrollWatch/)
 
 NoUISlider is included by default, with some preset pudding styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
 
@@ -111,9 +115,9 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have three font families:
 
-* **Canela** (class name: `tk-canela`)
-* **Publico** (class name: `tk-publico`)
-* **Atlas Grotesk** (class name: `tk-atlas`)
+- **Canela** (class name: `tk-canela`)
+- **Publico** (class name: `tk-publico`)
+- **Atlas Grotesk** (class name: `tk-atlas`)
 
 Simply include the class on the element, and all children will inherit it. Publico is included on the body tag by default.
 
@@ -127,9 +131,9 @@ Example:
 
 Use the **font-weight** CSS property. Available weights:
 
-* Canela: 300, 700
-* Publico: 400, 700
-* Atlas: 400, 500, 600
+- Canela: 300, 700
+- Publico: 400, 700
+- Atlas: 400, 500, 600
 
 ## Assets
 
@@ -137,8 +141,8 @@ Use the **font-weight** CSS property. Available weights:
 
 I reccommend creating separate directories for images, data, etc. Assets can always be referenced relative to `assets` directory. For example:
 
-* `<img src='assets/img/test.jpg'>`
-* `d3.csv('assets/data/test.csv')`
+- `<img src='assets/img/test.jpg'>`
+- `d3.csv('assets/data/test.csv')`
 
 When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
 
@@ -156,9 +160,9 @@ Run `make github` (make sure you've enabled github pages in your repo settings t
 
 Requirements:
 
-* [awscli](https://aws.amazon.com/cli/)
-* [configure aws](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html)
-* [configure cloud](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html).
+- [awscli](https://aws.amazon.com/cli/)
+- [configure aws](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html)
+- [configure cloud](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html).
 
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
@@ -166,11 +170,11 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 
 ## Pre-launch checklist
 
-* optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also crunched with something like [imageoptim](https://imageoptim.com/online).
-* clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
-* remove console logs: aesthetics :smile:
-* enable anayltics: be sure analytics partial is included (`analytics.hbs`)
-* fill out metadata: `template-data/meta.json`
-* create two social images:
+- optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also crunched with something like [imageoptim](https://imageoptim.com/online).
+- clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
+- remove console logs: aesthetics :smile:
+- enable anayltics: put `UA-90567923-1` in `template-data/meta.json`
+- fill out metadata: `template-data/meta.json`
+- create two social images:
   _ Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   _ Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
