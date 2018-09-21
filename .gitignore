@@ -1,7 +1,8 @@
 .DS_Store
+.tmp
+.vscode
 npm-debug.log
 node_modules
 dev
 dist
-.tmp
 package-lock.json
