@@ -175,6 +175,7 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 - remove console logs: aesthetics :smile:
 - enable anayltics: put `UA-90567923-1` in `template-data/meta.json`
 - fill out metadata: `template-data/meta.json`
+- record project recap
 - create two social images:
   * Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   * Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
