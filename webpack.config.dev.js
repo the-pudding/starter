@@ -1,4 +1,12 @@
 module.exports = {
+	mode: 'development',
+	entry: {
+		bundle: './src/js/entry.js',
+		critical: './src/js/critical.js'
+	},
+	output: {
+		filename: '[name].js'
+	},
 	module: {
 		rules: [
 			{
@@ -7,16 +15,13 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: [
-							require.resolve('babel-preset-env'),
-						],
-						plugins: [
-							require.resolve('babel-plugin-transform-object-rest-spread'),
-						],
-					},
-				},
-			},
-		],
+						presets: ['@babel/preset-env'],
+						plugins: [require('@babel/plugin-proposal-object-rest-spread')]
+					}
+				}
+			}
+		]
 	},
-	devtool: 'cheap-module-eval-source-map',
-}
+	target: 'web',
+	devtool: 'cheap-module-eval-source-map'
+};
