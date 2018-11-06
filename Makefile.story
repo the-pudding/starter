@@ -1,4 +1,4 @@
-PHONY: github aws-assets aws-htmljs aws-cache live
+PHONY: github aws-assets aws-htmljs aws-cache
 
 github:
 	rm -rf docs
