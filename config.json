@@ -1,5 +1,13 @@
 {
-	"google": {
-		"id": ""
-	}
+  "google": {
+    "doc": {
+      "id": "",
+      "filepath": ""
+    },
+    "sheet": {
+      "id": "",
+      "gid": "",
+      "filepath": ""
+    }
+  }
 }
