@@ -22,7 +22,7 @@ const makeRequest = (opt, cb) => {
 	});
 };
 
-gulp.task('fetch-google', cb => {
+gulp.task('fetch-doc', cb => {
 	if (doc.id) makeRequest(doc, cb);
 	else {
 		console.error('No google doc');
