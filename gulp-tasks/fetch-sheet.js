@@ -23,9 +23,15 @@ const makeRequest = (opt, cb) => {
 };
 
 gulp.task('fetch-sheet', cb => {
-	if (sheet.id && sheet.gid) makeRequest(sheet, cb);
-	else {
-		console.error('No google sheet');
-		cb();
+	let i = 0;
+	const next = () => {
+		const d = sheet[i]
+		if (d.id) makeRequest(d, () => {
+			i += 1
+			if (i < sheet.length) next();
+			else cb();
+		});
 	}
+
+	next();
 });

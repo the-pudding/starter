@@ -22,9 +22,15 @@ const makeRequest = (opt, cb) => {
 };
 
 gulp.task('fetch-doc', cb => {
-	if (doc.id) makeRequest(doc, cb);
-	else {
-		console.error('No google doc');
-		cb();
+	let i = 0;
+	const next = () => {
+		const d = doc[i]
+		if (d.id) makeRequest(d, () => {
+			i += 1
+			if (i < doc.length) next();
+			else cb();
+		});
 	}
+
+	next();
 });
