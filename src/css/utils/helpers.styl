@@ -52,9 +52,10 @@ set-type-size(scale, lh = false)
 // hash = the hashed version (eg. open-sans)
 // fallback = fallback stack (eg. $sans or 'Helvetica, Arial')
 // fb-weight = fallback weight
-fontify($font, $hash, $fallback)
+fontify($font, $hash, $fallback, $spacing = normal)
 	.tk-{$hash}
 		font-family $fallback
+		letter-spacing $spacing
 		.loaded-{$hash} & 
 			font-family $font, $fallback
 			

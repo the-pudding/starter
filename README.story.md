@@ -115,25 +115,21 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have three font families:
 
-- **Canela** (class name: `tk-canela`)
-- **Publico** (class name: `tk-publico`)
-- **Atlas Grotesk** (class name: `tk-atlas`)
+- **National** (class name: `tk-national`)
+- **Tiempos** (class name: `tk-tiempos`)
 
-Simply include the class on the element, and all children will inherit it. Publico is included on the body tag by default.
+Simply include the class on the element, and all children will inherit it. Tiempos is included on the body tag by default.
 
 Example:
 
 ```html
-<div class='example'>
-	<p class='tk-atlas'>test</p>
-</div>
+<div class="example"><p class="tk-national">test</p></div>
 ```
 
 Use the **font-weight** CSS property. Available weights:
 
-- Canela: 300, 700
-- Publico: 400, 700
-- Atlas: 400, 500, 600
+- National: 500, 700, 900
+- Tiempos: 500, 700
 
 ## Assets
 
@@ -144,7 +140,7 @@ I reccommend creating separate directories for images, data, etc. Assets can alw
 - `<img src='assets/img/test.jpg'>`
 - `d3.csv('assets/data/test.csv')`
 
-When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
+When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v5.8.0.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
 
 ## Deploy
 
