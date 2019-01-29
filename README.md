@@ -23,7 +23,7 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 - Google Docs -> JSON (with [ArchieML](http://archieml.org/)) integration for a micro CMS
 - Bundles and minifies JavaScript with [Webpack](http://webpack.js.org)
 - Bundles, minifies, auto-prefixes, and inlines CSS
-- Async font loading (using FOUT)
+- Async font loading (using `font-display`)
 - Preloaded [icon set](https://feathericons.com/)
 
 #### Setup
