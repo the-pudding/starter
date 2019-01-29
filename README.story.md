@@ -113,23 +113,21 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 ## Fonts
 
-Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have three font families:
+Fonts are loaded async and use the `font-display: swap` CSS setting.
 
-- **National** (class name: `tk-national`)
-- **Tiempos** (class name: `tk-tiempos`)
-
-Simply include the class on the element, and all children will inherit it. Tiempos is included on the body tag by default.
-
-Example:
-
-```html
-<div class="example"><p class="tk-national">test</p></div>
-```
+- **National**
+- **Tiempos Text** (default `body` font)
+- **Publico Text** (disabled by default)
+- **Atlas Grotesk** (disabled by default)
 
 Use the **font-weight** CSS property. Available weights:
 
-- National: 500, 700, 900
+- National: 500, 700, 900, 200 (disabled)
 - Tiempos: 500, 700
+- Publico: 400, 700
+- Atlas: 400, 500, 600
+
+By default, **National** is bound to the variable `$sans` and **Tiempos** is bound to the variable `$serif` in `variables.styl`. Use these since they contain fallbacks as well.
 
 ## Assets
 

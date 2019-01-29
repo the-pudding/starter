@@ -12,7 +12,8 @@
     "lodash.debounce": "^4.0.8",
     "nouislider": "^12.1.0",
     "promise-polyfill": "^8.1.0",
-    "superagent": "^4.1.0"
+    "superagent": "^4.1.0",
+    "whatwg-fetch": "3.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
