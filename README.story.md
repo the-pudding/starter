@@ -113,27 +113,21 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 ## Fonts
 
-Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have three font families:
+Fonts are loaded async and use the `font-display: swap` CSS setting.
 
-- **Canela** (class name: `tk-canela`)
-- **Publico** (class name: `tk-publico`)
-- **Atlas Grotesk** (class name: `tk-atlas`)
-
-Simply include the class on the element, and all children will inherit it. Publico is included on the body tag by default.
-
-Example:
-
-```html
-<div class='example'>
-	<p class='tk-atlas'>test</p>
-</div>
-```
+- **National**
+- **Tiempos Text** (default `body` font)
+- **Publico Text** (disabled by default)
+- **Atlas Grotesk** (disabled by default)
 
 Use the **font-weight** CSS property. Available weights:
 
-- Canela: 300, 700
+- National: 500, 700, 900, 200 (disabled)
+- Tiempos: 500, 700
 - Publico: 400, 700
 - Atlas: 400, 500, 600
+
+By default, **National** is bound to the variable `$sans` and **Tiempos** is bound to the variable `$serif` in `variables.styl`. Use these since they contain fallbacks as well.
 
 ## Assets
 
@@ -144,7 +138,7 @@ I reccommend creating separate directories for images, data, etc. Assets can alw
 - `<img src='assets/img/test.jpg'>`
 - `d3.csv('assets/data/test.csv')`
 
-When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
+When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v5.8.0.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
 
 ## Deploy
 

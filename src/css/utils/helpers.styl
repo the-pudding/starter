@@ -45,18 +45,6 @@ set-type-size(scale, lh = false)
     else
         error('Not a defined type scale')
 
-// -------------------
-// WEB FONT LOADING
-// -------------------
-// font = the actual font name (eg. Open Sans)
-// hash = the hashed version (eg. open-sans)
-// fallback = fallback stack (eg. $sans or 'Helvetica, Arial')
-// fb-weight = fallback weight
-fontify($font, $hash, $fallback)
-	.tk-{$hash}
-		font-family $fallback
-		.loaded-{$hash} & 
-			font-family $font, $fallback
 			
 // -------------------
 // BREAKPOINTS
