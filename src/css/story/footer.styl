@@ -1,0 +1,90 @@
+footer.pudding-footer
+	padding 3rem 1rem
+	background-color $white
+	font-family $sans
+
+	.footer-social
+		display flex
+		align-items center
+		justify-content center
+		flex-wrap wrap
+		p
+			margin 0
+
+		&__icons
+			display flex
+			padding-bottom 1rem
+		
+		&__icon
+			margin-left 1rem
+	
+		&__preach
+			font-family $serif
+			padding-bottom 1rem
+			set-type-size(large)
+			+mq('bp-4')
+				set-type-size(x-large)
+			
+			span
+				font-family $sans
+				font-weight 700
+				text-transform uppercase
+	
+	.footer-recirc
+		max-width 65rem
+		margin 0 auto
+		&__articles
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+		
+		&__article
+			display block
+			width 100%
+			border none
+			border-left 4px solid $black
+			margin-bottom 3rem
+			+mq('bp-5')
+				width calc(33.3% - 1.5rem)
+				margin-right 1.5rem
+				&:last-of-type
+					margin-right 0
+
+		.article__headline
+			set-type-size(large, false)
+			line-height 1
+			font-weight 700
+			padding-left 0.5rem
+			padding-top 1rem
+
+	.footer-company
+		margin 0 auto
+		margin-top 5rem
+		max-width 65rem
+
+		&__cta-list
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			flex-direction column
+			+mq('bp-5')
+				flex-direction row
+			p
+				margin 0
+				margin-bottom 1rem
+				line-height 1
+				+mq('bp-4')
+					set-type-size(large)
+			a
+				border none
+
+			svg
+				fill $gray
+				vertical-align middle
+
+
+		&__about
+			margin-top 2.5rem
+			color $gray
+			p
+				margin 0
