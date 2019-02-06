@@ -37,7 +37,7 @@ d3.selection.prototype.puddingChartName = function init(options) {
 				const $g = $svg.append('g');
 
 				// offset chart for margins
-				$g.at('transform', `translate(${marginLeft}, ${marginTop})`);
+				$g.attr('transform', `translate(${marginLeft}, ${marginTop})`);
 
 				// create axis
 				$axis = $svg.append('g.g-axis');
@@ -53,7 +53,7 @@ d3.selection.prototype.puddingChartName = function init(options) {
 				// defaults to grabbing dimensions from container element
 				width = $sel.node().offsetWidth - marginLeft - marginRight;
 				height = $sel.node().offsetHeight - marginTop - marginBottom;
-				$svg.at({
+				$svg.attr({
 					width: width + marginLeft + marginRight,
 					height: height + marginTop + marginBottom
 				});
