@@ -33,17 +33,17 @@ d3.selection.prototype.puddingChartName = function init(options) {
 		const Chart = {
 			// called once at start
 			init() {
-				$svg = $sel.append('svg.pudding-chart');
+				$svg = $sel.append('svg').attr('class', 'pudding-chart');
 				const $g = $svg.append('g');
 
 				// offset chart for margins
 				$g.attr('transform', `translate(${marginLeft}, ${marginTop})`);
 
 				// create axis
-				$axis = $svg.append('g.g-axis');
+				$axis = $svg.append('g').attr('class', 'g-axis');
 
 				// setup viz group
-				$vis = $g.append('g.g-vis');
+				$vis = $g.append('g').attr('class', 'g-vis');
 
 				Chart.resize();
 				Chart.render();
