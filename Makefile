@@ -12,3 +12,4 @@ enhanced:
 	mv Makefile.story Makefile
 	npm i
 	rm package-lock.json
+	gulp fetch-doc

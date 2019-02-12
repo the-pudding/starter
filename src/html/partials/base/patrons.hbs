@@ -1,0 +1,11 @@
+<div class='menu__patrons'>
+	<p>
+		{{{@root.patrons.message}}}
+	</p>
+	
+	<ul>
+		{{#each @root.patrons.names}}
+		<li class='small'>{{this}}</li>
+		{{/each}}
+	</ul>
+</div>

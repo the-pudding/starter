@@ -83,27 +83,43 @@ header.is-sticky
 			&:hover
 				color $gray-light
 
-		.menu__links li
-			margin-bottom 0.5rem
-			set-type-size(large)
-			+mq('bp-3')
-				set-type-size(x-large)
+		.menu__links
+			display flex
+			flex-wrap wrap
+			flex-direction row
+			+mq('bp-4')
+				flex-direction column
+			li
+				font-family $sans
+				font-weight 700
+				text-transform uppercase
+				margin-bottom 0.5em
+				margin-right 0.5em
+				set-type-size(large)
+				+mq('bp-3')
+					set-type-size(x-large)
 
 		.menu__patreon a
 			font-family $sans
 			font-weight 700
-			color $off-black
-			background-color $off-white
-			padding 0.25em 0.5em
-			border-radius 4px
-			border none
-			border-bottom none
-			font-size 0.8em
+			border-bottom 2px solid currentColor
 			text-transform uppercase
-			margin-left 0.5em
 			&:hover
-				background-color rgba($off-white, 0.75)
-				color $off-black
+				opacity 0.75
+
+	.menu__patrons
+		ul
+			display flex
+			flex-wrap wrap
+		li
+			&:after
+				display inline
+				content ','
+				margin-right 0.25em
+			&:last-of-type:after
+				content '.'
+		// li
+		// 	set
 
 // dark color version
 header.is-sticky.is-dark
@@ -133,11 +149,5 @@ header.is-sticky.is-dark
 		&.is-visible span
 			svg
 				stroke $off-black
-				
-	
-	.menu__patreon a
-		color $off-white
-		background-color $off-black
-		&:hover
-			background-color rgba($off-black, 0.75)
-			color $off-white
+
+
