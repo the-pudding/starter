@@ -25,7 +25,7 @@ Change `base/header` in `index.hbs`:
 
 To use the menu but without it being sticky, simply changed `position fixed` to `position absolute` in `header.styl`.
 
-To add in the patreon message and list, uncomment `{{> base/patrons }}` in `sticky.hbs`.
+To add in the patreon message and list, uncomment `{{> base/patrons }}` in `sticky.hbs`. Running `gulp fetch-doc` will update to latest patrons.
 
 #### Metadata
 
