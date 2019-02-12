@@ -23,6 +23,10 @@ Change `base/header` in `index.hbs`:
 - `{{> base/header 'sticky' }}`
 - `{{> base/header 'sticky-dark' }}`
 
+To use the menu but without it being sticky, simply changed `position fixed` to `position absolute` in `header.styl`.
+
+To add in the patreon message and list, uncomment `{{> base/patrons }}` in `sticky.hbs`.
+
 #### Metadata
 
 Fill out `template-data/meta.json`
