@@ -1,35 +1,38 @@
 footer.pudding-footer
 	padding 3rem 1rem
-	background-color $white
+	//background-color $off-white
+	border-top 4px solid $black
 	font-family $sans
+	margin-top 3rem
 
 	.footer-social
 		display flex
 		align-items center
 		justify-content center
 		flex-wrap wrap
+		margin-bottom 1rem
 		p
 			margin 0
 
 		&__icons
 			display flex
 			padding-bottom 1rem
-		
+
 		&__icon
 			margin-left 1rem
-	
+
 		&__preach
 			font-family $serif
 			padding-bottom 1rem
 			set-type-size(large)
 			+mq('bp-4')
 				set-type-size(x-large)
-			
+
 			span
 				font-family $sans
 				font-weight 700
 				text-transform uppercase
-	
+
 	.footer-recirc
 		max-width 65rem
 		margin 0 auto
@@ -37,7 +40,7 @@ footer.pudding-footer
 			display flex
 			flex-wrap wrap
 			justify-content space-between
-		
+
 		&__article
 			display block
 			width 100%
@@ -45,7 +48,7 @@ footer.pudding-footer
 			border-left 4px solid $black
 			margin-bottom 3rem
 			+mq('bp-5')
-				width calc(33.3% - 1.5rem)
+				width calc(25% - 1.5rem)
 				margin-right 1.5rem
 				&:last-of-type
 					margin-right 0
@@ -59,20 +62,43 @@ footer.pudding-footer
 
 	.footer-company
 		margin 0 auto
-		margin-top 5rem
+		margin-top 3rem
 		max-width 65rem
+		display flex
+		flex-direction column
+		+mq('bp-5')
+			flex-direction row
+
+		&__cta
+			order 1
+			margin 2rem 0 0 0
+			width 100%
+			+mq('bp-5')
+				width 22rem
+				margin 0 0 0 2rem
 
 		&__cta-list
 			display flex
 			flex-wrap wrap
-			justify-content space-between
+			//justify-content space-between
 			flex-direction column
+			height 9rem
 			+mq('bp-5')
-				flex-direction row
+				flex-direction column
+
+			li
+				display flex
+				width 50%
+				margin 0.25rem 0
+				+mq('bp-5')
+					margin 0.25rem 0 0.25rem 1rem
+
 			p
 				margin 0
 				margin-bottom 1rem
+				padding-left 0.5rem
 				line-height 1
+				color $gray
 				+mq('bp-4')
 					set-type-size(large)
 			a
@@ -80,6 +106,7 @@ footer.pudding-footer
 
 			svg
 				fill $gray
+				stroke none
 				vertical-align middle
 				circle, polyline, line
 					fill none
@@ -90,7 +117,17 @@ footer.pudding-footer
 
 
 		&__about
-			margin-top 2.5rem
+			order 0
+			width 100%
+			//margin-top 2.5rem
 			color $gray
+			display flex
+			flex-direction column
+			+mq('bp-5')
+				width calc(100% - 24rem)
+
 			p
 				margin 0
+			svg
+				width 12rem
+				margin-bottom 0.5rem
