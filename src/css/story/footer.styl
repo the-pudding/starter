@@ -93,27 +93,29 @@ footer.pudding-footer
 				+mq('bp-5')
 					margin 0.25rem 0 0.25rem 1rem
 
-			p
-				margin 0
-				margin-bottom 1rem
-				padding-left 0.5rem
-				line-height 1
-				color $gray
-				+mq('bp-4')
-					set-type-size(large)
-			a
-				border none
+				a
+					display flex
+					border none
 
-			svg
-				fill $gray
-				stroke none
-				vertical-align middle
-				circle, polyline, line
-					fill none
-					stroke $gray
-			.feather-mail path
-					stroke $gray
-					fill none
+				p
+					margin 0
+					margin-bottom 1rem
+					padding-left 0.5rem
+					line-height 1
+					color $gray
+					+mq('bp-4')
+						set-type-size(large)
+
+				svg
+					fill $gray
+					stroke none
+					vertical-align middle
+					circle, polyline, line
+						fill none
+						stroke $gray
+				.feather-mail path
+						stroke $gray
+						fill none
 
 
 		&__about
