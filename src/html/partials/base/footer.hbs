@@ -1,0 +1,74 @@
+<footer class='pudding-footer'>
+
+	{{!-- social --}}
+	<div class='footer-social'>
+		<p class='footer-social__preach'>Was this your jam? <span>Preach.</span></p>
+		<div class='footer-social__icons'>
+			<div class='footer-social__icon fb-like' data-href='{{url}}' data-layout='button_count' data-action='like'
+				data-size='large' data-show-faces='true' data-share='false'></div>
+			<div class='footer-social__icon'>
+				<a href='https://twitter.com/share' data-size='large' class='twitter-share-button'>Tweet</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id='fb-root'></div>
+
+	{{!-- recirc --}}
+	<div class='footer-recirc'>
+		<div class='footer-recirc__articles'></div>
+	</div>
+
+	{{!-- company --}}
+	<div class='footer-company'>
+		<div class='footer-company__cta'>
+			<ul class='footer-company__cta-list'>
+				<li>
+					<a href='https://facebook.com/pudding.viz/'>
+						@@include('pudding/facebook.svg')
+						<p>FACEBOOK</p>
+					</a>
+				</li>
+				<li>
+					<a href='https://twitter.com/puddingviz/'>
+						@@include('pudding/twitter.svg')
+						<p>TWITTER</p>
+					</a>
+				</li>
+				<li>
+					<a href='https://www.instagram.com/pudding.cool'>
+						@@include('pudding/instagram.svg')
+						<p>INSTAGRAM</p>
+					</a>
+				</li>
+				<li>
+					<a href='https://patreon.com/thepudding/'>
+						@@include('pudding/patreon.svg')
+						<p>PATREON</p>
+					</a>
+				</li>
+				<li>
+					<a href='http://eepurl.com/czym6f'>
+						@@include('pudding/mail.svg')
+						<p>NEWSLETTER</p>
+					</a>
+				</li>
+				<li>
+					<a href='https://pudding.cool/about'>
+						@@include('pudding/info.svg')
+						<p>ABOUT</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	
+		<div class='footer-company__about'>
+			@@include('pudding/wordmark.svg')
+			<p class='footer-company__description'><a href='https://pudding.cool'>The Pudding</a> is a digital publication that
+				explains ideas debated in culture with visual essays.</p>
+			<p class='footer-company__trademark'>The Pudding<span>®</span> is made in Brooklyn, NY; Seattle, WA; and Great
+				Barrington, MA.</p>
+		</div>
+	
+	</div>
+</footer>
