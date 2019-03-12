@@ -5,11 +5,6 @@ const fallbackData = [
 		hed: 'Rappers, Sorted by the Size of their Vocabulary'
 	},
 	{
-		image: '2018_12_countries',
-		url: '2018/12/countries',
-		hed: 'The World through the Eyes of the US'
-	},
-	{
 		image: '2018_04_birthday-paradox',
 		url: '2018/04/birthday-paradox',
 		hed: 'The Birthday Paradox Experiment'
@@ -43,21 +38,12 @@ function loadJS(src, cb) {
 }
 
 function loadStories(cb) {
-	const request = new XMLHttpRequest();
 	const v = Date.now();
 	const url = `https://pudding.cool/assets/data/stories.json?v=${v}`;
-	request.open('GET', url, true);
-
-	request.onload = () => {
-		if (request.status >= 200 && request.status < 400) {
-			const data = JSON.parse(request.responseText);
-			cb(data);
-		} else cb(fallbackData);
-	};
-
-	request.onerror = () => cb(fallbackData);
-
-	request.send();
+	console.log(url);
+	d3.json(url)
+		.then(cb)
+		.catch(() => cb(fallbackData));
 }
 
 function createLink(d) {
