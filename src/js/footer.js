@@ -38,12 +38,21 @@ function loadJS(src, cb) {
 }
 
 function loadStories(cb) {
+	const request = new XMLHttpRequest();
 	const v = Date.now();
 	const url = `https://pudding.cool/assets/data/stories.json?v=${v}`;
-	console.log(url);
-	d3.json(url)
-		.then(cb)
-		.catch(() => cb(fallbackData));
+	request.open('GET', url, true);
+
+	request.onload = () => {
+		if (request.status >= 200 && request.status < 400) {
+			const data = JSON.parse(request.responseText);
+			cb(data);
+		} else cb(fallbackData);
+	};
+
+	request.onerror = () => cb(fallbackData);
+
+	request.send();
 }
 
 function createLink(d) {
