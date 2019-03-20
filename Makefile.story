@@ -9,6 +9,9 @@ github:
 
 archive:
 	zip -r archive.zip dev
+	git add -A
+	git commit -m "archive"
+	git push
 
 # aws-assets:
 # 	aws s3 sync dist s3://pudding.cool/year/month/name --delete --cache-control 'max-age=31536000' --exclude 'index.html' --exclude 'bundle.js'
