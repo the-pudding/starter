@@ -1,6 +1,5 @@
 footer.pudding-footer
 	padding 3rem 1rem
-	//background-color $off-white
 	border-top 4px solid $black
 	font-family $sans
 	margin-top 3rem
@@ -22,14 +21,13 @@ footer.pudding-footer
 			margin-left 1rem
 
 		&__preach
-			font-family $serif
 			padding-bottom 1rem
 			set-type-size(large)
 			+mq('bp-4')
 				set-type-size(x-large)
 
 			span
-				font-family $sans
+				font-family $sans-display
 				font-weight 700
 				text-transform uppercase
 
@@ -54,6 +52,7 @@ footer.pudding-footer
 					margin-right 0
 
 		.article__headline
+			font-family $sans-display
 			set-type-size(large, false)
 			line-height 1
 			font-weight 700
@@ -80,7 +79,6 @@ footer.pudding-footer
 		&__cta-list
 			display flex
 			flex-wrap wrap
-			//justify-content space-between
 			flex-direction column
 			height 9rem
 			+mq('bp-5')
@@ -98,6 +96,7 @@ footer.pudding-footer
 					border none
 
 				p
+					font-family $sans-display
 					margin 0
 					margin-bottom 1rem
 					padding-left 0.5rem
