@@ -61,7 +61,6 @@ function compileTemplate(data) {
 }
 
 function inlineScriptStyle(input) {
-  console.log({ input });
   return new Promise((resolve, reject) => {
     inlineSource(input, {
       compress: false,

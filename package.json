@@ -10,9 +10,7 @@
   "dependencies": {
     "lodash.debounce": "^4.0.8",
     "nouislider": "^12.1.0",
-    "promise-polyfill": "^8.1.0",
-    "superagent": "^4.1.0",
-    "whatwg-fetch": "3.0.0"
+    "superagent": "^4.1.0"
   },
   "devDependencies": {
     "archieml": "0.4.2",
@@ -23,7 +21,9 @@
     "npm-run-all": "4.1.5",
     "onchange": "5.2.0",
     "parcel-bundler": "1.12.3",
-    "request": "2.88.0"
+    "promise-polyfill": "8.1.0",
+    "request": "2.88.0",
+    "whatwg-fetch": "3.0.0"
   },
   "main": "scripts/main.js",
   "directories": {
@@ -33,18 +33,26 @@
     "build": "run-s build:*",
     "prebuild": "rm -rf .tmp .cache dev && mkdir .tmp .cache dev",
     "build:assets": "cp -r src/assets dev",
-    "build:html": "node ./scripts/html.js",
     "build:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m",
     "build:js": "parcel build src/js/entry.js --out-dir dev --out-file bundle.js --no-minify",
+    "build:critical": "parcel build src/js/critical.js --out-dir dev --out-file critical.js --no-minify",
+    "build:html": "node ./scripts/html.js",
+    "deploy": "NODE_ENV=dist run-s deploy:*",
+    "predeploy": "rm -rf .tmp .cache dist && mkdir .tmp .cache dist",
+    "deploy:assets": "cp -r src/assets dist",
+    "deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css",
+    "deploy:js": "parcel build src/js/entry.js --out-dir dist --out-file bundle.js --no-source-maps",
+    "deploy:critical": "parcel build src/js/critical.js --out-dir dist --out-file critical.js",
+    "deploy:html": "node ./scripts/html.js",
     "watch:assets": "onchange 'src/assets/**/*' -- run-s build:assets build:html",
-    "watch:html": "onchange 'src/html/**/*' -- run-s build:html",
     "watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -w -m",
     "watch:js": "parcel watch src/js/entry.js --out-dir dev --out-file bundle.js",
+    "watch:html": "onchange 'src/html/**/*' -- run-s build:html",
     "watch": "run-p watch:*",
     "serve": "light-server -q -o -x http://localhost:4000 -s dev/. -w 'dev/bundle.css # # reloadcss' -w 'dev/bundle.js # #' -w 'dev/index.html # #' -w 'dev/assets/**/* # #'",
     "doc": "node ./scripts/fetch-doc.js",
     "sheet": "node ./scripts/fetch-sheet.js",
-    "start": "NODE_ENV=development run-s build watch serve"
+    "start": "NODE_ENV=dev run-s build watch serve"
   },
   "repository": {
     "type": "git",
