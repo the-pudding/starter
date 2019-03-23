@@ -42,7 +42,7 @@
     "deploy:assets": "cp -r src/assets dist",
     "deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css",
     "deploy:js": "parcel build src/js/entry.js --out-dir dist --out-file bundle.js --no-source-maps",
-    "deploy:critical": "parcel build src/js/critical.js --out-dir dist --out-file critical.js",
+    "deploy:critical": "parcel build src/js/critical.js --out-dir dist --out-file critical.js --no-source-maps",
     "deploy:html": "node ./scripts/html.js",
     "watch:assets": "onchange 'src/assets/**/*' -- run-s build:assets build:html",
     "watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -w -m",
