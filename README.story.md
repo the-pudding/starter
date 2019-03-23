@@ -50,7 +50,7 @@ You can now reference the JSON in your HTML, namespaced by `doc` (eg. `<p>{{doc.
 
 There is a directory called `svg` in the root of project, it contains a bunch of [icons](https://feathericons.com/). To include them in the HTML, simply do this:
 
-`<div>@@include('arrow-left.svg')</div>`
+`<img inline src='arrow-left.svg>`
 
 This way you can drop in svg icons anywhere in your HTML code whilst keeping it uncluttered.
 
