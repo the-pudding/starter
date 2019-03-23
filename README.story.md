@@ -29,7 +29,7 @@ To add in the patreon message and list, uncomment `{{> base/patrons }}` in `stic
 
 #### Metadata
 
-Fill out `template-data/meta.json`
+Fill out `data/meta.json`
 
 ##### Analytics
 
@@ -46,7 +46,7 @@ Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.or
 - In the address bar, grab the ID - eg. ...com/document/d/**1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
 - In the file `config.json` in root of project, paste in the ID
 
-Running `gulp fetch-doc` at any point (even in new tab while server is running) will pull down the latest, and output a file `template-data/doc.json`.
+Running `gulp fetch-doc` at any point (even in new tab while server is running) will pull down the latest, and output a file `data/doc.json`.
 
 You can now reference the JSON in your HTML, namespaced by `doc` (eg. `<p>{{doc.explanation}}</p>`).
 
@@ -171,8 +171,8 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 - optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also crunched with something like [imageoptim](https://imageoptim.com/online).
 - clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
 - remove console logs: aesthetics :smile:
-- enable anayltics: put `UA-90567923-1` in `template-data/meta.json`
-- fill out metadata: `template-data/meta.json`
+- enable anayltics: put `UA-90567923-1` in `data/meta.json`
+- fill out metadata: `data/meta.json`
 - record project recap
 - create two social images:
   - Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
