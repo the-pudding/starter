@@ -48,11 +48,11 @@
     "watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -w -m",
     "watch:js": "parcel watch src/js/entry.js --out-dir dev --out-file bundle.js",
     "watch:html": "onchange 'src/html/**/*' -- run-s build:html",
-    "watch": "run-p watch:*",
-    "serve": "light-server -q -o -x http://localhost:4000 -s dev/. -w 'dev/bundle.css # # reloadcss' -w 'dev/bundle.js # #' -w 'dev/index.html # #' -w 'dev/assets/**/* # #'",
+    "watch": "run-p watch:* serve",
+    "serve": "light-server -q -o -s dev -p 4000 -w 'dev/bundle.css # # reloadcss' -w 'dev/bundle.js # #' -w 'dev/index.html # #' -w 'dev/assets/**/* # #'",
     "doc": "node ./scripts/fetch-doc.js",
     "sheet": "node ./scripts/fetch-sheet.js",
-    "start": "NODE_ENV=dev run-s build watch serve"
+    "start": "NODE_ENV=dev run-s build:assets build:html watch"
   },
   "repository": {
     "type": "git",
