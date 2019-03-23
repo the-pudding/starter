@@ -69,7 +69,6 @@ function inlineScriptStyle(input) {
     })
       .then(html => {
         const output = `${DIR_OUT}/index.html`;
-        console.log({ output });
         fs.writeFileSync(output, html);
         resolve(output);
       })
