@@ -1,6 +1,6 @@
-.PHONY: enhanced boilerplate
+.PHONY: setup
 
-enhanced: 
+setup: 
 	curl -Lk https://github.com/russellgoldenberg/starter/archive/master.zip > temp.zip
 	unzip -q temp.zip
 	mv starter-master/* .
@@ -12,4 +12,4 @@ enhanced:
 	mv Makefile.story Makefile
 	npm i
 	rm package-lock.json
-	gulp fetch-doc
+	npm run doc
