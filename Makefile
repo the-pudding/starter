@@ -5,7 +5,8 @@ setup:
 	unzip -q temp.zip
 	mv starter-master/* .
 	mv starter-master/.gitignore .
-	mv starter-master/.eslintrc.json .
+	mv starter-master/.editorconfig .
+	mv starter-master/.eslintrc .
 	rm -rf temp.zip starter-master Makefile docs
 	rm README.md
 	mv README.story.md README.md
