@@ -58,13 +58,13 @@ This way you can drop in svg icons anywhere in your HTML code whilst keeping it 
 
 **Where it goes:** `src/js/`
 
-Take a look at `entry.js`. This is the kickoff file, the only one included and run automatically.
+Take a look at `main.js`. This is the kickoff file, the only one included and run automatically.
 
-Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you. This is imported and called from `entry.js` once on load, and subsequently on a debounced resize event. I recommend putting your code in here. If you want to create more files, I recommending doing that in `graphic.js`, but remember they won't be executed until you import them.
+Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you. This is imported and called from `main.js` once on load, and subsequently on a debounced resize event. I recommend putting your code in here. If you want to create more files, I recommending doing that in `graphic.js`, but remember they won't be executed until you import them.
 
-[D3 Jetpack](https://github.com/gka/d3-jetpack/) is included globally by default. For any other libraries, it is recommend that you use `npm` to install and import them. You can also do it the vanilla way by including them in the `src/assets` folder and putting a script tag in the HTML.
+[D3](https://d3js.org/) is included globally by default. For any other libraries, it is recommend that you use `npm` to install and import them. You can also do it the vanilla way by including them in the `src/assets` folder and putting a script tag in the HTML.
 
-The JavaScript is transpiled from ES6, and uses Webpack to bundle into a single file. That means each file creates its own closure, so a "global" variable is scoped to a file unless you declare it as `window.variable = ....`.
+The JavaScript is transpiled from ES6, and uses Parcel to bundle into a single file. That means each file creates its own closure, so a "global" variable is scoped to a file unless you declare it as `window.variable = ....`.
 
 #### Installing libraries
 
@@ -115,36 +115,40 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 Fonts are loaded async and use the `font-display: swap` CSS setting.
 
-- **National**
 - **Tiempos Text** (default `body` font)
+- **Tiempos Headline** (disabled by default)
+- **National**
+- **National Narrow**
 - **Publico Text** (disabled by default)
 - **Atlas Grotesk** (disabled by default)
 
-Use the **font-weight** CSS property. Available weights:
+Available font-weights (bold means it is loaded by default):
 
-- National: 500, 700, 900, 200 (disabled)
-- Tiempos: 500, 700
+- Tiempos: **500**, **700**
+- Tiempos Headline: 500
+- National: **500**, **700**
+- National Narrow: 200, **500**, **700**, 900
 - Publico: 400, 700
 - Atlas: 400, 500, 600
 
-By default, **National** is bound to the variable `$sans` and **Tiempos** is bound to the variable `$serif` in `variables.styl`. Use these since they contain fallbacks as well.
+Variable names in stylus (use these for `font-family` since they contain proper fallbacks):
+
+- **Tiempos**: `$serif`
+- **Tiempos Headline** `$serif-display`
+- **National** `$sans`
+- **National Narrow** `$sans-display`
 
 ## Assets
 
-**Where it goes:** `src/assets/`
+Put everything (images, audio, data, etc) in `src/assets/`.
 
-I reccommend creating separate directories for images, data, etc. Assets can always be referenced relative to `assets` directory. For example:
-
-- `<img src='assets/img/test.jpg'>`
-- `d3.csv('assets/data/test.csv')`
-
-When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line like `<script src='{{basepath}}assets/scripts/d3.v5.9.1.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `data.basepath` variable in `scripts/html.js`.
+When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line like `<script src='{{basepath}}assets/scripts/d3.v5.9.1.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-Pudding one, make sure to update the `data.basepath` variable in `scripts/html.js`.
 
 ## Deploy
 
 Run `npm run deploy`
 
-This generates a single html file with inlined css, a single js file, and a folder with assets in the `dist` folder.
+This generates a single html file with inlined css, a single js file, and a folder with assets in the `dist` folder. It also will automatically optimize jpg and png files in the folders `assets/social` and `assets/images`.
 
 **Update Github pages version (during development)**
 
@@ -164,12 +168,10 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 
 ## Pre-launch checklist
 
-- optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also crunched with something like [imageoptim](https://imageoptim.com/online).
 - clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
 - remove console logs: aesthetics :smile:
 - enable anayltics: put `UA-90567923-1` in `data/meta.json`
 - fill out metadata: `data/meta.json`
-- record project recap
 - create two social images:
   - Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   - Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
