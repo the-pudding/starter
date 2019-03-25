@@ -38,11 +38,10 @@
     "whatwg-fetch": "3.0.0"
   },
   "main": "scripts/main.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "build": "run-s build:assets build:css build:critical build:html",
+    "doc": "node ./scripts/fetch-doc.js",
+    "sheet": "node ./scripts/fetch-sheet.js",
+    "build": "run-s build:assets build:css build:html",
     "prebuild": "rm -rf .tmp .cache dev && mkdir .tmp .cache dev",
     "build:assets": "cp -r src/assets dev",
     "build:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m",
@@ -54,21 +53,23 @@
     "deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css -c",
     "deploy:js": "parcel build src/js/main.js src/js/head.js --out-dir dist --no-source-maps",
     "deploy:html": "node ./scripts/html.js",
-    "watchx:assets": "onchange 'src/assets/**/*' -- run-s build:assets",
+    "watch:assets": "onchange 'src/assets/**/*' -- run-s build:assets",
     "watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m -w",
-    "watch:js": "parcel watch src/js/main.js src/js/head.js --out-dir dev --no-hmr --no-minify",
-    "watchx:html": "onchange 'src/html/**/*' -- run-s build:html",
+    "watch:js": "parcel watch src/js/main.js src/js/head.js --out-dir dev --no-hmr",
+    "watch:html": "onchange 'src/html/**/*' 'data/*/' -- run-s build:html",
     "serve": "light-server -q -o -s dev -p 4000 -w 'dev/*.css # # reloadcss' -w 'dev/*.js # #' -w 'dev/*.html # #' -w 'dev/assets/**/* # #'",
     "dev": "run-p serve watch:*",
-    "doc": "node ./scripts/fetch-doc.js",
-    "sheet": "node ./scripts/fetch-sheet.js",
     "start": "NODE_ENV=dev run-s build dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/polygraph-cool/starter.git"
   },
-  "keywords": [],
+  "keywords": [
+    "pudding",
+    "starter",
+    "template"
+  ],
   "bugs": {
     "url": "https://github.com/polygraph-cool/starter/issues"
   },
