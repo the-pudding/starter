@@ -5,15 +5,12 @@
 
 	{{> base/meta}}
 
-	<!-- smoosh -->
-	<link rel='stylesheet' href='bundle.css' />
-	<!-- endsmoosh -->
+	<link inline rel='stylesheet' href='bundle.css' />
 
 	{{> base/font}}
 
-	<!-- smoosh -->
-	<script src='critical.js'></script>
-	<!-- endsmoosh -->
+
+	<script inline src='head.js'></script>
 
 	{{> base/analytics }}
 
@@ -35,7 +32,7 @@
 
 
 	<script src='{{basepath}}assets/scripts/d3.v5.9.1.min.js'></script>
-	<script src='bundle.js?version={{timestamp}}' async></script>
+	<script src='main.js?version={{timestamp}}' async></script>
 </body>
 
 </html>

@@ -13,18 +13,20 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 #### Dependencies
 
 - [node](http://nodejs.org)
-- [gulp](http://gulpjs.com)
+- [stylus](https://github.com/stylus/stylus#stylus-)
+- [auto-prefixer](https://github.com/jescalan/autoprefixer-stylus#autoprefixer-stylus)
 
 #### Features
 
-- Transpiles ES6 with [Babel](http://babeljs.io)
-- [Stylus](http://stylus-lang.com/) for CSS pre-processor
+- [Parcel](http://parceljs.org) for JS bundling
+- [Stylus](http://stylus-lang.com/) for CSS pre-processing
 - [Handlebars](http://handlebarsjs.com/) for HTML templating
-- Google Docs -> JSON (with [ArchieML](http://archieml.org/)) integration for a micro CMS
-- Bundles and minifies JavaScript with [Webpack](http://webpack.js.org)
-- Bundles, minifies, auto-prefixes, and inlines CSS
+- [ArchieML](http://archieml.org/)) for micro-CMS (Google Docs -> JSON)
+- [Feather](https://feathericons.com/) for preset icons
+- Google Sheets -> JSON
+- Minifies, auto-prefixes, and inlines CSS
+- Inlines SVG
 - Async font loading (using `font-display`)
-- Preloaded [icon set](https://feathericons.com/)
 
 #### Setup
 

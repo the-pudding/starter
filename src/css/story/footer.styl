@@ -43,8 +43,7 @@ footer.pudding-footer
 			display block
 			width 100%
 			border none
-			border-left 4px solid $black
-			margin-bottom 3rem
+			margin-bottom 2rem
 			+mq('bp-5')
 				width calc(25% - 1.5rem)
 				margin-right 1.5rem
@@ -57,7 +56,7 @@ footer.pudding-footer
 			line-height 1
 			font-weight 700
 			padding-left 0.5rem
-			padding-top 1rem
+			// padding-top 1rem
 
 	.footer-company
 		margin 0 auto
@@ -65,6 +64,7 @@ footer.pudding-footer
 		max-width 65rem
 		display flex
 		flex-direction column
+		font-family $sans-display
 		+mq('bp-5')
 			flex-direction row
 
@@ -120,7 +120,6 @@ footer.pudding-footer
 		&__about
 			order 0
 			width 100%
-			//margin-top 2.5rem
 			color $gray
 			display flex
 			flex-direction column
@@ -129,6 +128,8 @@ footer.pudding-footer
 
 			p
 				margin 0
+				set-type-size(root, false)
+				line-height 1.4
 			svg
 				width 12rem
 				margin-bottom 0.5rem

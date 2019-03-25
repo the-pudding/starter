@@ -1,0 +1,15 @@
+{
+  "title": "Title Case Hed Goes Here",
+  "description": "Sentence case dek goes down here. Modify these in data/meta.json.",
+  "url": "https://pudding.cool/year/month/name/",
+  "keywords": "tk",
+  "imgFacebook": "https://pudding.cool/year/month/name/assets/social/social-facebook.jpg",
+  "imgTwitter": "https://pudding.cool/year/month/name/assets/social/social-twitter.jpg",
+  "author": {
+    "name": "Author Name",
+    "url": "https://twitter.com/puddingviz",
+    "twitterHandle": "@puddingviz"
+  },
+  "analytics": "",
+  "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis neque sit amet sollicitudin vehicula. Maecenas fringilla mi non lacus mattis elementum. Curabitur dignissim faucibus justo."
+}
