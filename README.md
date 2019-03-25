@@ -4,7 +4,7 @@ A starter template for projects.
 
 **If creating a brand new project from scratch:** Follow setup [instructions](#setup).
 
-**Else contributing to an existing project:** clone the repo (enhanced version: + run `npm install`).
+**Else contributing to an existing project:** clone the repo andd run `npm install`).
 
 _Please note: do not use or reproduce The Pudding logos or fonts without written permission._
 

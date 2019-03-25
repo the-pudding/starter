@@ -1,3 +1,23 @@
+- [Development](#development)
+  - [HTML](#html)
+		- [Sticky header](#sticky-header)
+		- [Metadata](#metadata)
+		- [Analytics](#analytics)
+		- [Copy](#copy)
+		- [SVG Icons](#svg-icons)
+  - [JavaScript](#javascript)
+		- [Installing Libraries](#installing-libraries)
+		- [Javascript Utilities](#javascript-utilities)
+		- [Slider](#slider)
+		- [Google Sheet](#google-sheet)
+  - [CSS](#css)
+  - [Fonts](#fonts)
+  - [Assets](#assets)
+- [Deploy](#deploy)
+  - [Github Pages](#github-pages)
+  - [S3](#s3)
+	- [Launch Checklist](#launch-checklist)
+
 # Development
 
 Run `npm start` to fire up the project server.
@@ -12,7 +32,7 @@ The main HTML file is `src/html/index.hbs`. Generally speaking, You should mostl
 
 Partials are not automatically included. You must add them to `index.hbs`. If you created a new file `content.hbs` it would be referenced as `{{> story/content }}`.
 
-#### Sticky header with menu
+#### Sticky Header
 
 Change `base/header` in `index.hbs`:
 
@@ -48,7 +68,7 @@ You can now reference the JSON in your HTML, namespaced by `doc` (eg. `<p>{{doc.
 
 You can also do the same with a [Google Sheet](#google-sheet).
 
-#### SVG icons
+#### SVG Icons
 
 There is a directory called `svg` in the root of project, it contains a bunch of [icons](https://feathericons.com/). To include them in the HTML, simply do this:
 
@@ -68,7 +88,7 @@ Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you
 
 The JavaScript is transpiled from ES6, and uses Parcel to bundle into a single file. That means each file creates its own closure, so a "global" variable is scoped to a file unless you declare it as `window.variable = ....`.
 
-#### Installing libraries
+#### Installing Libraries
 
 **NPM way**:
 `npm install [name] --save`.
@@ -78,7 +98,7 @@ Usage: (see library docs, but usually) `import [library] from '[library]'`
 Put JS file in the `src/assets/scripts` directory.
 Usage: reference in the `index.hbs` file `<script src='assets/scripts/[name].js'></script>`
 
-#### JavaScript utilties
+#### JavaScript Utilties
 
 In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 
@@ -141,17 +161,17 @@ Put everything (images, audio, data, etc) in `src/assets/`.
 
 When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line like `<script src='{{basepath}}assets/scripts/d3.v5.9.1.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-Pudding one, make sure to update the `data.basepath` variable in `scripts/html.js`.
 
-## Deploy
+# Deploy
 
 Run `npm run deploy`
 
 This generates a single html file with inlined css, a single js file, and a folder with assets in the `dist` folder. It also will automatically optimize jpg and png files in the folders `assets/social` and `assets/images`.
 
-**Update Github pages version (during development)**
+## Github Pages
 
 Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
 
-**Update The Pudding version (launch)**
+## S3
 
 Requirements:
 
@@ -163,7 +183,7 @@ In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Unco
 
 Run `make pudding` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
 
-## Pre-launch checklist
+## Launch Checklist
 
 - clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
 - remove console logs: aesthetics :smile:
