@@ -40,7 +40,7 @@ Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.or
 - Create a Google Doc
 - Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
 - In the address bar, grab the ID - eg. ...com/document/d/**1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
-- In the file `config.json` in root of project, paste in the ID
+- paste in the ID above into `config.json`
 
 Running `npm run doc` at any point (even in new tab while server is running) will pull down the latest, and output a file `data/doc.json`.
 
@@ -50,7 +50,7 @@ You can now reference the JSON in your HTML, namespaced by `doc` (eg. `<p>{{doc.
 
 There is a directory called `svg` in the root of project, it contains a bunch of [icons](https://feathericons.com/). To include them in the HTML, simply do this:
 
-`<img inline src='arrow-left.svg>`
+`<img inline src='arrow-left.svg'>`
 
 This way you can drop in svg icons anywhere in your HTML code whilst keeping it uncluttered.
 
@@ -72,7 +72,7 @@ The JavaScript is transpiled from ES6, and uses Parcel to bundle into a single f
 `npm install [name] --save`.
 Usage: (see library docs, but usually) `import [library] from '[library]'`
 
-**Old school**
+**Old school**:
 Put JS file in the `src/assets/scripts` directory.
 Usage: reference in the `index.hbs` file `<script src='assets/scripts/[name].js'></script>`
 
@@ -90,17 +90,6 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 - `lookup-state-abbr.js`: Get state abbrevation from state name.
 - `tracker.js`: Fire simple GA tracking on events.
 
-#### The Pudding's favorite libraries
-
-- [d3-annotation](http://d3-annotation.susielu.com/)
-- [lodash](https://lodash.com/)
-- [moveto](https://github.com/hsnaydd/moveTo)
-- [jump.js](http://callmecavs.com/jump.js/)
-- [nouislider](https://refreshless.com/nouislider/)
-- [geolib](https://github.com/manuelbieh/geolib)
-- [scrollama](https://github.com/russellgoldenberg/scrollama)
-- [ScrollWatch](https://edull24.github.io/ScrollWatch/)
-
 NoUISlider is included by default, with some preset pudding styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
 
 ## CSS
@@ -113,7 +102,7 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 ## Fonts
 
-Fonts are loaded async and use the `font-display: swap` CSS setting.
+Fonts are loaded async and use the `font-display swap` CSS setting.
 
 - **Tiempos Text** (default `body` font)
 - **Tiempos Headline** (disabled by default)
@@ -124,7 +113,7 @@ Fonts are loaded async and use the `font-display: swap` CSS setting.
 
 Available font-weights (bold means it is loaded by default):
 
-- Tiempos: **500**, **700**
+- Tiempos Text: **500**, **700**
 - Tiempos Headline: 500
 - National: **500**, **700**
 - National Narrow: 200, **500**, **700**, 900
@@ -133,7 +122,7 @@ Available font-weights (bold means it is loaded by default):
 
 Variable names in stylus (use these for `font-family` since they contain proper fallbacks):
 
-- **Tiempos**: `$serif`
+- **Tiempos Text**: `$serif`
 - **Tiempos Headline** `$serif-display`
 - **National** `$sans`
 - **National Narrow** `$sans-display`
