@@ -31,7 +31,7 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
 
 ```
-curl -Lk https://bit.ly/2J0L3MD > Makefile; make enhanced;
+curl -Lk https://bit.ly/2J0L3MD > Makefile; make setup;
 ```
 
 #### Documentation

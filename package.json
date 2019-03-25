@@ -41,7 +41,7 @@
   "scripts": {
     "doc": "node ./scripts/fetch-doc.js",
     "sheet": "node ./scripts/fetch-sheet.js",
-    "build": "run-s build:assets build:css build:html",
+    "build": "run-s build:assets build:css build:js build:html",
     "prebuild": "rm -rf .tmp .cache dev && mkdir .tmp .cache dev",
     "build:assets": "cp -r src/assets dev",
     "build:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m",
