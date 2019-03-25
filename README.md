@@ -13,15 +13,13 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 #### Dependencies
 
 - [node](http://nodejs.org)
-- [stylus](https://github.com/stylus/stylus#stylus-)
-- [auto-prefixer](https://github.com/jescalan/autoprefixer-stylus#autoprefixer-stylus)
 
 #### Features
 
 - [Parcel](http://parceljs.org) for JS bundling
 - [Stylus](http://stylus-lang.com/) for CSS pre-processing
 - [Handlebars](http://handlebarsjs.com/) for HTML templating
-- [ArchieML](http://archieml.org/)) for micro-CMS (Google Docs -> JSON)
+- [ArchieML](http://archieml.org/) for micro-CMS (Google Docs -> JSON)
 - [Feather](https://feathericons.com/) for preset icons
 - Google Sheets -> JSON
 - Minifies, auto-prefixes, and inlines CSS
