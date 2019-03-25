@@ -1,12 +1,12 @@
 * [Development](#development)
   * [HTML](#html)
-		* [Sticky header](#sticky-header)
+    * [Sticky header](#sticky-header)
 		* [Metadata](#metadata)
 		* [Analytics](#analytics)
 		* [Copy](#copy)
 		* [SVG Icons](#svg-icons)
   * [JavaScript](#javascript)
-		* [Installing Libraries](#installing-libraries)
+    * [Installing Libraries](#installing-libraries)
 		* [Javascript Utilities](#javascript-utilities)
 		* [Slider](#slider)
 		* [Google Sheet](#google-sheet)
@@ -16,7 +16,7 @@
 * [Deploy](#deploy)
   * [Github Pages](#github-pages)
   * [S3](#s3)
-	* [Launch Checklist](#launch-checklist)
+  * [Launch Checklist](#launch-checklist)
 
 # Development
 
