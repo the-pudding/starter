@@ -46,6 +46,8 @@ Running `npm run doc` at any point (even in new tab while server is running) wil
 
 You can now reference the JSON in your HTML, namespaced by `doc` (eg. `<p>{{doc.explanation}}</p>`).
 
+You can also do the same with a [Google Sheet](#google-sheet).
+
 #### SVG icons
 
 There is a directory called `svg` in the root of project, it contains a bunch of [icons](https://feathericons.com/). To include them in the HTML, simply do this:
@@ -90,7 +92,13 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 - `lookup-state-abbr.js`: Get state abbrevation from state name.
 - `tracker.js`: Fire simple GA tracking on events.
 
+#### Slider
+
 NoUISlider is included by default, with some preset pudding styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
+
+#### Google Sheet
+
+You can pull down a Google Sheet to JSON to include in your JS, or use for templating HTML. Make the sheet sharable, then fill out `config.json` with the details. By default it will be the file in `data/sheet.json` which you could use for HTML. You can have it save anywhere by supplying a custom filepath (eg. `src/js/example.json` or `src/assets/data/example.json`).
 
 ## CSS
 
