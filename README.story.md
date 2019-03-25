@@ -7,9 +7,9 @@
 		* [SVG Icons](#svg-icons)
   * [JavaScript](#javascript)
     * [Installing Libraries](#installing-libraries)
-		* [Javascript Utilities](#javascript-utilities)
-		* [Slider](#slider)
-		* [Google Sheet](#google-sheet)
+    * [Helper Functions](#helper-functions)
+    * [Slider](#slider)
+    * [Google Sheet](#google-sheet)
   * [CSS](#css)
   * [Fonts](#fonts)
   * [Assets](#assets)
@@ -98,7 +98,7 @@ Usage: (see library docs, but usually) `import [library] from '[library]'`
 Put JS file in the `src/assets/scripts` directory.
 Usage: reference in the `index.hbs` file `<script src='assets/scripts/[name].js'></script>`
 
-#### JavaScript Utilties
+#### Helper Functions
 
 In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 
