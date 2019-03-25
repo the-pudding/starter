@@ -177,7 +177,7 @@ Requirements:
 
 - [awscli](https://aws.amazon.com/cli/)
 - [configure aws](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html)
-- [configure cloud](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html).
+- [configure cloud](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)
 
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
