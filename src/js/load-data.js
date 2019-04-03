@@ -1,4 +1,10 @@
 /* global d3 */
+/* usage
+	import loadData from './load-data'
+	loadData().then(result => {
+
+	}).catch(console.error)
+*/
 
 function loadA(file) {
   return new Promise((resolve, reject) => {
