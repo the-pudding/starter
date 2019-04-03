@@ -32,7 +32,7 @@ function init() {
       makeRequest(d, () => {
         i += 1;
         if (i < sheet.length) next();
-        else cb();
+        else process.exit();
       });
   };
 

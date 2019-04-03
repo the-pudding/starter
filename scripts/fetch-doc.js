@@ -31,7 +31,7 @@ function init() {
       makeRequest(d, () => {
         i += 1;
         if (i < doc.length) next();
-        else cb();
+        else process.exit();
       });
   };
 
