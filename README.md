@@ -8,13 +8,13 @@ A starter template for projects.
 
 _Please note: do not use or reproduce The Pudding logos or fonts without written permission._
 
-# Setup
+## Setup
 
-#### Dependencies
+### Dependencies
 
 - [node](http://nodejs.org)
 
-#### Features
+### Features
 
 - [Parcel](http://parceljs.org) for JS bundling
 - [Stylus](http://stylus-lang.com/) for CSS pre-processing
@@ -26,8 +26,11 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 - Inlines SVG
 - Async font loading (using `font-display`)
 
-#### Setup
+### Usage
 
+Use the [starter CLI](https://github.com/the-pudding/starter-cli).
+
+### Usage (deprecated)
 To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
 
 ```
