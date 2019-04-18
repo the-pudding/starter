@@ -3,7 +3,8 @@ const CWD = process.cwd();
 const fs = require('fs');
 const handlebars = require('handlebars');
 const { inlineSource } = require('inline-source');
-const helpers = require(`${CWD}/src/html/helpers/index.js`);
+
+const helpers = require(`${CWD}/src/html/helpers/helpers.js`);
 
 const ENV = NODE_ENV || 'dev';
 const DIR_IN = './src/html';
@@ -65,7 +66,7 @@ function inlineScriptStyle(input) {
     inlineSource(input, {
       compress: false,
       rootpath: DIR_OUT,
-      ignore: ENV === 'dev' ? ['link', 'script'] : null
+      ignore: ENV === 'dev' ? ['link', 'script'] : null,
     })
       .then(html => {
         const output = `${DIR_OUT}/index.html`;
@@ -81,7 +82,7 @@ function inlineSVG(input) {
     inlineSource(input, {
       compress: false,
       rootpath: './svg',
-      ignore: ['link', 'script']
+      ignore: ['link', 'script'],
     })
       .then(html => {
         const output = `${DIR_TMP}/index-svg.html`;
