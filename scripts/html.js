@@ -103,7 +103,10 @@ function init() {
     .then(inlineSVG)
     .then(inlineScriptStyle)
     .then(() => console.timeEnd('compiling html'))
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      process.exit(1);
+    });
 }
 
 init();
