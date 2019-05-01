@@ -20,7 +20,7 @@
 
 # Development
 
-Run `npm start` to fire up the project server.
+Run `npm start` to fire up the project server. `control + c` to stop.
 
 Any changes to the `src/` folder will trigger live reload.
 
@@ -124,7 +124,7 @@ You can pull down a Google Sheet to JSON to include in your JS, or use for templ
 
 **Where it goes:** `src/css/story/`.
 
-There is a file for you to start off with, `story.styl`. You can create as many files as you want in this directory, they are automatically included.
+There is a file for you to start off with, `story.styl`. You can create as many files as you want in this directory, they are automatically included. *Note: You must restart the server when you create a new stylus file.*
 
 Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, `helpers.styl`, `presets.styl`). You can modify these, especially `variables.styl`.
 
