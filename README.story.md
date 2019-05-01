@@ -17,6 +17,7 @@
   * [Github Pages](#github-pages)
   * [S3](#s3)
   * [Launch Checklist](#launch-checklist)
+ * [Future Proofing](#future-proofing)
 
 # Development
 
@@ -192,3 +193,9 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 - create two social images:
   - Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   - Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
+
+# Future Proofing
+Here are some best practices to follow to increase the likelihood that the story doesn't break in the near future.
+
+- When possible, host assets locally. Put things like images and audio in your project rather than loading from a third party.
+- Don't rely on externally hosted scripts. If you are using a library, use `npm` or self-host in favor of externally hosted scripts.
