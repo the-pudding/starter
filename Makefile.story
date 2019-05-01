@@ -1,4 +1,4 @@
-PHONY: github aws-assets aws-htmljs aws-cache pudding
+PHONY: github aws-assets aws-htmljs aws-cache pudding client
 
 github:
 	rm -rf docs
@@ -13,6 +13,9 @@ archive:
 	git commit -m "archive"
 	git push
 
+client: 
+	npm run depudding
+	
 # aws-assets:
 # 	aws s3 sync dist s3://pudding.cool/year/month/name --delete --cache-control 'max-age=31536000' --exclude 'index.html' --exclude 'main.js'
 
