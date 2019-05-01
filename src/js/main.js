@@ -39,6 +39,7 @@ function init() {
   setupStickyHeader();
   // kick off graphic code
   graphic.init();
+  // load footer stories
   footer.init();
 }
 
