@@ -1,4 +1,4 @@
-.PHONY: setup
+.PHONY: setup client
 
 setup: 
 	curl -Lk https://github.com/russellgoldenberg/starter/archive/master.zip > temp.zip
@@ -14,3 +14,6 @@ setup:
 	npm i
 	rm package-lock.json
 	npm run doc
+
+client:
+	npm run depudding
