@@ -54,7 +54,7 @@
 		"deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css -c",
 		"deploy:js": "parcel build src/js/main.js src/js/head.js --out-dir dist --no-source-maps",
 		"deploy:html": "node ./scripts/html.js",
-		"watch:assets": "onchange 'src/assets/**/*' -- run-s build:assets",
+		"watch:assets": "onchange -k 'src/assets/**/*' -- run-s build:assets",
 		"watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m -w",
 		"watch:js": "parcel watch src/js/main.js src/js/head.js --out-dir dev --no-hmr",
 		"watch:html": "onchange 'src/html/**/*' 'data/*/' -- run-s build:html",
