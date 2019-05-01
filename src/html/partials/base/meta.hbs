@@ -7,7 +7,7 @@
 <meta name='news_keywords' content='{{meta.keywords}}' />
 
 <meta property='og:title' content='{{meta.title}}' />
-<meta property='og:site_name' content='The Pudding' />
+<meta property='og:site_name' content='{{meta.siteName}}' />
 <meta property='og:url' content='{{meta.url}}' />
 <meta property='og:description' content='{{meta.description}}' />
 <meta property='og:type' content='article' />
@@ -19,7 +19,7 @@
 <meta property='og:image:height' content='600' />
 
 <meta name='twitter:card' content='summary_large_image' />
-<meta name='twitter:site' content='https://pudding.cool' />
+<meta name='twitter:site' content='{{meta.site}}' />
 <meta name='twitter:creator' content='{{meta.author.twitterHandle}}' />
 <meta name='twitter:title' content='{{meta.title}}' />
 <meta name='twitter:description' content='{{meta.description}}' />
@@ -27,24 +27,6 @@
 
 <link rel='canonical' href='{{meta.url}}' />
 
-<link rel='apple-touch-icon' sizes='180x180' href='https://pudding.cool/apple-touch-icon.png'>
-<link rel='icon' type='image/png' sizes='32x32' href='https://pudding.cool/favicon-32x32.png'>
-<link rel='icon' type='image/png' sizes='16x16' href='https://pudding.cool/favicon-16x16.png'>
-<link rel='manifest' href='https://pudding.cool/site.webmanifest'>
-<link rel='mask-icon' href='https://pudding.cool/safari-pinned-tab.svg' color='#5bbad5'>
-<meta name='msapplication-TileColor' content='#ffc40d'>
-<meta name='theme-color' content='#ffffff'>
+{{> base/meta-icon }}
 
-<link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/national/National2Web-Regular.woff2'>
-<link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/national/National2Web-Bold.woff2'>
-<link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/national/National2NarrowWeb-Regular.woff2'>
-<link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/national/National2NarrowWeb-Bold.woff2'>
-<link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/tiempos/TiemposTextWeb-Regular.woff2'>
-<link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/tiempos/TiemposTextWeb-Bold.woff2'>
-{{!-- <link rel='preload' type='font/woff2' as='font' crossorigin href='https://pudding.cool/assets/fonts/tiempos/TiemposHeadlineWeb-Regular.woff2'> --}}
-{{!-- <link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/national/National2NarrowWeb-Black.woff2'> --}}
-{{!-- <link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/publico/PublicoText-Roman-Web.woff2'> --}}
-{{!-- <link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/publico/PublicoText-Bold-Web.woff2'> --}}
-{{!-- <link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2'> --}}
-{{!-- <link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/atlas/AtlasGrotesk-Medium-Web.woff2'> --}}
-{{!-- <link rel='preload' type='font/woff2' as='font' crossorigin href='{{basepath}}assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2'> --}}
+{{> base/meta-font }}
