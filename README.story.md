@@ -194,7 +194,7 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
   - Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   - Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
 - Before launching, test the final pudding link in [Facebook Debugger](https://developers.facebook.com/tools/debug/sharing) to ensure all og tags are working properly.
-- create Twitter asset:
+- Create Twitter asset:
   - Motion works well on Twitter, so when possible use a scrolling video of the story (.MP4)
   - Tweets should always include some sort of visual asset
   - For one image: 1024 x 576 px
@@ -203,6 +203,26 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
   - Make sure to include the link
   - Include author/contributor Twitter handle in initial story post
   - Use of emojis is encouraged!
+- Create Instagram Story Asset
+  - Portrait aspect ratio (1080 x 1920)
+  - Text can be added in Instagram
+  - These tend to be more insightful/personal than an initial post
+  - Make sure to indicate that the link is in our bio
+  - Feel free to experiment here!
+  - You can add polls and questions to ask the audience (in stickers)
+  - You can tag people here (especially if they are talking about us)
+- Create Instagram Feed Asset
+  - Square Images (1080 x 1080) or Videos
+  - Make sure to change the link & bio description for new story
+  - Emojis are encouraged
+  - Hashtags are encouraged. Feel free to use #data #dataviz #ddj #datajournalism #chart #charts
+  - Include other hashtags that may be relevant to the specific story
+  - Tag people in the image if they are relevant
+  - Keep in mind that you can only add one caption (even if there is a carousel of images)
+  - The images in the carousel all have to be the same aspect ratio
+  - No need to tag authors here
+
+
 
 
 
