@@ -221,6 +221,14 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
   - Keep in mind that you can only add one caption (even if there is a carousel of images)
   - The images in the carousel all have to be the same aspect ratio
   - No need to tag authors here
+- Post to Patreon (Author posts)
+- Post to FotP (Author posts)
+- Add data to open data repo (with necessary metadata, scripts when possible)
+- Record Process video and post to FotP/Patreon (optional)
+- Make sure repo is on the-pudding
+- Update s3
+- Update homepage
+- Release assets - author can tap the promotion team to post assets, but otherwise expected that authors post.
 
 
 
