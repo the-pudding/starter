@@ -202,7 +202,7 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
   - Add description of photo or video for accessibility purposes
   - Make sure to include the link
   - Include author/contributor Twitter handle in initial story post
-  - Use of emojis is encouraged!
+  - Use of emojis is encouraged! 🤠
 - Create Instagram Story Asset
   - Portrait aspect ratio (1080 x 1920)
   - Text can be added in Instagram
