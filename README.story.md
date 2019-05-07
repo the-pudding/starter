@@ -193,6 +193,18 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 - create two social images:
   - Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   - Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
+- Before launching, test the final pudding link in [Facebook Debugger](https://developers.facebook.com/tools/debug/sharing) to ensure all og tags are working properly.
+- create Twitter asset:
+  - Motion works well on Twitter, so when possible use a scrolling video of the story (.MP4)
+  - Tweets should always include some sort of visual asset
+  - For one image: 1024 x 576 px
+  - if you're sharing multiple images in a post, adjust them to twitter's thumbnail formats — previewed thumbnails have a different aspect ratio (1:1) other than the standard twitter social cards (2:1)
+  - Add description of photo or video for accessibility purposes
+  - Make sure to include the link
+  - Include author/contributor Twitter handle in initial story post
+  - Use of emojis is encouraged!
+
+
 
 # Future Proofing
 Here are some best practices to follow to increase the likelihood that the story doesn't break in the near future.
