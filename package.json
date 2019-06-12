@@ -77,8 +77,5 @@
 	"bugs": {
 		"url": "https://github.com/polygraph-cool/starter/issues"
 	},
-	"homepage": "https://github.com/polygraph-cool/starter#readme",
-	"browserslist": [
-		"last 2 Chrome versions"
-	]
+	"homepage": "https://github.com/polygraph-cool/starter#readme"
 }
