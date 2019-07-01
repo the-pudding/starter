@@ -1,5 +1,5 @@
 @css {
-/*! nouislider - 11.0.3 - 2018-01-21 14:04:07 */
+/*! nouislider - 14.0.2 - 6/28/2019 */
 /* Functional styling;
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.
@@ -41,10 +41,19 @@
   z-index: 1;
   top: 0;
   left: 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: 0 0;
+  transform-style: flat;
+}
+.noUi-connect {
   height: 100%;
   width: 100%;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
+}
+.noUi-origin {
+  height: 10%;
+  width: 10%;
 }
 /* Offset direction
  */
@@ -62,7 +71,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
   height: 0;
 }
 .noUi-handle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
+}
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
 }
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
@@ -242,7 +257,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 .noUi-value-vertical {
   -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%, 0);
+  transform: translate(0, -50%);
   padding-left: 25px;
 }
 .noUi-rtl .noUi-value-vertical {
