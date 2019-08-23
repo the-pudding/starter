@@ -1,9 +1,14 @@
 /* global d3 */
 /* usage
 	import loadData from './load-data'
-	loadData().then(result => {
+	
+	loadData('file.csv').then(result => {
+		console.log(result);
+	}).catch(console.error);
 
-	}).catch(console.error)
+	loadData(['file1.csv', 'file2.json]).then(result => {
+		console.log(result);
+	}).catch(console.error);
 */
 
 function loadFile(file) {
