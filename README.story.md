@@ -113,6 +113,11 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 - `lookup-state-abbr.js`: Get state abbrevation from state name.
 - `tracker.js`: Fire simple GA tracking on events.
 
+To use these, at the top of your `.js` file, include
+`import functionName from './utils/useful-thing.js'`
+
+If there is only one exported function, you can use it in your file with just `functionName()`. Otherwise, you'll need `functionName.specificFunction()`.
+
 #### Slider
 
 NoUISlider is included by default, with some preset pudding styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.

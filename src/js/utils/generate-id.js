@@ -6,7 +6,7 @@ function getReverseChronDate() {
   const f = parseInt(
     d3
       .range(l)
-      .map(d => 9)
+      .map(() => 9)
       .join(''),
     10
   );
