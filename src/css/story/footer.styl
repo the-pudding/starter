@@ -53,14 +53,15 @@ footer.pudding-footer
 			display flex
 			flex-wrap wrap
 			flex-direction column
-			height 9rem
+			height 12rem
 			+mq('bp-5')
 				flex-direction column
 
 			li
 				display flex
 				width 50%
-				margin 0.25rem 0
+				margin-bottom 1rem
+				align-items center
 				+mq('bp-5')
 					padding-left 1rem
 
@@ -71,8 +72,8 @@ footer.pudding-footer
 				p
 					font-family $sans-display
 					margin 0
-					margin-bottom 1rem
 					padding-left 0.5rem
+					padding-top 0.1rem
 					line-height 1
 					color $gray
 					+mq('bp-4')
@@ -85,7 +86,7 @@ footer.pudding-footer
 					circle, polyline, line
 						fill none
 						stroke $gray
-				.feather-mail path
+				.feather-mail path, .feather-lock path, .feather-rss path
 						stroke $gray
 						fill none
 
