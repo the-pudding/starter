@@ -1,9 +1,13 @@
-/*
- Use when you need to find unique values in an array of strings or numbers
-
- 1. at the top of your file: import findUnique from './utils/unique'
- 2. to use it: findUnique(arr) where `arr` is your array of strings
-*/
+/**
+ * Finds unique values in an array of values
+ * @param {array} arr - sequence of strings, numbers, booleans
+ * @returns {array} array of unique values
+ *
+ * @example
+ * import findUnique from './utils/unique';
+ * const unique = findUnique([1,2,2,3]);
+ * // [1,2,3]
+ */
 
 export default function findUnique(arr) {
   return [...new Set(arr)];
