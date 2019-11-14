@@ -36,16 +36,12 @@ d3.selection.prototype.puddingChartName = function init(options) {
       // called once at start
       init() {
         $svg = $chart.append('svg').attr('class', 'pudding-chart');
-        const $g = $svg.append('g');
-
-        // offset chart for margins
-        $g.attr('transform', `translate(${MARGIN_LEFT}, ${MARGIN_TOP})`);
 
         // create axis
         $axis = $svg.append('g').attr('class', 'g-axis');
 
         // setup viz group
-        $vis = $g.append('g').attr('class', 'g-vis');
+        $vis = $svg.append('g').attr('class', 'g-vis');
       },
       // on resize, update new dimensions
       resize() {
@@ -59,6 +55,9 @@ d3.selection.prototype.puddingChartName = function init(options) {
       },
       // update scales and render chart
       render() {
+        // offset chart for margins
+        $vis.attr('transform', `translate(${MARGIN_LEFT}, ${MARGIN_TOP})`);
+
         return Chart;
       },
       // get / set data
