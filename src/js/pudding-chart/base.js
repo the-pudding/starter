@@ -8,75 +8,73 @@
 */
 
 d3.selection.prototype.puddingChartName = function init(options) {
-	function createChart(el) {
-		const $sel = d3.select(el);
-		let data = $sel.datum();
-		// dimension stuff
-		let width = 0;
-		let height = 0;
-		const marginTop = 0;
-		const marginBottom = 0;
-		const marginLeft = 0;
-		const marginRight = 0;
+  function createChart(el) {
+    // dom elements
+    const $chart = d3.select(el);
+    let $svg = null;
+    let $axis = null;
+    let $vis = null;
 
-		// scales
-		const scaleX = null;
-		const scaleY = null;
+    // data
+    let data = $chart.datum();
 
-		// dom elements
-		let $svg = null;
-		let $axis = null;
-		let $vis = null;
+    // dimensions
+    let width = 0;
+    let height = 0;
+    const MARGIN_TOP = 0;
+    const MARGIN_BOTTOM = 0;
+    const MARGIN_LEFT = 0;
+    const MARGIN_RIGHT = 0;
 
-		// helper functions
+    // scales
+    const scaleX = null;
+    const scaleY = null;
 
-		const Chart = {
-			// called once at start
-			init() {
-				$svg = $sel.append('svg').attr('class', 'pudding-chart');
-				const $g = $svg.append('g');
+    // helper functions
 
-				// offset chart for margins
-				$g.attr('transform', `translate(${marginLeft}, ${marginTop})`);
+    const Chart = {
+      // called once at start
+      init() {
+        $svg = $chart.append('svg').attr('class', 'pudding-chart');
+        const $g = $svg.append('g');
 
-				// create axis
-				$axis = $svg.append('g').attr('class', 'g-axis');
+        // offset chart for margins
+        $g.attr('transform', `translate(${MARGIN_LEFT}, ${MARGIN_TOP})`);
 
-				// setup viz group
-				$vis = $g.append('g').attr('class', 'g-vis');
+        // create axis
+        $axis = $svg.append('g').attr('class', 'g-axis');
 
-				Chart.resize();
-				Chart.render();
-			},
-			// on resize, update new dimensions
-			resize() {
-				// defaults to grabbing dimensions from container element
-				width = $sel.node().offsetWidth - marginLeft - marginRight;
-				height = $sel.node().offsetHeight - marginTop - marginBottom;
-				$svg
-					.attr('width', width + marginLeft + marginRight)
-					.attr('height', height + marginTop + marginBottom);
-				return Chart;
-			},
-			// update scales and render chart
-			render() {
-				return Chart;
-			},
-			// get / set data
-			data(val) {
-				if (!arguments.length) return data;
-				data = val;
-				$sel.datum(data);
-				Chart.render();
-				return Chart;
-			}
-		};
-		Chart.init();
+        // setup viz group
+        $vis = $g.append('g').attr('class', 'g-vis');
+      },
+      // on resize, update new dimensions
+      resize() {
+        // defaults to grabbing dimensions from container element
+        width = $chart.node().offsetWidth - MARGIN_LEFT - MARGIN_RIGHT;
+        height = $chart.node().offsetHeight - MARGIN_TOP - MARGIN_BOTTOM;
+        $svg
+          .attr('width', width + MARGIN_LEFT + MARGIN_RIGHT)
+          .attr('height', height + MARGIN_TOP + MARGIN_BOTTOM);
+        return Chart;
+      },
+      // update scales and render chart
+      render() {
+        return Chart;
+      },
+      // get / set data
+      data(val) {
+        if (!arguments.length) return data;
+        data = val;
+        $chart.datum(data);
+        return Chart;
+      },
+    };
+    Chart.init();
 
-		return Chart;
-	}
+    return Chart;
+  }
 
-	// create charts
-	const charts = this.nodes().map(createChart);
-	return charts.length > 1 ? charts : charts.pop();
+  // create charts
+  const charts = this.nodes().map(createChart);
+  return charts.length > 1 ? charts : charts.pop();
 };
