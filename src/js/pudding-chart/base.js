@@ -1,3 +1,5 @@
+/* global d3 */
+
 /*
  USAGE (example: line chart)
  1. c+p this template to a new file (line.js)
