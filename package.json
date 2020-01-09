@@ -5,7 +5,7 @@
 	"author": "Russell Goldenberg",
 	"license": "MIT",
 	"engines": {
-		"node": ">=8.0.0"
+		"node": "12.14.0"
 	},
 	"dependencies": {
 		"lodash.debounce": "4.0.8",
