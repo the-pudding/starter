@@ -5,12 +5,12 @@
 	"author": "Russell Goldenberg",
 	"license": "MIT",
 	"engines": {
-		"node": "12.14.0"
+		"node": "10.18.0"
 	},
 	"dependencies": {
 		"lodash.debounce": "4.0.8",
-		"nouislider": "14.0.3",
-		"superagent": "5.1.2"
+		"nouislider": "14.1.1",
+		"superagent": "5.2.1"
 	},
 	"devDependencies": {
 		"archieml": "0.4.2",
@@ -18,12 +18,12 @@
 		"babel-eslint": "10.0.3",
 		"cli-error-notifier": "2.1.0",
 		"d3-dsv": "1.2.0",
-		"eslint": "6.7.2",
+		"eslint": "6.8.0",
 		"eslint-config-airbnb-base": "14.0.0",
-		"eslint-config-prettier": "6.7.0",
-		"eslint-plugin-import": "2.18.2",
-		"eslint-plugin-prettier": "3.1.1",
-		"handlebars": "4.5.3",
+		"eslint-config-prettier": "6.9.0",
+		"eslint-plugin-import": "2.20.0",
+		"eslint-plugin-prettier": "3.1.2",
+		"handlebars": "4.7.2",
 		"imagemin": "7.0.1",
 		"imagemin-mozjpeg": "8.0.0",
 		"imagemin-pngquant": "8.0.0",
@@ -34,7 +34,7 @@
 		"parcel-bundler": "1.12.4",
 		"prettier": "1.19.1",
 		"promise-polyfill": "8.1.3",
-		"replace-in-file": "4.2.0",
+		"replace-in-file": "5.0.2",
 		"request": "2.88.0",
 		"rimraf": "3.0.0",
 		"stylus": "0.54.7",
