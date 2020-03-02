@@ -1,82 +1,82 @@
 {
-	"name": "starter",
-	"version": "4.1.1",
-	"description": "Starter template for Pudding stories",
-	"author": "Russell Goldenberg",
-	"license": "MIT",
-	"engines": {
-		"node": "10.18.0"
-	},
-	"dependencies": {
-		"lodash.debounce": "4.0.8",
-		"nouislider": "14.1.1",
-		"superagent": "5.2.1"
-	},
-	"devDependencies": {
-		"archieml": "0.4.2",
-		"autoprefixer-stylus": "1.0.0",
-		"babel-eslint": "10.0.3",
-		"cli-error-notifier": "2.1.0",
-		"d3-dsv": "1.2.0",
-		"eslint": "6.8.0",
-		"eslint-config-airbnb-base": "14.0.0",
-		"eslint-config-prettier": "6.9.0",
-		"eslint-plugin-import": "2.20.0",
-		"eslint-plugin-prettier": "3.1.2",
-		"handlebars": "4.7.2",
-		"imagemin": "7.0.1",
-		"imagemin-mozjpeg": "8.0.0",
-		"imagemin-pngquant": "8.0.0",
-		"inline-source": "7.1.0",
-		"light-server": "2.6.4",
-		"npm-run-all": "4.1.5",
-		"onchange": "6.1.0",
-		"parcel-bundler": "1.12.4",
-		"prettier": "1.19.1",
-		"promise-polyfill": "8.1.3",
-		"replace-in-file": "5.0.2",
-		"request": "2.88.0",
-		"rimraf": "3.0.0",
-		"stylus": "0.54.7",
-		"whatwg-fetch": "3.0.0"
-	},
-	"main": "scripts/main.js",
-	"scripts": {
-		"depudding": "node ./scripts/depudding.js",
-		"doc": "node ./scripts/fetch-doc.js",
-		"sheet": "node ./scripts/fetch-sheet.js",
-		"build": "run-s build:assets build:css build:js build:html",
-		"prebuild": "rm -rf .tmp .cache dev && mkdir .tmp .cache dev",
-		"build:assets": "cp -r src/assets dev",
-		"build:css": "onerror \"stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m\"  -t \"Build Error in CSS\" -m \"See terminal for details\" -s Basso",
-		"build:js": "onerror \"parcel build src/js/main.js --out-dir dev --no-minify\"  -t \"Build Error in JS\" -m \"See terminal for details\" -s Basso",
-		"build:html": "onerror \"node ./scripts/html.js\" -t \"Build Error in HTML\" -m \"See terminal for details\" -s Basso",
-		"deploy": "NODE_ENV=dist run-s deploy:*",
-		"predeploy": "rm -rf .tmp .cache dist && mkdir .tmp .cache dist",
-		"deploy:assets": "cp -r src/assets dist && node ./scripts/image-min.js",
-		"deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css -c",
-		"deploy:js": "parcel build src/js/main.js --out-dir dist --no-source-maps",
-		"deploy:html": "node ./scripts/html.js",
-		"watch:assets": "onchange -k 'src/assets/**/*' -- run-s build:assets",
-		"watch:html": "onchange 'src/html/**/*' 'data/*/' -- run-s build:html",
-		"watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m -w",
-		"watch:js": "parcel watch src/js/main.js --out-dir dev --no-hmr",
-		"serve": "light-server -q -o -s dev -p 4000 -w 'dev/*.css # # reloadcss' -w 'dev/*.js # #' -w 'dev/*.html # #' -w 'dev/assets/**/* # #'",
-		"dev": "run-p serve watch:*",
-		"start": "NODE_ENV=dev run-s build dev"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/polygraph-cool/starter.git"
-	},
-	"keywords": [
-		"pudding",
-		"starter",
-		"template"
-	],
-	"bugs": {
-		"url": "https://github.com/polygraph-cool/starter/issues"
-	},
-	"homepage": "https://github.com/polygraph-cool/starter#readme",
-	"browserslist": "last 3 versions"
+  "name": "starter",
+  "version": "4.1.2",
+  "description": "Starter template for Pudding stories",
+  "author": "Russell Goldenberg",
+  "license": "MIT",
+  "engines": {
+    "node": "10.18.0"
+  },
+  "dependencies": {
+    "lodash.debounce": "4.0.8",
+    "nouislider": "14.1.1",
+    "superagent": "5.2.2"
+  },
+  "devDependencies": {
+    "archieml": "0.4.2",
+    "autoprefixer-stylus": "1.0.0",
+    "babel-eslint": "10.1.0",
+    "cli-error-notifier": "2.1.0",
+    "d3-dsv": "1.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-prettier": "3.1.2",
+    "handlebars": "4.7.3",
+    "imagemin": "7.0.1",
+    "imagemin-mozjpeg": "8.0.0",
+    "imagemin-pngquant": "8.0.0",
+    "inline-source": "7.2.0",
+    "light-server": "2.6.4",
+    "npm-run-all": "4.1.5",
+    "onchange": "6.1.0",
+    "parcel-bundler": "1.12.4",
+    "prettier": "1.19.1",
+    "promise-polyfill": "8.1.3",
+    "replace-in-file": "5.0.2",
+    "request": "2.88.2",
+    "rimraf": "3.0.2",
+    "stylus": "0.54.7",
+    "whatwg-fetch": "3.0.0"
+  },
+  "main": "scripts/main.js",
+  "scripts": {
+    "depudding": "node ./scripts/depudding.js",
+    "doc": "node ./scripts/fetch-doc.js",
+    "sheet": "node ./scripts/fetch-sheet.js",
+    "build": "run-s build:assets build:css build:js build:html",
+    "prebuild": "rm -rf .tmp .cache dev && mkdir .tmp .cache dev",
+    "build:assets": "cp -r src/assets dev",
+    "build:css": "onerror \"stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m\"  -t \"Build Error in CSS\" -m \"See terminal for details\" -s Basso",
+    "build:js": "onerror \"parcel build src/js/main.js --out-dir dev --no-minify\"  -t \"Build Error in JS\" -m \"See terminal for details\" -s Basso",
+    "build:html": "onerror \"node ./scripts/html.js\" -t \"Build Error in HTML\" -m \"See terminal for details\" -s Basso",
+    "deploy": "NODE_ENV=dist run-s deploy:*",
+    "predeploy": "rm -rf .tmp .cache dist && mkdir .tmp .cache dist",
+    "deploy:assets": "cp -r src/assets dist && node ./scripts/image-min.js",
+    "deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css -c",
+    "deploy:js": "parcel build src/js/main.js --out-dir dist --no-source-maps",
+    "deploy:html": "node ./scripts/html.js",
+    "watch:assets": "onchange -k 'src/assets/**/*' -- run-s build:assets",
+    "watch:html": "onchange 'src/html/**/*' 'data/*/' -- run-s build:html",
+    "watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m -w",
+    "watch:js": "parcel watch src/js/main.js --out-dir dev --no-hmr",
+    "serve": "light-server -q -o -s dev -p 4000 -w 'dev/*.css # # reloadcss' -w 'dev/*.js # #' -w 'dev/*.html # #' -w 'dev/assets/**/* # #'",
+    "dev": "run-p serve watch:*",
+    "start": "NODE_ENV=dev run-s build dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polygraph-cool/starter.git"
+  },
+  "keywords": [
+    "pudding",
+    "starter",
+    "template"
+  ],
+  "bugs": {
+    "url": "https://github.com/polygraph-cool/starter/issues"
+  },
+  "homepage": "https://github.com/polygraph-cool/starter#readme",
+  "browserslist": "last 3 versions"
 }
