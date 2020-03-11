@@ -17,6 +17,7 @@
     "autoprefixer-stylus": "1.0.0",
     "babel-eslint": "10.1.0",
     "cli-error-notifier": "2.1.0",
+    "cross-env": "^7.0.2",
     "d3-dsv": "1.2.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.0.0",
@@ -51,7 +52,7 @@
     "build:css": "onerror \"stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m\"  -t \"Build Error in CSS\" -m \"See terminal for details\" -s Basso",
     "build:js": "onerror \"parcel build src/js/main.js --out-dir dev --no-minify\"  -t \"Build Error in JS\" -m \"See terminal for details\" -s Basso",
     "build:html": "onerror \"node ./scripts/html.js\" -t \"Build Error in HTML\" -m \"See terminal for details\" -s Basso",
-    "deploy": "NODE_ENV=dist run-s deploy:*",
+    "deploy": "cross-env NODE_ENV=dist run-s deploy:*",
     "predeploy": "rm -rf .tmp .cache dist && mkdir .tmp .cache dist",
     "deploy:assets": "cp -r src/assets dist && node ./scripts/image-min.js",
     "deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css -c",
@@ -63,7 +64,7 @@
     "watch:js": "parcel watch src/js/main.js --out-dir dev --no-hmr",
     "serve": "light-server -q -o -s dev -p 4000 -w 'dev/*.css # # reloadcss' -w 'dev/*.js # #' -w 'dev/*.html # #' -w 'dev/assets/**/* # #'",
     "dev": "run-p serve watch:*",
-    "start": "NODE_ENV=dev run-s build dev"
+    "start": "cross-env NODE_ENV=dev run-s build dev"
   },
   "repository": {
     "type": "git",
