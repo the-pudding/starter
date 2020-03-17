@@ -30,13 +30,6 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 
 Use the [starter CLI](https://github.com/the-pudding/starter-cli).
 
-### Usage (deprecated)
-To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
-
-```
-curl -Lk https://bit.ly/2J0L3MD > Makefile; make setup;
-```
-
 #### Documentation
 
 See the generated [README](https://github.com/polygraph-cool/starter/blob/master/README.story.md#development) file in the new project directory for instructions.
