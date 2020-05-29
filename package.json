@@ -52,6 +52,7 @@
     "build:css": "onerror \"stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m\"  -t \"Build Error in CSS\" -m \"See terminal for details\" -s Basso",
     "build:js": "onerror \"parcel build src/js/main.js --out-dir dev --no-minify\"  -t \"Build Error in JS\" -m \"See terminal for details\" -s Basso",
     "build:html": "onerror \"node ./scripts/html.js\" -t \"Build Error in HTML\" -m \"See terminal for details\" -s Basso",
+    "protect": "npm run deploy && npx staticrypt dist/index.html changethispassword -o dist/index.html",
     "deploy": "cross-env NODE_ENV=dist run-s deploy:*",
     "predeploy": "rm -rf .tmp .cache dist && mkdir .tmp .cache dist",
     "deploy:assets": "cp -r src/assets dist && node ./scripts/image-min.js",
