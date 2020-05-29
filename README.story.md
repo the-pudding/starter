@@ -1,23 +1,23 @@
-* [Development](#development)
-  * [HTML](#html)
-    * [Sticky Header](#sticky-header)
-    * [Metadata](#metadata)
-    * [Analytics](#analytics)
-    * [Copy](#copy)
-    * [SVG Icons](#svg-icons)
-  * [JavaScript](#javascript)
-    * [Installing Libraries](#installing-libraries)
-    * [Helper Functions](#helper-functions)
-    * [Slider](#slider)
-    * [Google Sheet](#google-sheet)
-  * [CSS](#css)
-  * [Fonts](#fonts)
-  * [Assets](#assets)
-* [Deploy](#deploy)
-  * [Github Pages](#github-pages)
-  * [S3](#s3)
-  * [Launch Checklist](#launch-checklist)
- * [Future Proofing](#future-proofing)
+- [Development](#development)
+  - [HTML](#html)
+    - [Sticky Header](#sticky-header)
+    - [Metadata](#metadata)
+    - [Analytics](#analytics)
+    - [Copy](#copy)
+    - [SVG Icons](#svg-icons)
+  - [JavaScript](#javascript)
+    - [Installing Libraries](#installing-libraries)
+    - [Helper Functions](#helper-functions)
+    - [Slider](#slider)
+    - [Google Sheet](#google-sheet)
+  - [CSS](#css)
+  - [Fonts](#fonts)
+  - [Assets](#assets)
+- [Deploy](#deploy)
+  - [Github Pages](#github-pages)
+  - [S3](#s3)
+  - [Launch Checklist](#launch-checklist)
+- [Future Proofing](#future-proofing)
 
 # Development
 
@@ -130,7 +130,7 @@ You can pull down a Google Sheet to JSON to include in your JS, or use for templ
 
 **Where it goes:** `src/css/story/`.
 
-There is a file for you to start off with, `story.styl`. You can create as many files as you want in this directory, they are automatically included. *Note: You must restart the server when you create a new stylus file.*
+There is a file for you to start off with, `story.styl`. You can create as many files as you want in this directory, they are automatically included. _Note: You must restart the server when you create a new stylus file._
 
 Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, `helpers.styl`, `presets.styl`). You can modify these, especially `variables.styl`.
 
@@ -176,6 +176,10 @@ This generates a single html file with inlined css, a single js file, and a fold
 ## Github Pages
 
 Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
+
+## Password Protection
+
+In the `package.json` file, modify the password in the `protect` script. If using Netlify, make `npm run protect` the build script.
 
 ## S3
 
@@ -235,11 +239,8 @@ Run `make pudding` to deploy and bust cache. If you only made changes to html/cs
 - Update homepage
 - Release assets - author can tap the promotion team to post assets, but otherwise expected that authors post.
 
-
-
-
-
 # Future Proofing
+
 Here are some best practices to follow to increase the likelihood that the story doesn't break in the near future.
 
 - When possible, host assets locally. Put things like images and audio in your project rather than loading from a third party.
