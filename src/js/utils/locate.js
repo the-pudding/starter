@@ -1,62 +1,37 @@
 /* USAGE:
-locate(key, (err, result) => {
-  ...
-})
+locate().then(data => {
+
+}).catch(err => {
+
+});
 */
 
-import request from 'superagent';
 import testData from './locate-test';
 
-const debug = false;
 const MAX_TIME = 4000;
-let key = null;
 
-function getIP() {
-	if (debug) return Promise.resolve(testData);
-	const url = 'https://api.ipify.org?format=json';
-	return new Promise((resolve, reject) => {
-		request.get(url).end((err, res) => {
-			if (err) reject(err);
-			else if (res && res.status >= 200 && res.status < 400)
-				resolve(JSON.parse(res.text));
-			else reject(err);
-		});
-	});
+function lookup() {
+	const local = window.location.href.includes('localhost');
+	if (local) return Promise.resolve(testData);
+  const url = `https://ipinfo.io?token=6f0f9c88db028a`;
+  return new Promise((resolve, reject) => {
+    fetch(url).then((response) => {
+      if (response.ok) response.json().then(resolve).catch(reject);
+      else reject(new Error(response.status));
+    });
+  });
 }
 
-function getGeocode({ ip }) {
-	if (debug) return Promise.resolve(testData);
-	const url = `https://api.ipstack.com/${ip}?access_key=${key}`;
-	return new Promise((resolve, reject) => {
-		request.get(url).end((err, res) => {
-			if (err) reject(err);
-			else if (res && res.status >= 200 && res.status < 400) {
-				const j = JSON.parse(res.text);
-				if (j.error) reject(j.error);
-				else resolve(j);
-			} else reject(err);
-		});
-	});
-}
-
-/**
- * Get users approx. location according to IP address
- * @param {function} cb callback funtion
- */
-
-function init(k, cb) {
-	if (k) {
-		key = k;
-		const timeout = setTimeout(() => cb('timeout'), MAX_TIME);
-
-		getIP()
-			.then(getGeocode)
-			.then(response => {
-				clearTimeout(timeout);
-				cb(null, response);
-			})
-			.catch(err => cb(err));
-	} else cb('error: must pass ipstack key');
+function init() {
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => reject(new Error('timeout')), MAX_TIME);
+    lookup()
+      .then((data) => {
+        clearTimeout(timeout);
+        resolve(data);
+      })
+      .catch(reject);
+  });
 }
 
 export default init;
