@@ -1,8 +1,7 @@
 const path = require("path");
 
 module.exports = env => {
-	const dev = !env;
-	const dir = dev ? 'dev' : 'dist';
+	const dir = env ? 'dist' : 'dev';
 
 	return {
     entry: "./src/js/main.js",
