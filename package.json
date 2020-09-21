@@ -8,12 +8,10 @@
     "node": "12.18.3"
   },
   "dependencies": {
-    "nouislider": "14.2.0",
-    "superagent": "5.2.2"
+    "lodash.debounce": "^4.0.8",
+    "nouislider": "14.2.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
     "archieml": "0.4.2",
     "autoprefixer-stylus": "1.0.0",
     "babel-eslint": "10.1.0",
@@ -38,10 +36,9 @@
     "replace-in-file": "6.1.0",
     "request": "2.88.2",
     "rimraf": "3.0.2",
-    "rollup": "^2.27.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-uglify": "^6.0.4",
     "stylus": "0.54.8",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
     "whatwg-fetch": "3.2.0"
   },
   "main": "scripts/main.js",
@@ -53,14 +50,14 @@
     "prebuild": "rm -rf .tmp .cache dev && mkdir .tmp .cache dev",
     "build:assets": "cp -r src/assets dev",
     "build:css": "onerror \"stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m\"  -t \"Build Error in CSS\" -m \"See terminal for details\" -s Basso",
-    "build:js": "rollup --config --environment BUILD:dev",
+    "build:js": "webpack --mode='development' --config webpack.config.js",
     "build:html": "onerror \"node ./scripts/html.js\" -t \"Build Error in HTML\" -m \"See terminal for details\" -s Basso",
     "protect": "npm run deploy && npx staticrypt dist/index.html changethispassword -o dist/index.html",
     "deploy": "cross-env NODE_ENV=dist run-s deploy:*",
     "predeploy": "rm -rf .tmp .cache dist && mkdir .tmp .cache dist",
     "deploy:assets": "cp -r src/assets dist && node ./scripts/image-min.js",
     "deploy:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dist/bundle.css -c",
-    "deploy:js": "rollup --config --environment BUILD:dist",
+    "deploy:js": "webpack --env='production' --mode='production' --config webpack.config.js",
     "deploy:html": "node ./scripts/html.js",
     "watch:assets": "onchange -k \"src/assets/**/*\" -- run-s build:assets",
     "watch:html": "onchange \"src/html/**/*\" \"data/*/\" -- run-s build:html",
