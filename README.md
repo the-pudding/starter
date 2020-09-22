@@ -16,7 +16,7 @@ _Please note: do not use or reproduce The Pudding logos or fonts without written
 
 ### Features
 
-- [Parcel](http://parceljs.org) for JS bundling
+- [Webpack](http://webpack.js.org) for JS bundling
 - [Stylus](http://stylus-lang.com/) for CSS pre-processing
 - [Handlebars](http://handlebarsjs.com/) for HTML templating
 - [ArchieML](http://archieml.org/) for micro-CMS (Google Docs -> JSON)
