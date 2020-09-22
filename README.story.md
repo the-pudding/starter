@@ -2,7 +2,6 @@
   - [HTML](#html)
     - [Sticky Header](#sticky-header)
     - [Metadata](#metadata)
-    - [Analytics](#analytics)
     - [Copy](#copy)
     - [SVG Icons](#svg-icons)
   - [JavaScript](#javascript)
@@ -47,10 +46,6 @@ To add in the patreon message and list, uncomment `{{> base/patrons }}` in `stic
 #### Metadata
 
 Fill out `data/meta.json`
-
-##### Analytics
-
-For The Pudding analytics use `UA-90567923-1`.
 
 #### Copy
 
