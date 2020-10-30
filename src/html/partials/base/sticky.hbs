@@ -1,18 +1,25 @@
-<div class='header__menu tk-national'>
-	<p class='menu__tagline'><a href='https://pudding.cool' target='_blank'>The Pudding</a> explains ideas debated in culture with visual essays.</p>
-	<ul class='menu__links'>
-		<li><a href='https://pudding.cool/#new' target='_blank'>What’s New</a></li>
-		<li><a href='https://pudding.cool/#hits' target='_blank'>Greatest Hits</a></li>
-		<li><a href='https://pudding.cool/archives' target='_blank'>All Essays</a></li>
-		<li><a href='https://pudding.cool/about/' target='_blank'>About Us</a>
-	</ul>
-	<p class='menu__patreon'>We pour our ❤️ into these stories, but they take time and money. For just $2/month, you can help support us. Join our
-	growing community of data-driven enthusiasts.</p>
-	<a class='patreon-link' href='https://www.patreon.com/thepudding' target='_blank'>Help fund us</a>
-	{{!-- {{> base/patrons }} --}}
+<div class='header__menu tk-national' aria-label='Main menu' data-js='menu'>
+	<span hidden id='menu-label'>Main menu</span>
+	<button class='header__toggle' id='header__toggle' aria-labelledby='menu-label' aria-expanded='false'>
+		<span><img inline src='menu.svg'></span>
+		<span><img inline src='x.svg'></span>
+	</button>
+	<div id='slide__menu'>
+		<p class='menu__tagline'><a href='https://pudding.cool' target='_blank'>The Pudding</a> explains ideas debated
+			in
+			culture with visual essays.</p>
+		<ul class='menu__links'>
+			<li><a href='https://pudding.cool/#new' target='_blank'>What’s New</a></li>
+			<li><a href='https://pudding.cool/#hits' target='_blank'>Greatest Hits</a></li>
+			<li><a href='https://pudding.cool/archives' target='_blank'>All Essays</a></li>
+			<li><a href='https://pudding.cool/about/' target='_blank'>About Us</a>
+		</ul>
+		<p class='menu__patreon'>We pour our ❤️ into these stories, but they take time and money. For just $2/month, you
+			can
+			help support us. Join our
+			growing community of data-driven enthusiasts.</p>
+		<a class='patreon-link' href='https://www.patreon.com/thepudding' target='_blank'>Help fund us</a>
+		{{!-- {{> base/patrons }} --}}
+	</div>
 
 </div>
-<button class='header__toggle'>
-	<span><img inline src='menu.svg'></span>
-	<span><img inline src='x.svg'></span>
-</button>

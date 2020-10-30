@@ -1,58 +1,182 @@
 header
-	z-index set-index('overlay')
 	position absolute
 	top 0
 	left 0
+	z-index set-index('overlay')
 	width 100%
 	background-color $white
-	font-family $sans
+	font-family $sans	
 
 	a.logo
 		display block
+		padding 1rem
 		border none
-		max-width 9rem
-		margin 1rem auto
 
-		svg
-			fill $off-black
+		img
 			display block
 			width 100%
+			fill $off-black
+			max-width 6rem
+			margin-right 0.5rem
+		
+	.header__container 
+		max-width 1200px
+		width 100%
+		padding 0 30px
+		margin auto 
+		position relative
+		display flex 
+		justify-content space-between
+		align-items center
+		background-color $white
+		height 100%
+
+
+		select 
+			border-radius 4px
+			set-type-size('small')
+			height 2rem
+			border 1px solid $liBlue
+			color $liBlue
+			padding 0.25rem
+		.menu-toggle 
+			display block 
+			pointer-events all
+			visibility visible 
+			background-color $white
+			+mq('bp-6')
+				display none 
+				visibility none 
+			&:focus 
+				outline 2px solid
 	
+	.header__title 
+		a
+			position relative
+			display flex 
+			align-items center		
+			&:after 
+				background #0073b1
+				display block
+				height 2px
+				position absolute
+				transition left 334ms cubic-bezier(.4,0,1,1),right 334ms cubic-bezier(.4,0,1,1)
+				left 50%
+				right 50%
+				bottom 12px
+				content ''
+			&:hover 
+				&:after 
+					left -4px
+					right -4px
+		span 
+			set-type-size('root')
+			color rgba(0,0,0,.55)
+			font-weight normal
+
+
+
+	#slide__nav
+		position absolute 
+		height 100vh
+		padding-top 1rem
+		top 57px
+		left 0
+		margin 0 auto
+		width 100%
+		background-color lighten($liSage, 10)
+		transform translateY(-100%)
+		z-index -10
+		transition transform 334ms cubic-bezier(0,0,.2,1),-webkit-transform 334ms cubic-bezier(0,0,.2,1)
+		visibility hidden
+		&.active 
+			transform translateY(0)
+			transition transform 334ms cubic-bezier(0,0,.2,1),-webkit-transform 334ms cubic-bezier(0,0,.2,1)
+		&.visible 
+			visibility visible
+		+mq('bp-6')
+			position relative
+			height auto 
+			width auto 
+			background-color transparent 
+			top 0
+			padding-top 0
+			margin 0
+			transform translateY(0)
+			z-index 0
+			visibility visible
+		ul
+			display flex
+			justify-content space-around
+			align-items center
+			flex-direction column
+			+mq('bp-6')
+				flex-direction row 
+			li
+				margin-right 1em
+				a
+					position relative
+					display flex 
+					align-items center
+					padding 0.25rem 1rem
+					+mq('bp-6')
+						padding 1rem
+							
+					&:after 
+						background #0073b1
+						display block
+						height 2px
+						position absolute
+						transition left 334ms cubic-bezier(.4,0,1,1),right 334ms cubic-bezier(.4,0,1,1)
+						left 50%
+						right 50%
+						bottom 12px
+						content ''
+					&:hover 
+						border-bottom none
+						&:after 
+							left -4px
+							right -4px
+
 header.is-sticky
 	position fixed
-	transform translate3d(0,0,0)
-	background-color $white
-	box-shadow 0 0 7px 1px $gray-light
-	height 3rem
 	display flex
 	align-items center
-	
+	height 4rem
+	background-color $white
+	transform translate3d(0, 0, 0)
+
+
+
 	a.logo
 		margin 0 auto
-	
+
 	.header__toggle
 		position fixed
-		transform translate3d(0,0,0)
 		top 0
 		right 0
-		padding 0.75rem
-		cursor pointer
-		line-height 1
 		z-index set-index(overlay)
-		border none 
+		padding 0.75rem
+		border none
 		background-color transparent
+		line-height 1
+		cursor pointer
+		transform translate3d(0, 0, 0)
+
 		svg
 			stroke $off-black
-		
+
 		span
 			&:first-of-type
 				display block
+
 			&:last-of-type
 				display none
-		
+
 		&.is-visible span
 			&:first-of-type
 				display none
+
 			&:last-of-type
 				display block
 
@@ -63,15 +187,16 @@ header.is-sticky
 		position fixed
 		top 0
 		right 0
-		transform translateX(100%)
-		height 100vh
-		width 100%
-		max-width 30rem
+		z-index set-index(overlay)
 		padding 1rem 1.5rem
+		max-width 30rem
+		width 100%
+		height 100vh
 		background-color $off-black
 		color $off-white
-		z-index set-index(overlay)
 		transition transform 200ms ease-in-out
+		transform translateX(100%)
+
 		+mq('bp-3')
 			border-left 1px solid $gray-dark
 
@@ -79,79 +204,27 @@ header.is-sticky
 			transform translateX(0)
 
 		a
-			color $off-white
 			border-bottom 1px solid $off-white
+			color $off-white
+
 			&:hover
 				color $gray-light
 
 		.menu__links
 			display flex
-			flex-wrap wrap
 			flex-direction row
+			flex-wrap wrap
+
 			+mq('bp-4')
 				flex-direction column
+
 			li
-				font-family $sans-display
-				font-weight 700
-				text-transform uppercase
-				margin-bottom 0.5em
 				margin-right 0.5em
+				margin-bottom 0.5em
+				text-transform uppercase
+				font-weight 700
+				font-family $sans-display
 				set-type-size(large)
+
 				+mq('bp-3')
 					set-type-size(x-large)
-
-		a.patreon-link
-			font-family $sans-display
-			font-weight 700
-			text-transform uppercase
-			border none
-			background-color $off-white
-			color $off-black
-			padding 0.5em 0.75em
-			&:hover
-				opacity 0.75
-
-	.menu__patrons
-		ul
-			display flex
-			flex-wrap wrap
-		li
-			&:after
-				display inline
-				content ','
-				margin-right 0.25em
-			&:last-of-type:after
-				content '.'
-		// li
-		// 	set
-
-// dark color version
-header.is-sticky.is-dark
-	background-color $off-black
-	box-shadow 0 0 7px 1px $gray-dark
-
-	svg
-		path
-			fill $off-white
-
-	.header__menu
-		background-color $white
-		color $off-black
-		+mq('bp-3')
-			border-left 1px solid $gray-light
-
-	a
-		color $off-black
-		border-bottom 1px solid $off-black
-		&:hover
-			color $gray-dark
-
-	.header__toggle
-		svg
-			stroke $off-white
-		
-		&.is-visible span
-			svg
-				stroke $off-black
-
-
