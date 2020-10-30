@@ -1,11 +1,24 @@
 /**
  * Improves keyboard accessibility of modal windows
- * Finds unique values in an array of values
- * @param {array} arr - sequence of strings, numbers, booleans
+ * Modal windows are now completely keyboard accessible, but only when visible
+ * Prevents tab accessing hidden modal content
+ * Prevents tabbing out of modal window if open (but escape key can be used to close modal window at any time)
+ * @param {selection} $openEl - selection of element that when clicked opens the modal
+ * @param {selection} $closeEl - selection of element that when clicked closes the modal
+ * @param {selection} $containerEl - selection of element that contains the modal and any other elements you may want to receive tab focus
+ * @param {selection} $modalEl - selection of the modal itself
+ * @param {string} focusable - comma separated list of classes, ids, or DOM elements that should receive focus in a modal
+ * @param {boolean} hamburger - whether or not the toggle switch represents a hamburger menu (will swap icons if true)
  * @returns {array} array of unique values
  *
  * @example
  * import modalSetup from './utils/modal-a11y';
+ * const $openEl = d3.select('.open')
+ * const $closeEl = d3.select('.close')
+ * const $containerEl = d3.select('.container')
+ * const $modalEl = d3.select('.modal')
+ * const focusable = 'a, .logo'
+ * modalSetup($openEl, $closeEl, $containerEl, $modalEl, focusable, false)
  */
 
 const hamburgerSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
