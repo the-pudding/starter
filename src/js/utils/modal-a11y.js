@@ -23,6 +23,7 @@
 
 const hamburgerSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
 const xSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+const $body = d3.select('body')
 
 function handleOpenClose($modalEl, $toggleEl, hamburger) {
   // see if menu is already opened
@@ -32,6 +33,9 @@ function handleOpenClose($modalEl, $toggleEl, hamburger) {
   $toggleEl.attr('aria-expanded', !opened);
   $modalEl.classed('is-active', !opened);
   $modalEl.classed('is-visible', !opened);
+
+  // set an open class on the body to prevent scrolling 
+  $body.classed('modal-open', !opened)
 
   // if the hamburger argument is set to true, switch between hamburger & x icon
   if (hamburger === true) {
@@ -49,6 +53,8 @@ export default function setup(
   focusable,
   hamburger
 ) {
+
+  console.log({$containerEl})
   // find first and last focusable elements in the modal
   const $focusableInModal = $containerEl.selectAll(focusable).nodes();
   const $firstFocus = $focusableInModal[0];

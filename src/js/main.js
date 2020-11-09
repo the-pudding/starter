@@ -26,13 +26,6 @@ function setupStickyHeader() {
     const $toggle = $body.select('.header__toggle');
 
     modalSetup($toggle, $toggle, $header, $menu, 'a, button, .logo', true);
-
-    modalSetup()
-    // $toggle.on('click', () => {
-    //   const visible = $menu.classed('is-visible');
-    //   $menu.classed('is-visible', !visible);
-    //   $toggle.classed('is-visible', !visible);
-    // });
   }
 }
 
