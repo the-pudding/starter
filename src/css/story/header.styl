@@ -29,8 +29,20 @@ header.is-sticky
 	
 	a.logo
 		margin 0 auto
+
+	.header__container 
+		width 100%
+		padding 0 2rem
+		margin auto 
+		position relative 
+		display flex 
+		align-items center 
+		height 100% 
 	
 	.header__toggle
+		display block 
+		pointer-events all
+		visibility visible 
 		position fixed
 		transform translate3d(0,0,0)
 		top 0
@@ -43,6 +55,8 @@ header.is-sticky
 		background-color transparent
 		svg
 			stroke $off-black
+		&:focus 
+				outline 2px solid
 		
 		span
 			&:first-of-type
@@ -58,10 +72,11 @@ header.is-sticky
 
 			svg
 				stroke $off-white
+	
 
-	.header__menu
-		position fixed
-		top 0
+	#slide__menu
+		position absolute
+		top 3rem
 		right 0
 		transform translateX(100%)
 		height 100vh
@@ -72,11 +87,14 @@ header.is-sticky
 		color $off-white
 		z-index set-index(overlay)
 		transition transform 200ms ease-in-out
+		visibility hidden
 		+mq('bp-3')
 			border-left 1px solid $gray-dark
 
 		&.is-visible
 			transform translateX(0)
+			transition transform 200ms ease-in-out
+			visibility visible 
 
 		a
 			color $off-white
