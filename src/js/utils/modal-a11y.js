@@ -54,7 +54,6 @@ export default function setup(
   hamburger
 ) {
 
-  console.log({$containerEl})
   // find first and last focusable elements in the modal
   const $focusableInModal = $containerEl.selectAll(focusable).nodes();
   const $firstFocus = $focusableInModal[0];
