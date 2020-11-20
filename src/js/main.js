@@ -25,7 +25,7 @@ function setupStickyHeader() {
     const $menu = $body.select('#slide__menu');
     const $toggle = $body.select('.header__toggle');
 
-    modalSetup($toggle, $toggle, $header, $menu, 'a, button, .logo', true);
+    modalSetup($toggle, $toggle, $header, $menu, 'a, button, .logo', true, false);
   }
 }
 

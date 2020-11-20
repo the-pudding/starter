@@ -9,6 +9,7 @@
  * @param {selection} $modalEl - selection of the modal itself
  * @param {string} focusable - comma separated list of classes, ids, or DOM elements that should receive focus in a modal
  * @param {boolean} hamburger - whether or not the toggle switch represents a hamburger menu (will swap icons if true)
+ * @param {boolean} preventScroll - whether the rest of the page should be scrollable while this is open
  * @returns {array} array of unique values
  *
  * @example
@@ -25,7 +26,7 @@ const hamburgerSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height=
 const xSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
 const $body = d3.select('body')
 
-function handleOpenClose($modalEl, $toggleEl, hamburger) {
+function handleOpenClose($modalEl, $toggleEl, hamburger, preventScroll) {
   // see if menu is already opened
   const opened = $modalEl.classed('is-visible');
 
@@ -35,7 +36,9 @@ function handleOpenClose($modalEl, $toggleEl, hamburger) {
   $modalEl.classed('is-visible', !opened);
 
   // set an open class on the body to prevent scrolling 
-  $body.classed('modal-open', !opened)
+  if (preventScroll === true) $body.classed('modal-open', !opened)
+  
+  
 
   // if the hamburger argument is set to true, switch between hamburger & x icon
   if (hamburger === true) {
@@ -51,7 +54,8 @@ export default function setup(
   $containerEl,
   $modalEl,
   focusable,
-  hamburger
+  hamburger,
+  preventScroll
 ) {
 
   // find first and last focusable elements in the modal
@@ -61,8 +65,8 @@ export default function setup(
 
   // if you click on the element that triggers the modal to open
   // open (or close) the modal
-  $openEl.on('click', () => handleOpenClose($modalEl, $openEl, hamburger));
-  $closeEl.on('click', () => handleOpenClose($modalEl, $closeEl, hamburger));
+  $openEl.on('click', () => handleOpenClose($modalEl, $openEl, hamburger, preventScroll));
+  $closeEl.on('click', () => handleOpenClose($modalEl, $closeEl, hamburger, preventScroll));
 
   // listen for escape key press on the modal element
   $containerEl.on('keydown', event => {
