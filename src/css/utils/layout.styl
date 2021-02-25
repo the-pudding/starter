@@ -1,51 +1,60 @@
 // -------------------
 // Layouts
 // -------------------
-
 body
-	font-feature-settings 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1
-	-webkit-font-smoothing antialiased
-	-webkit-tap-highlight-color rgba(0,0,0,0)
 	background-color $bg
 	color $fg
 	font-weight 500
 	font-family $serif
+	font-feature-settings 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1
+	-webkit-font-smoothing antialiased
+	-webkit-tap-highlight-color rgba(0, 0, 0, 0)
 	set-type-size(root, false)
+
 	+mq('bp-3')
 		set-type-size(medium, false)
+
 	&.modal-open
-		height 100vh
-		overflow-y hidden 
+		overflow-y hidden
 		padding-right 1rem
+		height 100vh
 
 h1
 	set-type-size(xx-large, true)
 	margin-top 1.5rem
+
 h2
 	set-type-size(x-large, true)
 	margin-top 1.5rem
+
 h3
 	set-type-size(large, true)
 	margin-top 1.5rem
+
 h4
 	set-type-size(medium, true)
 	margin-top 1.5rem
+
 h5
 	set-type-size(root, true)
 	margin-top 1.5rem
+
 h6
 	set-type-size(small, true)
 	margin-top 1.5rem
-p 
+
+p
 	margin 1.5rem 0
 	set-type-size(root, true)
+
 	+mq('bp-3')
 		set-type-size(medium, true)
 
 a
-	text-decoration none
 	border-bottom 1px solid $fg
 	color $fg
+	text-decoration none
+
 	&:visited, &:hover
 		color $fg
 
@@ -54,12 +63,13 @@ strong, b
 
 em, i
 	font-style italic
-	
+
 ul
 	list-style-type none
 
 li
 	set-type-size(root, false)
+
 	+mq('bp-3')
 		set-type-size(medium, false)
 
@@ -68,20 +78,20 @@ img, video
 	width 100%
 
 button
-	cursor pointer
-	border none
-	outline none
 	margin 0
 	padding 0
+	border none
+	cursor pointer
 	set-type-size(root, false)
+
 	+mq('bp-3')
 		set-type-size(medium, false)
 
 sub, sup
-	font-size 0.75rem
-	line-height 0
 	position relative
 	vertical-align baseline
+	font-size 0.75rem
+	line-height 0
 
 sup
 	top -0.5em
