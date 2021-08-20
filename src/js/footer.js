@@ -65,11 +65,11 @@ function createLink(d) {
 }
 
 function recircHTML() {
-	const url = window.location.href;
+	const localURL = window.location.href;
 
-	const story = data.find((d) => localURL.includes(d.url));
+	const story = storyData.find((d) => localURL.includes(d.url));
 	const topic = story ? story.topic : "culture";
-	const others = data.filter((d) => !localURL.includes(d.url));
+	const others = storyData.filter((d) => !localURL.includes(d.url));
 
 	const diff = others.filter((d) => d.topic !== topic);
 	const same = others.filter((d) => d.topic === topic);
