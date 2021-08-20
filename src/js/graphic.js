@@ -1,8 +1,8 @@
 /* global d3 */
-function resize() {}
+function resize() { }
 
 function init() {
-  console.log('Make something awesome!');
+	console.log('Make something!');
 }
 
 export default { init, resize };
