@@ -67,21 +67,7 @@ function createLink(d) {
 function recircHTML() {
 	const localURL = window.location.href;
 
-	const story = storyData.find((d) => localURL.includes(d.url));
-	const topic = story ? story.topic : "culture";
-	const others = storyData.filter((d) => !localURL.includes(d.url));
-
-	const diff = others.filter((d) => d.topic !== topic);
-	const same = others.filter((d) => d.topic === topic);
-
-	const stories = [];
-	stories.push(...diff.slice(0, 2));
-
-	if (same.length > 1) {
-		stories.push(same[0]);
-		stories.push(same[Math.ceil(Math.random() * (same.length - 1))]);
-	} else stories.push(...diff.slice(2, 4));
-
+	const stories = storyData.filter((d) => !localURL.includes(d.url)).slice(0, 4);
 
 	const html = stories
 		.map(createLink)
