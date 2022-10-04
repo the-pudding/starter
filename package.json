@@ -1,42 +1,32 @@
 {
 	"name": "starter",
-	"version": "2.4.0",
+	"version": "3.0.0",
 	"description": "Starter template for Pudding stories",
-	"author": "Russell Goldenberg",
+	"author": "The Pudding",
 	"license": "MIT",
 	"engines": {
-		"node": "14.17.3"
-	},
-	"dependencies": {
-		"lodash.debounce": "^4.0.8",
-		"nouislider": "15.4.0"
+		"node": "16.17.1"
 	},
 	"devDependencies": {
-		"archieml": "0.4.2",
+		"archieml": "0.5.0",
 		"autoprefixer-stylus": "1.0.0",
-		"babel-eslint": "10.1.0",
-		"cli-error-notifier": "2.1.0",
-		"cross-env": "^7.0.3",
+		"cli-error-notifier": "3.0.1",
+		"cross-env": "7.0.3",
 		"d3-dsv": "2.0.0",
-		"eslint": "7.32.0",
-		"eslint-config-airbnb-base": "14.2.1",
-		"eslint-config-prettier": "8.3.0",
-		"eslint-plugin-import": "2.24.1",
-		"eslint-plugin-prettier": "3.4.0",
 		"handlebars": "4.7.7",
-		"inline-source": "7.2.0",
+		"inline-source": "8.0.2",
 		"light-server": "2.9.1",
+		"lodash.debounce": "4.0.8",
+		"nouislider": "15.6.1",
 		"npm-run-all": "4.1.5",
 		"onchange": "7.1.0",
-		"prettier": "2.3.2",
-		"promise-polyfill": "8.2.0",
-		"replace-in-file": "6.2.0",
+		"prettier": "2.7.1",
+		"replace-in-file": "6.3.5",
 		"request": "2.88.2",
 		"rimraf": "3.0.2",
-		"stylus": "0.54.8",
-		"webpack": "5.51.0",
-		"webpack-cli": "4.8.0",
-		"whatwg-fetch": "3.6.2"
+		"stylus": "0.59.0",
+		"webpack": "5.74.0",
+		"webpack-cli": "4.10.0"
 	},
 	"main": "scripts/main.js",
 	"scripts": {
